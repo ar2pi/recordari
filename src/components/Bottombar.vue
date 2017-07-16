@@ -1,9 +1,9 @@
 <template>
-  <md-bottom-bar md-shift>
-  <md-bottom-bar-item md-icon="ondemand_video">Movies</md-bottom-bar-item>
-  <md-bottom-bar-item md-icon="music_note">Music</md-bottom-bar-item>
-  <md-bottom-bar-item md-icon="books" md-active>Books</md-bottom-bar-item>
-  <md-bottom-bar-item md-icon="photo">Pictures</md-bottom-bar-item>
+  <md-bottom-bar>
+    <md-bottom-bar-item @click="show('conciencia')"><img class="opaque" src="../assets/Conciencia.svg">Conciencia</md-bottom-bar-item>
+  <md-bottom-bar-item><img class="opaque" src="../assets/Reconciliacion.svg">Reconciliacion</md-bottom-bar-item>
+  <md-bottom-bar-item><img class="opaque" src="../assets/Reparacion.svg">Reparacion</md-bottom-bar-item>
+  <md-bottom-bar-item><img class="opaque" src="../assets/Testimonios.svg">Testimonios</md-bottom-bar-item>
 </md-bottom-bar>
 </template>
 
@@ -36,5 +36,9 @@ export default {
 .md-bottom-bar {
   bottom:0;
   position: fixed;
+}
+.opaque {
+  margin-top: -19px;
+  height: 57px !important;
 }
 </style>

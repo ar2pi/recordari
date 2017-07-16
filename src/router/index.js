@@ -26,7 +26,7 @@ export default new Router({
       component: Map
     },
     {
-      path: '/cronologia',
+      path: '/cronos',
       name: 'Timeline',
       component: Timeline
     }
