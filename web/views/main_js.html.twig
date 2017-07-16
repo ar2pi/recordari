@@ -1,15 +1,43 @@
 <script type="text/javascript" src="js/vue.js"></script>
 <script type="text/javascript" src="js/vue-router.js"></script>
 <script type="text/javascript">
-  new Vue({
+  Vue.component('inline-component', {
+    template: '#inline-component',
+    data: function() {
+      return {greeting: 'Hello'};
+    }
+  });
+  var testcomponent = Vue.component('script-component', {
+    template: '#script-component',
+    data: function() {
+      return {greeting: 'Hello'};
+    }
+  });
+
+  console.log(testcomponent);
+
+  var Foo = {
+    template: '<div>Test</div>'
+  }
+
+  var routes = [
+    {
+      path: '/foo',
+      component: Foo
+    }
+  ];
+
+  var router = new VueRouter({routes: routes});
+
+  var App = new Vue({
     delimiters: [
       '${', '}'
     ],
-    el: '#app',
+    router: router,
     data: {
       greeting: "Hello world"
     }
-  });
+  }).$mount('#app');
 </script>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
