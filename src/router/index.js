@@ -4,6 +4,7 @@ import Intro from '@/components/Intro'
 import Path from '@/components/Path'
 import Map from '@/components/Map'
 import Timeline from '@/components/Timeline'
+import Docu from '@/components/Docu'
 
 
 Vue.use(Router)
@@ -29,6 +30,11 @@ export default new Router({
       path: '/cronos',
       name: 'Timeline',
       component: Timeline
+    },
+    {
+      path: '/doc',
+      name: 'Docu',
+      component: Docu
     }
   ]
 })

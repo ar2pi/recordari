@@ -20,6 +20,11 @@
           <i class="ion ion-calendar" data-pack="default" data-tags="date, time, month, year"></i>
         </router-link>
       </p>
+      <p class="col s12 m8 offset-m2 caption">
+        <router-link to="doc" class="btn-large waves-effect waves-light">Documentación
+          <i class="ion ion-easel" data-pack="default" data-tags="images, art, create, color"></i>
+        </router-link>
+      </p>
     </div>
   </div>
 </div>
