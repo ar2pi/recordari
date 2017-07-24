@@ -37,7 +37,7 @@
           style="width: 100%; height: 100%; position: relative;"
         >
           <gmap-info-window
-            :opened="infoWinOpen === true"
+            :opened="infoWinOpen"
             :position="infoWindowPos"
             @closeclick="reinitInfoWindow()">{{ infoContent }}
           </gmap-info-window>
@@ -45,11 +45,10 @@
             :key="index"
             v-for="(m, index) in markers"
             :position="m.position"
-            :opacity="m.markerType === activeMarkers ? 1 : 0"
             :clickable="true"
             :draggable="false"
+            :icon="icon"
             :visible="m.markerType === activeMarkers"
-            v-bind:class="{'hidden' : m.markerType === activeMarkers }"
             @click="toggleInfoWindow(m,index)"
           ></gmap-marker>
         </gmap-map>
@@ -85,7 +84,7 @@
   console.log(desvinculados);
 
   var markers = [];
-  for (var key in desvinculados) {
+  for (let key in desvinculados) {
     markers.push({
       position: {
         lat: parseFloat(desvinculados[key]['Latitud']),
@@ -102,7 +101,7 @@
       }
     });
   }
-  for (var key in map) {
+  for (let key in map) {
     markers.push({
       position: {
         lat: parseFloat(map[key]['Latitud']),
@@ -116,7 +115,7 @@
       }
     });
   }
-  for (var key in pard) {
+  for (let key in pard) {
     markers.push({
       position: {
         lat: parseFloat(pard[key]['Latitud']),
@@ -188,22 +187,24 @@
     },
     mounted: function () {
       this.show('conciencia');
+
+      console.log(this.icon);
     },
     methods: {
       show: function (marker) {
         this.activeMarkers = marker;
         switch (marker) {
           case "reparacion":
-            this.message = "Proceso de Restablecimiento de Derechos"
+            this.message = "Proceso de Restablecimiento de Derechos";
             break;
           case "reconciliacion":
-            this.message = "Desmobilisados de grupos armados"
+            this.message = "Desmobilisados de grupos armados";
             break;
           case "testimonios":
-            this.message = "Testimonios: "
+            this.message = "Testimonios: ";
             break;
           case "conciencia":
-            this.message = "Victimas de minas anti personales por region"
+            this.message = "Victimas de minas anti personales por region";
             break;
           default:
             this.message = "Elementos del conflicto"
@@ -261,10 +262,12 @@
         //optional: offset infowindow so it visually sits nicely on top of our marker
         infoOptions: {
           pixelOffset: {
-            width: 0,
-            height: -35
+            width: 20,
+            height: -90
           }
         },
+        icon: require('../assets/Conciencia.svg'),
+//        iconPath: path.resolve(__dirname,'../assets/'),
         markers
       }
     }
