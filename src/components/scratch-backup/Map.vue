@@ -68,19 +68,123 @@
 </template>
 
 <script>
+  // import Sidebar from './Sidebar.vue';
+  // import Bottombar from './Bottombar.vue';
+
   import * as VueGoogleMaps from 'vue2-google-maps';
   import * as VueMaterial from 'vue-material';
   import Vue from 'vue';
 
+  Vue.use(VueMaterial);
+
+  import desvinculados from '../datasets/desvinculados.json';
+  import map from '../datasets/map.json';
+  import pard from '../datasets/pard.json';
+
+  console.log(desvinculados);
+
+  var markers = [];
+  for (let key in desvinculados) {
+    markers.push({
+      position: {
+        lat: parseFloat(desvinculados[key]['Latitud']),
+        lng: parseFloat(desvinculados[key]['Longitud'])
+      },
+      infoText: desvinculados[key]['registros'],
+      region: key,
+      markerType: 'reconciliacion',
+      icon: {
+        url: '../assets/Reconciliacion.svg'
+      },
+      options: {
+        icon: 'url(../assets/Reconciliacion.svg)'
+      }
+    });
+  }
+  for (let key in map) {
+    markers.push({
+      position: {
+        lat: parseFloat(map[key]['Latitud']),
+        lng: parseFloat(map[key]['Longitud'])
+      },
+      infoText: map[key]['registros'],
+      region: key,
+      markerType: 'conciencia',
+      options: {
+        icon: 'url(../assets/Conciencia.svg)'
+      }
+    });
+  }
+  for (let key in pard) {
+    markers.push({
+      position: {
+        lat: parseFloat(pard[key]['Latitud']),
+        lng: parseFloat(pard[key]['Longitud'])
+      },
+      infoText: pard[key]['registros'],
+      region: key,
+      markerType: 'reparacion',
+      options: {
+        icon: 'url(../assets/Reparacion.svg)'
+      }
+    });
+  }
+
+  var testimonios = [];
+  testimonios.push({
+    position: {
+      lat: 9,
+      lng: -74
+    },
+    infoText: "Mi hermanita menor se agarró a llorar cuando esos hombres golpeaban a mi papá y ella se pegó de su pierna. A él lo mataron con ella agarrada. El impacto de las balas la tumbó al piso y ella quedó inconsciente y ensangrentada. Ella nunca superó eso, no habla, no pudo estudiar y es muy malgeniada y rebelde, testimonio de niña de Montería.",
+    region: "Monteria",
+    markerType: 'testimonios',
+    options: {
+      icon: 'url(../assets/Reparacion.svg)'
+    }
+  });
+  testimonios.push({
+    position: {
+      lat: 7,
+      lng: -75
+    },
+    infoText: "Yo tenía 14 años y viajaba en un bus con mi mamá. En un retén los paramilitares lo pararon y nos bajaron a todos. Mi mamá me trataba de esconder, pero se dieron cuenta y empezaron a decirme que no fuera niñita. Yo tenía mucho miedo, me oriné en los pantalones. Al final nos dejaron ir… Y esto solo lo he contado hoy, casi 15 años después, porque me da vergüenza, testimonio de un adulto de San Carlos.",
+    region: "Antioquia",
+    markerType: 'testimonios',
+    options: {
+      icon: 'url(../assets/Reparacion.svg)'
+    }
+  });
+  testimonios.push({
+    position: {
+      lat: 0.5,
+      lng: -76
+    },
+    infoText: "Yo no supe cómo explicarle a mi hijo sobre la muerte de su padre. Cuando por fin le conté la verdad, me decía que quería vengarse. El susto mío fue tan grande que siempre evitaba que mi hijo saliera, lo privé de su infancia… Yo lo veo siempre triste. Incluso hasta hace muy poco, mi hijo me dijo que a veces sentía deseos de suicidarse. Testimonio de un madre del Putumayo.",
+    region: "Orinoquia",
+    markerType: 'testimonios',
+    options: {
+      icon: 'url(../assets/Reparacion.svg)'
+    }
+  });
+  markers = markers.concat(testimonios);
+  console.log(testimonios);
+  console.log(markers);
+
   Vue.use(VueGoogleMaps, {
     load: {
       key: 'AIzaSyCe1S3oeq7wJ5AeA9wnyiNCyHr1N2vbcm4',
+      // v: 'OPTIONAL VERSION NUMBER',
+      // libraries: 'places', //// If you need to use place input
     }
   });
 
   export default {
-    name: 'ap-map',
-    mounted: function () {},
+    name: 'Map',
+    components: {},
+    mounted: function () {
+      this.show('conciencia');
+    },
     methods: {
       show: function (marker) {
         this.activeMarkers = marker;
@@ -102,19 +206,39 @@
         }
       },
       toggleInfoWindow: function (marker, idx) {
+
+        console.log(marker);
+        console.log(idx);
+        console.log(this.currentMidx == idx);
+
         this.infoWindowPos = marker.position;
         this.infoContent = marker.region + ': ' + marker.infoText;
 
+        //check if its the same marker that was selected if yes toggle
         if (this.currentMidx === idx) {
           this.infoWinOpen = !this.infoWinOpen;
-        } else {
+        }
+        //if different marker set infowindow to open and reset current marker index
+        else {
           this.infoWinOpen = true;
           this.currentMidx = idx;
+
         }
       },
       reinitInfoWindow: function () {
         this.currentMidx = null;
         this.infoWinOpen = false;
+      },
+      toggleLeftSidenav() {
+        this.$refs.leftSidenav.toggle();
+      },
+      toggleRightSidenav() {
+      },
+      closeRightSidenav() {
+      },
+      open(ref) {
+      },
+      close(ref) {
       }
     },
     data() {
@@ -137,7 +261,9 @@
             height: -90
           }
         },
-        icon: require('../assets/Conciencia.svg')
+        icon: require('../assets/Conciencia.svg'),
+//        iconPath: path.resolve(__dirname,'../assets/'),
+        markers
       }
     }
   }

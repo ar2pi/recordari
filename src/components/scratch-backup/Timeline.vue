@@ -8,7 +8,7 @@ import * as VueMaterial from 'vue-material';
 import Vue from 'vue';
 
 export default {
-  name: 'ap-timeline'
+  name: 'Timeline'
 }
 </script>
 

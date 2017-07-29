@@ -1,21 +1,33 @@
-#map {
-  height: 100%;
-}
-
-
-
-
 /* Optional: Makes the sample page fill the window. */
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-
-
+#map {
+  height: 100%;
+}
 
 .btn-large i {
   font-size: inherit;
+}
+
+.full-height {
+  min-height: 100%;
+  height: auto;
+}
+.fit-image {
+  object-fit: contain;
+}
+.sp-hinset {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.sp-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
