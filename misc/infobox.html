@@ -155,7 +155,9 @@
 
       console.log(infowindowCustom);
 
-      var marker = (new google.maps.Marker({
+      var markers = [];
+
+      markers.push((new google.maps.Marker({
         position: {
           lat: 4.624335,
           lng: -74.063644
@@ -165,9 +167,9 @@
       })).addListener('click', function() {
         console.log(this);
         infowindow.open(map, this);
-      });
+      }));
 
-      var marker = (new google.maps.Marker({
+      markers.push((new google.maps.Marker({
         position: {
           lat: 5.624335,
           lng: -73.063644
@@ -185,7 +187,7 @@
         } else {
           this.customOverlay.remove();
         }
-      });
+      }));
     }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe1S3oeq7wJ5AeA9wnyiNCyHr1N2vbcm4&callback=initMap">
