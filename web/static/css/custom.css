@@ -14,8 +14,7 @@ html, body {
 }
 
 .full-height {
-  min-height: 100%;
-  height: auto;
+  height: 100%;
 }
 .fit-image {
   object-fit: contain;

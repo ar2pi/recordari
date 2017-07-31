@@ -1,127 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Infobox</title>
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-            height: 100%;
-        }
-
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #info-target {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            padding: 18px;
-            background-color: #fff;
-            z-index: 1;
-            max-width: 300px;
-        }
-    </style>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Infobox</title>
+  <style>
+    #map {
+      height: 100%;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 <body>
 <div id="info-target"></div>
 <div id="map"></div>
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>
+  var $ = window.jQuery;
+  var map;
 
-    // This example creates a simple polygon representing the Bermuda Triangle.
-    // When the user clicks on the polygon an info window opens, showing
-    // information about the polygon's coordinates.
-
-    var $ = window.jQuery;
-
-    //    $.getJSON( "./datasets/admin_level_4.geojson", function( data ) {
-    //        console.log(data);
-    //    });
-
-    var map;
-    var infoWindow;
-
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 5,
-            center: {lat: 4.624335, lng: -74.063644},
-            mapTypeId: 'terrain'
-        });
-
-        $.getJSON("./datasets/map-fix.geojson", function (data) {
-
-            console.log(data);
-
-            for (let i = 0; i < data.features.length; i++) {
-
-                let dpt = [];
-                for (let j = 0; j < data.features[i].geometry.coordinates[0].length; j++) {
-                    dpt.push({
-                        lat: data.features[i].geometry.coordinates[0][j][1],
-                        lng: data.features[i].geometry.coordinates[0][j][0]
-                    });
-                }
-
-                console.log(data.features[i].geometry);
-                console.log(data.features[i].properties);
-
-//                console.log(dpt);
-
-                console.count('done mapping dpt');
-                let dptBoundary = new google.maps.Polygon({
-                    paths: dpt,
-                    strokeColor: '#FF0000',
-                    strokeOpacity: 0.8,
-                    strokeWeight: 3,
-                    fillColor: '#FF0000',
-                    fillOpacity: 0.35,
-                    name: data.features[i].properties.name,
-                    stateCode: data.features[i].properties.state_code
-                });
-                console.log(dptBoundary);
-                dptBoundary.setMap(map);
-
-                dptBoundary.addListener('mouseover', showArrays);
-            }
-
-        });
-
-        infoWindow = new google.maps.InfoWindow;
-    }
-
-    function EventBus() {
-        this.stateCode = "";
-    }
-
-    var eventBus = new EventBus();
-
-    /** @this {google.maps.Polygon} */
-    function showArrays(event) {
-        // Since this polygon has only one path, we can call getPath() to return the
-        // MVCArray of LatLngs.
-
-        if (eventBus.stateCode !== this.stateCode) {
-            $('#info-target').html('<b>' + this.name + '</b>');
-            eventBus.stateCode = this.stateCode;
-        }
-
-
-        console.log(this);
-        console.log(event);
-
-        // Replace the info window's content and position.
-//        infoWindow.setContent(contentString);
-//        infoWindow.setPosition(event.latLng);
-//
-//        infoWindow.open(map);
-    }
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 5,
+      center: {lat: 4.624335, lng: -74.063644},
+      mapTypeId: 'terrain'
+    });
+  }
 </script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe1S3oeq7wJ5AeA9wnyiNCyHr1N2vbcm4&callback=initMap">
