@@ -29,9 +29,14 @@
 
     $.getJSON('./datasets/map_victimas.json', function(data) {
       console.log(data);
-      for (var i = 0; i < data.length; i++) {
-        setTimeout(addMarkerMethod(data[i]), i * 100);
-      }
+      // start rendering once tiles loaded
+      // should probably wait for it also outside of xhr callback... but works fine for purpose of this example
+      google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+        //this part runs when the mapobject is created and rendered
+        for (var i = 0; i < data.length; i++) {
+          setTimeout(addMarkerMethod(data[i]), 0);
+        }
+      });
     });
 
     function addMarkerMethod(loc) {

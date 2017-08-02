@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Markers</title>
+  <style>
+    /*#map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }*/
+    html {
+      /* Address IE6 background flicker */
+      filter: expression(document.execCommand("BackgroundImageCache", false, true));
+    }
+    .marker {
+      height: 34px;
+      width: 20px;
+      background-image: url('./img/icon-explosion.svg');
+    }
+    .customOverlay {
+        position: relative;
+        height: 600px;
+        width: 100%;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+
+<body>
+  <div id="info-target"></div>
+  <div id="map" style="width: 800px;height: 600px;position: relative;overflow: hidden;"></div>
+
+  <script>
+    function initMap() {
+      var $ = window.jQuery;
+      var map = window.map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: new google.maps.LatLng(4.624335, -74.063644),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe1S3oeq7wJ5AeA9wnyiNCyHr1N2vbcm4&callback=initMap"></script>
+  <script src="./js/FastMarkerOverlay.js"></script>
+  <script>
+    var overlay;
+
+    $.getJSON('./datasets/map_victimas.json', function(data) {
+      console.log(data.length);
+      var fastMarkers = [];
+      for (var i = 0; i < data.length; i++) {
+        var latlng = new google.maps.LatLng(parseFloat(data[i].Latitude.replace(',', '.')), parseFloat(data[i].Longitude.replace(',', '.')));
+        var marker = new com.redfin.FastMarker( /*id*/ i, latlng, ["&nbsp;"], "marker");
+        fastMarkers.push(marker);
+      }
+      // start rendering once tiles loaded
+      // should probably wait for it also outside of xhr callback... but works fine for purpose of this example
+      google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+        //this part runs when the mapobject is created and rendered
+        overlay = new com.redfin.FastMarkerOverlay(map, fastMarkers);
+        console.log(overlay);
+      });
+    });
+  </script>
+</body>
+
+</html>
