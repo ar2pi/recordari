@@ -10,12 +10,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "marker-clusterer-plus": "^2.1.4",
     "vue": "^2.3.3",
     "vue-material": "^0.7.4",
     "vue-router": "^2.6.0",
     "vue-youtube-embed": "^2.1.1",
     "vue2-google-maps": "^0.7.9",
-    "vue2-leaflet": "0.0.51",
     "vuex": "^2.3.1"
   },
   "devDependencies": {

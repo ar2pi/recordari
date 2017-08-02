@@ -1,7 +1,7 @@
 <template>
-  <div class="full-height">
+  <main class="app">
     <router-view></router-view>
-  </div>
+  </main>
 </template>
 
 <script>
