@@ -23,6 +23,10 @@ html, body {
   padding-left: 18px;
   padding-right: 18px;
 }
+.sp-hinset--small {
+  padding-left: 9px;
+  padding-right: 9px;
+}
 .sp-fill {
   position: absolute;
   top: 0;

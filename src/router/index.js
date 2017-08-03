@@ -7,6 +7,7 @@ import Mapbasic from '@/components/Mapbasic'
 import Mapmarkers from '@/components/Mapmarkers'
 import Mapclusters from '@/components/Mapclusters'
 import Mapregions from '@/components/Mapregions'
+import Mapui from '@/components/Mapui'
 // import Map2 from '@/components/Map2'
 // import Timeline from '@/components/Timeline'
 // import Docu from '@/components/Docu'
@@ -50,6 +51,11 @@ export default new Router({
       path: '/mapregions',
       name: 'Mapregions',
       component: Mapregions
+    },
+    {
+      path: '/mapui',
+      name: 'Mapui',
+      component: Mapui
     },
     // {
     //   path: '/mapa',
