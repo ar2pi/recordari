@@ -62,7 +62,7 @@ export default {
             strokeOpacity: 0,
             strokeWeight: 3,
             fillColor: '#FF0000',
-            fillOpacity: 0.3,
+            fillOpacity: 0,
             name: data.features[i].properties.name,
             stateCode: data.features[i].properties.state_code
           }

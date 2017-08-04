@@ -1,0 +1,172 @@
+{
+  "VICHADA": {
+    "Latitud": 5,
+    "Longitud": "-69.5",
+    "registros": 333
+  },
+  "VAUPES": {
+    "Latitud": "0.25",
+    "Longitud": "-70.75",
+    "registros": 177
+  },
+  "VALLE DEL CAUCA": {
+    "Latitud": "3.75",
+    "Longitud": "-76.5",
+    "registros": 35567
+  },
+  "TOLIMA": {
+    "Latitud": "3.75",
+    "Longitud": "-75.25",
+    "registros": 7656
+  },
+  "SUCRE": {
+    "Latitud": 9,
+    "Longitud": -75,
+    "registros": 3703
+  },
+  "SEDE NACIONAL": {
+    "Latitud": "4.25",
+    "Longitud": "-74.18",
+    "registros": 373
+  },
+  "SANTANDER": {
+    "Latitud": 7,
+    "Longitud": "-73.25",
+    "registros": 6843
+  },
+  "SAN ANDRES": {
+    "Latitud": "12.55",
+    "Longitud": "-81.72",
+    "registros": 149
+  },
+  "RISARALDA": {
+    "Latitud": 5,
+    "Longitud": -76,
+    "registros": 6334
+  },
+  "QUINDIO": {
+    "Latitud": "4.5",
+    "Longitud": "-75.66",
+    "registros": 4777
+  },
+  "PUTUMAYO": {
+    "Latitud": "0.5",
+    "Longitud": -76,
+    "registros": 1354
+  },
+  "NORTE DE SANTANDER": {
+    "Latitud": 8,
+    "Longitud": -73,
+    "registros": 4683
+  },
+  "NARIÑO": {
+    "Latitud": "1.5",
+    "Longitud": -78,
+    "registros": 13639
+  },
+  "META": {
+    "Latitud": "3.5",
+    "Longitud": -73,
+    "registros": 6336
+  },
+  "MAGDALENA": {
+    "Latitud": 10,
+    "Longitud": "-74.5",
+    "registros": 6865
+  },
+  "LA GUAJIRA": {
+    "Latitud": "11.5",
+    "Longitud": "-72.5",
+    "registros": 4873
+  },
+  "HUILA": {
+    "Latitud": "2.5",
+    "Longitud": "-75.75",
+    "registros": 6149
+  },
+  "GUAVIARE": {
+    "Latitud": "1.68",
+    "Longitud": "-72.82",
+    "registros": 337
+  },
+  "GUAINIA": {
+    "Latitud": "2.5",
+    "Longitud": -69,
+    "registros": 232
+  },
+  "CUNDINAMARCA": {
+    "Latitud": 5,
+    "Longitud": "-74.16",
+    "registros": 15453
+  },
+  "CORDOBA": {
+    "Latitud": "8.33",
+    "Longitud": "-75.66",
+    "registros": 11146
+  },
+  "CHOCO": {
+    "Latitud": 6,
+    "Longitud": -77,
+    "registros": 2097
+  },
+  "CESAR": {
+    "Latitud": "9.33",
+    "Longitud": "-73.5",
+    "registros": 6867
+  },
+  "CAUCA": {
+    "Latitud": "2.5",
+    "Longitud": "-76.83",
+    "registros": 8424
+  },
+  "CASANARE": {
+    "Latitud": "5.5",
+    "Longitud": "-71.5",
+    "registros": 2199
+  },
+  "CAQUETA": {
+    "Latitud": 1,
+    "Longitud": -74,
+    "registros": 3626
+  },
+  "CALDAS": {
+    "Latitud": "5.25",
+    "Longitud": "-75.5",
+    "registros": 10010
+  },
+  "BOYACA": {
+    "Latitud": "5.5398",
+    "Longitud": "-73.1776",
+    "registros": 6421
+  },
+  "BOLIVAR": {
+    "Latitud": 9,
+    "Longitud": "-74.33",
+    "registros": 7024
+  },
+  "BOGOTA": {
+    "Latitud": "4.25",
+    "Longitud": "-74.18",
+    "registros": 60542
+  },
+  "ATLANTICO": {
+    "Latitud": "10.75",
+    "Longitud": -75,
+    "registros": 13189
+  },
+  "ARAUCA": {
+    "Latitud": "6.66",
+    "Longitud": -71,
+    "registros": 653
+  },
+  "ANTIOQUIA": {
+    "Latitud": 7,
+    "Longitud": "-75.5",
+    "registros": 11525
+  },
+  "AMAZONAS": {
+    "Latitud": "-1.01",
+    "Longitud": "-71.93",
+    "registros": 996
+  }
+}

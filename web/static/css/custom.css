@@ -20,12 +20,12 @@ html, body {
   object-fit: contain;
 }
 .sp-hinset {
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .sp-hinset--small {
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .sp-fill {
   position: absolute;

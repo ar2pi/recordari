@@ -1,0 +1,177 @@
+{
+  "Vichada": {
+    "Latitud": 5,
+    "Longitud": "-69.5",
+    "registros": 54
+  },
+  "Vaupés": {
+    "Latitud": "0.25",
+    "Longitud": "-70.75",
+    "registros": 25
+  },
+  "Valle del Cauca": {
+    "Latitud": "3.75",
+    "Longitud": "-76.5",
+    "registros": 251
+  },
+  "Tolima": {
+    "Latitud": "3.75",
+    "Longitud": "-75.25",
+    "registros": 335
+  },
+  "Sucre": {
+    "Latitud": 9,
+    "Longitud": -75,
+    "registros": 39
+  },
+  "Santander": {
+    "Latitud": 7,
+    "Longitud": "-73.25",
+    "registros": 202
+  },
+  "Risaralda": {
+    "Latitud": 5,
+    "Longitud": -76,
+    "registros": 81
+  },
+  "Quindío": {
+    "Latitud": "4.5",
+    "Longitud": "-75.66",
+    "registros": 20
+  },
+  "Putumayo": {
+    "Latitud": "0.5",
+    "Longitud": -76,
+    "registros": 257
+  },
+  "Norte de Santander": {
+    "Latitud": 8,
+    "Longitud": -73,
+    "registros": 108
+  },
+  "Nariño": {
+    "Latitud": "1.5",
+    "Longitud": -78,
+    "registros": 307
+  },
+  "Meta": {
+    "Latitud": "3.5",
+    "Longitud": -73,
+    "registros": 529
+  },
+  "Magdalena": {
+    "Latitud": 10,
+    "Longitud": "-74.5",
+    "registros": 44
+  },
+  "La Guajira": {
+    "Latitud": "11.5",
+    "Longitud": "-72.5",
+    "registros": 35
+  },
+  "Huila": {
+    "Latitud": "2.5",
+    "Longitud": "-75.75",
+    "registros": 208
+  },
+  "Guaviare": {
+    "Latitud": "1.68",
+    "Longitud": "-72.82",
+    "registros": 133
+  },
+  "Guainía": {
+    "Latitud": "2.5",
+    "Longitud": -69,
+    "registros": 30
+  },
+  "Frontera con Venezuela": {
+    "Latitud": "",
+    "Longitud": "",
+    "registros": 12
+  },
+  "Frontera con Panamá": {
+    "Latitud": "",
+    "Longitud": "",
+    "registros": 3
+  },
+  "Frontera con Ecuador": {
+    "Latitud": "",
+    "Longitud": "",
+    "registros": 5
+  },
+  "Cundinamarca": {
+    "Latitud": 5,
+    "Longitud": "-74.16",
+    "registros": 142
+  },
+  "Córdoba": {
+    "Latitud": "8.33",
+    "Longitud": "-75.66",
+    "registros": 42
+  },
+  "Chocó": {
+    "Latitud": 6,
+    "Longitud": -77,
+    "registros": 274
+  },
+  "Cesar": {
+    "Latitud": "9.33",
+    "Longitud": "-73.5",
+    "registros": 104
+  },
+  "Cauca": {
+    "Latitud": "2.5",
+    "Longitud": "-76.83",
+    "registros": 423
+  },
+  "Casanare": {
+    "Latitud": "5.5",
+    "Longitud": "-71.5",
+    "registros": 243
+  },
+  "Caquetá": {
+    "Latitud": 1,
+    "Longitud": -74,
+    "registros": 469
+  },
+  "Caldas": {
+    "Latitud": "5.25",
+    "Longitud": "-75.5",
+    "registros": 79
+  },
+  "Boyacá": {
+    "Latitud": "5.5398",
+    "Longitud": "-73.1776",
+    "registros": 112
+  },
+  "Bolívar": {
+    "Latitud": 9,
+    "Longitud": "-74.33",
+    "registros": 159
+  },
+  "Bogotá": {
+    "Latitud": "4.25",
+    "Longitud": "-74.18",
+    "registros": 171
+  },
+  "Atlántico": {
+    "Latitud": "10.75",
+    "Longitud": -75,
+    "registros": 10
+  },
+  "Arauca": {
+    "Latitud": "6.66",
+    "Longitud": -71,
+    "registros": 261
+  },
+  "Antioquia": {
+    "Latitud": 7,
+    "Longitud": "-75.5",
+    "registros": 901
+  },
+  "Amazonas": {
+    "Latitud": "-1.01",
+    "Longitud": "-71.93",
+    "registros": 5
+  }
+}
