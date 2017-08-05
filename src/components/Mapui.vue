@@ -153,7 +153,8 @@
               fillColor: '#FF0000',
               fillOpacity: 0,
               name: data[i].properties.name,
-              stateCode: data[i].properties.state_code
+              stateCode: data[i].properties.state_code,
+              daneCode: data[i].properties['DANE:departamento']
             }
           });
         }
