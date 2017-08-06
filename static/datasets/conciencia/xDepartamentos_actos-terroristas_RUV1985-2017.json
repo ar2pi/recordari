@@ -1,0 +1,205 @@
+{
+  "properties": {
+    "total": "227303"
+  },
+  "objects": [
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "0"
+    },
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "77500"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "1081"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "26"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "6578"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "15621"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "2781"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "1888"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "11928"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "2875"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "2464"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "22504"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "3240"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "5476"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "780"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "2130"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "4495"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "20544"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "7560"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "540"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "966"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "14181"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "2444"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "7285"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "8820"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "448"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "1501"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "1235"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "88"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "36"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "124"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "96"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "hecho-victimizante": "Acto terrorista",
+      "sum_registros": "68"
+    }
+  ]
+}

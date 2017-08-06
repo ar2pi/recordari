@@ -1,0 +1,205 @@
+{
+  "properties": {
+    "total": "260205"
+  },
+  "objects": [
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "0"
+    },
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "99500"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "1403"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "39"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "9016"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "17835"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "3807"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "1984"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "8694"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "4925"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "3332"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "20184"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "3300"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "4588"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "1335"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "4290"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "5916"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "18240"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "7200"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "708"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "1218"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "17661"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "3198"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "7144"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "9870"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "448"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "2489"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "1339"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "132"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "72"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "148"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "102"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "hecho-victimizante": "Secuestros y desapariciones",
+      "sum_registros": "88"
+    }
+  ]
+}

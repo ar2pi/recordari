@@ -4,6 +4,19 @@
               :zoom="zoom"
               :options="mapOptions"
               style="width: 100%; height: 100%; position: absolute;">
+      <gmap-info-window
+        :opened="infoWinOpen"
+        :position="infoWindowPos"
+        @closeclick="reinitInfoWindow()">{{ infoContent }}
+      </gmap-info-window>
+      <gmap-polygon :key="index"
+                    v-for="(p,index) in dptBoundaries"
+                    :paths="p.paths"
+                    :options="p.options"
+                    @mouseover="outlinePolygon(p)"
+                    @mouseout="resetPolygon(p)"
+                    @click="toggleInfoWindow($event, p, index)">
+      </gmap-polygon>
     </gmap-map>
 
     <div class="map-card md-fab md-fab-top-right">
@@ -24,51 +37,14 @@
         <form>
           <label>Mostrar en mapa</label>
           <md-list>
-            <md-list-item>
-              <md-radio v-model="radio5"
-                        id="my-test13"
-                        name="my-test-group4"
-                        md-value="1"
-                        class="md-primary">Orange radio
+            <md-list-item :key="index"
+                          v-for="(f,index) in datasets">
+              <md-radio v-model="mapFilters"
+                        name="map-filters"
+                        :md-value="index"
+                        class="md-primary"
+                        @change="showLayer">{{ f.name }}
               </md-radio>
-            </md-list-item>
-            <md-list-item>
-              <md-radio v-model="radio5"
-                        id="my-test14"
-                        name="my-test-group4"
-                        md-value="2"
-                        class="md-primary">Another Orange radio
-              </md-radio>
-            </md-list-item>
-            <md-list-item>
-              <md-radio v-model="radio5"
-                        id="my-test15"
-                        name="my-test-group4"
-                        md-value="3"
-                        class="md-primary">Another another Orange radio
-              </md-radio>
-            </md-list-item>
-          </md-list>
-          <md-list>
-            <md-list-item>
-              <md-checkbox id="my-test1"
-                           name="my-test1"
-                           v-model="checkbox">Regular Checkbox
-              </md-checkbox>
-            </md-list-item>
-            <md-list-item>
-              <md-checkbox id="my-test2"
-                           name="my-test2"
-                           v-model="checkbox"
-                           class="md-primary">Primary Color
-              </md-checkbox>
-            </md-list-item>
-            <md-list-item>
-              <md-checkbox id="my-test3"
-                           name="my-test3"
-                           v-model="checkbox"
-                           class="md-warn">Warn Color
-              </md-checkbox>
             </md-list-item>
           </md-list>
         </form>
@@ -113,6 +89,57 @@
     timeout: 10000
   });
 
+  const datasets = [
+    {
+      id: '1',
+      name: 'Actos terroristas',
+      archive: 'conciencia/xDepartamentos_actos-terroristas_RUV1985-2017.json',
+      geography: 'department'
+    },
+    {
+      id: '2',
+      name: 'Delitos sexuales',
+      archive: 'conciencia/xDepartamentos_delitos-sexuales_RUV1985-2017.json',
+      geography: 'department'
+    },
+    {
+      id: '1',
+      name: 'Desplazamientos y abandonos de tierras',
+      archive: 'conciencia/xDepartamentos_desplazamiento-abandono_RUV1985-2017.json',
+      geography: 'department'
+    },
+    {
+      id: '1',
+      name: 'Homicidios',
+      archive: 'conciencia/xDepartamentos_homicidios_RUV1985-2017.json',
+      geography: 'department'
+    },
+    {
+      id: '1',
+      name: 'Niños, niñas y adolescentes victimas del conflicto',
+      archive: 'conciencia/xDepartamentos_nna-victimas_ESRI1985-2014.json',
+      geography: 'department'
+    },
+    {
+      id: '1',
+      name: 'Niños y niñas vinculados',
+      archive: 'conciencia/xDepartamentos_nna-vinculados_RUV1985-2017.json',
+      geography: 'department'
+    },
+    {
+      id: '1',
+      name: 'Secuestros y desapariciones',
+      archive: 'conciencia/xDepartamentos_secuestros-desapariciones_RUV1985-2017.json',
+      geography: 'department'
+    },
+    {
+      id: '1',
+      name: 'Actos de tortura',
+      archive: 'conciencia/xDepartamentos_tortura_RUV1985-2017.json',
+      geography: 'department'
+    }
+  ];
+
   Vue.use(VueGoogleMaps, {
     load: {
       key: 'AIzaSyCe1S3oeq7wJ5AeA9wnyiNCyHr1N2vbcm4',
@@ -152,6 +179,7 @@
               strokeWeight: 3,
               fillColor: '#FF0000',
               fillOpacity: 0,
+              visible: false,
               name: data[i].properties.name,
               stateCode: data[i].properties.state_code,
               daneCode: data[i].properties['DANE:departamento']
@@ -163,10 +191,62 @@
         console.error('error loading dataset!', err);
       });
     },
+    events: {},
     methods: {
-      toggleInfoWindow: function (marker, idx) {
-        this.infoWindowPos = marker.position;
-        this.infoContent = 'some content';
+      showLayer: function (layer) {
+        api.get(this.datasets[layer].archive, {responseType: 'json'}).then((response) => {
+          response.data.objects.sort((a, b) => {
+            if (+a.sum_registros < +b.sum_registros) {
+              return 1;
+            } else if (+a.sum_registros > +b.sum_registros) {
+              return -1;
+            }
+            return 0;
+          });
+          for (let i = 0; i < response.data.objects.length; i++) {
+            for (let j = 0; j < this.dptBoundaries.length; j++) {
+              if (+response.data.objects[i]['codigo'] === this.dptBoundaries[j].options.daneCode) {
+                this.dptBoundaries[j].options.strokeOpacity = .9;
+                this.dptBoundaries[j].options.fillOpacity = 1 - (i / response.data.objects.length);
+                this.dptBoundaries[j].options.visible = true;
+                this.stateBus.memoizedData[this.dptBoundaries[j].options.daneCode] = response.data.objects[i];
+              }
+            }
+          }
+          this.stateBus.memoizedData.properties = response.data.properties;
+          setTimeout(function (self) {
+            return function () {
+              self.closeDialog('dialog2');
+            }
+          }(this), 0);
+        });
+      },
+      outlinePolygon: function (p) {
+        if (this.stateBus.outlinedPolygon !== p.options.daneCode) {
+          for (let i = 0; i < this.dptBoundaries.length; i++) {
+            this.dptBoundaries[i].options.strokeOpacity = .5;
+            this.dptBoundaries[i].options.zIndex = 0;
+          }
+          p.options.zIndex = 999;
+          p.options.strokeOpacity = 1;
+          p.options.strokeColor = '#333333';
+          this.stateBus.outlinedPolygon = p.options.daneCode;
+        }
+      },
+      resetPolygon(p) {
+        for (let i = 0; i < this.dptBoundaries.length; i++) {
+          this.dptBoundaries[i].options.strokeOpacity = .9;
+        }
+        p.options.zIndex = 0;
+        p.options.strokeColor = p.options.fillColor;
+        this.stateBus.outlinedPolygon = null;
+      },
+      toggleInfoWindow: function ($event, p, idx) {
+//        this.infoWindowPos = p.position;
+        console.log(p);
+        console.log(this.stateBus.memoizedData);
+        this.infoWindowPos = {lat: $event.latLng.lat(), lng: $event.latLng.lng()};
+        this.infoContent = this.stateBus.memoizedData[p.options.daneCode].sum_registros;
         if (this.currentMidx === idx) {
           this.infoWinOpen = !this.infoWinOpen;
         } else {
@@ -206,7 +286,14 @@
     data() {
       return {
         checkbox: '',
-        radio5: '',
+        mapFilters: '',
+        datasets,
+        stateBus: {
+          memoizedData: {},
+          outlinedPolygon: null,
+          infoContent: ''
+        },
+        infoContent: '',
         center: {
           lat: 4.624335,
           lng: -74.063644

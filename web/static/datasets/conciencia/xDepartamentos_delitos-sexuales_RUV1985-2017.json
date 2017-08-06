@@ -1,0 +1,205 @@
+{
+  "properties": {
+    "total": "126211"
+  },
+  "objects": [
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "2"
+    },
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "46125"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "1104"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "18"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "5336"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "6027"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "1998"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "800"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "3948"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "2375"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "1932"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "12180"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "1890"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "2257"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "495"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "2850"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "2175"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "8960"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "3000"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "420"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "686"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "8874"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "1924"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "3055"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "5838"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "168"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "950"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "676"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "33"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "27"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "44"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "24"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "hecho-victimizante": "Delitos contra la integridad sexual",
+      "sum_registros": "20"
+    }
+  ]
+}

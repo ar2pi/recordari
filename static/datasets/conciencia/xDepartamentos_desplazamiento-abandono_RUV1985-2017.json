@@ -1,0 +1,205 @@
+{
+  "properties": {
+    "total": "1311141"
+  },
+  "objects": [
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "22"
+    },
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "377375"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "11454"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "57"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "43930"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "131979"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "15525"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "6320"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "35868"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "16600"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "23156"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "209612"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "18870"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "29193"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "5445"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "18450"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "19749"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "85952"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "30040"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "3516"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "5110"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "104400"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "15964"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "44086"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "43722"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "1253"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "7296"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "4446"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "484"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "261"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "376"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "282"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "hecho-victimizante": "Desplazamientos y Abandonos o Despojos de Tierras",
+      "sum_registros": "348"
+    }
+  ]
+}

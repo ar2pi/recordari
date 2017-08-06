@@ -1,0 +1,205 @@
+{
+  "properties": {
+    "total": "576995"
+  },
+  "objects": [
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "3"
+    },
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "201625"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "4117"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "28"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "20608"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "39483"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "6615"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "3392"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "19236"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "9175"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "9492"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "69136"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "5850"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "12321"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "2805"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "10200"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "10005"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "35648"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "16800"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "1140"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "1750"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "41151"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "8346"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "20257"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "20244"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "595"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "4161"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "2132"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "154"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "72"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "212"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "102"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "hecho-victimizante": "Homicidio",
+      "sum_registros": "140"
+    }
+  ]
+}
