@@ -86,7 +86,7 @@
 
   const api = axios.create({
     baseURL: '/static/datasets/',
-    timeout: 100000
+    timeout: 999999
   });
 
   const datasets = [
@@ -158,7 +158,9 @@
 
     },
     mounted: function () {
-      api.get('map-fix.geojson', {responseType: 'json'}).then((response) => {
+      api.get('map-fix.geojson', {responseType: 'json', onDownloadProgress: function (progressEvent) {
+        console.log(progressEvent);
+      }}).then((response) => {
         console.log(response);
         const ms = (new Date()).getTime();
         console.log('=== started loading regions ===', ms);
