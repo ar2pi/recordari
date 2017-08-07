@@ -86,7 +86,7 @@
 
   const api = axios.create({
     baseURL: '/static/datasets/',
-    timeout: 10000
+    timeout: 100000
   });
 
   const datasets = [
@@ -355,5 +355,12 @@
   .md-dialog {
     width: 60%;
     min-width: 310px;
+  }
+
+  .md-list-item .md-radio {
+    display: block;
+  }
+  .md-list-item .md-radio-container {
+    float:left;
   }
 </style>

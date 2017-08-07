@@ -1,7 +1,7 @@
 <template>
   <div class="valign-wrapper full-height">
     <md-layout>
-      <md-layout md-align="center" md-column md-gutter class="sp-hinset">
+      <md-layout md-align="center" md-column md-gutter md-vertical-align="stretch" class="sp-hinset">
         <md-layout md-column md-flex="60">
           <md-image :md-src="require('../assets/recordari-min.svg')"></md-image>
         </md-layout>
