@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Intro from '@/components/Intro'
-import Path from '@/components/Path'
+import Fork from '@/components/Fork'
 import Map from '@/components/Map'
 import Mapbasic from '@/components/Mapbasic'
 import Mapmarkers from '@/components/Mapmarkers'
@@ -19,13 +19,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Intro',
+      name: 'intro',
       component: Intro
     },
     {
-      path: '/camino',
-      name: 'Path',
-      component: Path
+      path: '/inicio',
+      name: 'Fork',
+      component: Fork
     },
     {
       path: '/map',
