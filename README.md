@@ -1,6 +1,8 @@
 # alpha-panters
 
-> DatosDC project
+Recordari App, a DatosDC project  
+
+```minify-geojson -c 5 -b "ISO3166-2, clcfile, ref, source, wikidata, boundary, is_in:country, admin_level" map-fix.geojson```
 
 ## Build Setup
 

@@ -240,7 +240,7 @@ export default {
         this.datasets = datasets[2];
         break;
     }
-    api.get('map-fix.geojson', {
+    api.get('map-fix.min.geojson', {
       responseType: 'json',
       onDownloadProgress: function(progressEvent) {
         console.log(progressEvent);
@@ -267,9 +267,9 @@ export default {
             fillColor: COLOR_FILL,
             fillOpacity: 0,
             visible: false,
-            name: data[i].properties.name,
-            stateCode: data[i].properties.state_code,
-            daneCode: data[i].properties['DANE:departamento']
+            name: data[i].properties.n,
+            daneCode: data[i].properties.d,
+            stateCode: data[i].properties.s
           }
         });
       }
