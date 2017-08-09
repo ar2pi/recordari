@@ -10,7 +10,7 @@ import Mapregions from '@/components/Mapregions'
 import Mapui from '@/components/Mapui'
 // import Map2 from '@/components/Map2'
 import Timeline from '@/components/Timeline'
-// import Docu from '@/components/Docu'
+import Activities from '@/components/Activities'
 
 
 Vue.use(Router);
@@ -72,10 +72,10 @@ export default new Router({
       name: 'Timeline',
       component: Timeline
     },
-    // {
-    //   path: '/doc',
-    //   name: 'Docu',
-    //   component: Docu
-    // }
+    {
+      path: '/docente',
+      name: 'Activities',
+      component: Activities
+    }
   ]
 })
