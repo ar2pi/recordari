@@ -1,76 +1,167 @@
 <template>
-  <div class="full-height">
+  <div>
+    <gmap-map :center="center"
+              :zoom="zoom"
+              :options="mapOptions"
+              style="width: 100%; height: 100%; position: absolute;">
+      <gmap-info-window
+        :opened="infoWinOpen"
+        :position="infoWindowPos"
+        @closeclick="reinitInfoWindow()">
+        <div class="info-content">
+          <strong>{{ infoContent.locality }}</strong>
+          <p><span class="md-subheading">{{ infoContent.number | currency('', 0) }}</span> {{ infoContent.label }}</p>
+        </div>
+      </gmap-info-window>
+      <gmap-polygon :key="index"
+                    v-for="(p,index) in dptBoundaries"
+                    :paths="p.paths"
+                    :options="p.options"
+                    @mouseover="outlinePolygon(p)"
+                    @mouseout="resetPolygon(p)"
+                    @click="toggleInfoWindow($event, p, index)">
+      </gmap-polygon>
+    </gmap-map>
 
-    <div class="phone-viewport">
-      <md-toolbar>
-        <md-button class="md-icon-button" @click="toggleLeftSidenav">
-          <md-icon>menu</md-icon>
+    <div class="map-card md-fab md-fab-top-right">
+      <md-card>
+        <p class="md-body-2 sp-hinset">¿ Sabias que ?</p>
+        <span class="md-body-1 sp-hinset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</span>
+        <md-card-actions>
+          <md-button class="md-accent md-dense">Ver en mapa</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <md-dialog md-open-from="#fab"
+               md-close-to="#fab"
+               ref="dialog2">
+      <md-dialog-title>Filtros</md-dialog-title>
+
+      <md-dialog-content>
+        <form>
+          <label>Mostrar en mapa</label>
+          <md-list>
+            <md-list-item :key="index"
+                          v-for="(f,index) in datasets">
+              <md-radio v-model="mapFilters"
+                        name="map-filters"
+                        :md-value="index"
+                        class="md-primary"
+                        @change="showLayer">{{ f.name }}
+              </md-radio>
+            </md-list-item>
+          </md-list>
+        </form>
+      </md-dialog-content>
+
+      <md-dialog-actions>
+        <md-button class="md-primary"
+                   @click="closeDialog('dialog2')">Cerrar
         </md-button>
+      </md-dialog-actions>
+    </md-dialog>
 
-        <h2 class="md-title">{{ message }}</h2>
+    <md-button class="md-fab md-fab-bottom-left"
+               id="fab"
+               @click="openDialog('dialog2')">
+      <md-icon>add</md-icon>
+    </md-button>
+
+    <md-button class="md-fab md-fab-top-left md-mini md-primary" @click="toggleLeftSidenav">
+      <md-icon>menu</md-icon>
+    </md-button>
+    <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
+      <md-toolbar class="md-large">
+        <div class="md-toolbar-container">
+          <h3 class="md-title">Sidenav content</h3>
+        </div>
       </md-toolbar>
-
-      <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
-        <md-toolbar class="md-large">
-          <div class="md-toolbar-container">
-            <img src="../assets/Recordari_blue.svg">
-          </div>
-        </md-toolbar>
-
-        <p>fuentes:</p>
-        <ul>
-          <li>
-
-            <p><a href="http://www.icbf.gov.co" target="_blank">icbf.gov.co</a></p>
-          </li>
-        </ul>
-
-      </md-sidenav>
-
-    </div>
-    <div class="full-height">
-
-      <main class="full-height">
-        <gmap-map
-          :center="center"
-          :zoom="zoom"
-          style="width: 100%; height: 100%; position: relative;"
-        >
-          <gmap-info-window
-            :opened="infoWinOpen"
-            :position="infoWindowPos"
-            @closeclick="reinitInfoWindow()">{{ infoContent }}
-          </gmap-info-window>
-          <gmap-marker
-            :key="index"
-            v-for="(m, index) in markers"
-            :position="m.position"
-            :clickable="true"
-            :draggable="false"
-            :icon="icon"
-            :visible="m.markerType === activeMarkers"
-            @click="toggleInfoWindow(m,index)"
-          ></gmap-marker>
-        </gmap-map>
-      </main>
-      <md-bottom-bar>
-        <md-bottom-bar-item @click="show('conciencia')" md-active><img class="opaque" src="../assets/Conciencia.svg">Conciencia
-        </md-bottom-bar-item>
-        <md-bottom-bar-item @click="show('reconciliacion')"><img class="opaque" src="../assets/Reconciliacion.svg">Reconciliacion
-        </md-bottom-bar-item>
-        <md-bottom-bar-item @click="show('reparacion')"><img class="opaque" src="../assets/Reparacion.svg">Reparacion
-        </md-bottom-bar-item>
-        <md-bottom-bar-item @click="show('testimonios')"><img class="opaque" src="../assets/Testimonios.svg">Testimonios
-        </md-bottom-bar-item>
-      </md-bottom-bar>
-    </div>
+      <p>
+        <router-link tag="md-button" to="/mapa/conciencia" class="md-raised md-primary">Conciencia
+          <i class="ion ion-map" data-pack="default" data-tags="gps, navigation, pin"></i>
+        </router-link>
+      </p>
+      <p>
+        <router-link tag="md-button" to="/mapa/reparacion" class="md-raised md-primary">Reparacion
+          <i class="ion ion-map" data-pack="default" data-tags="gps, navigation, pin"></i>
+        </router-link>
+      </p>
+      <p>
+        <router-link tag="md-button" to="/mapa/reconciliacion" class="md-raised md-primary">Reconciliacion
+          <i class="ion ion-map" data-pack="default" data-tags="gps, navigation, pin"></i>
+        </router-link>
+      </p>
+      <p>
+        <router-link tag="md-button" to="/cronos" class="md-raised md-primary">Timeline
+          <i class="ion ion-map" data-pack="default" data-tags="gps, navigation, pin"></i>
+        </router-link>
+      </p>
+    </md-sidenav>
   </div>
 </template>
 
 <script>
-  import * as VueGoogleMaps from 'vue2-google-maps';
-  import * as VueMaterial from 'vue-material';
-  import Vue from 'vue';
+  import Vue from 'vue'
+  import axios from 'axios'
+  import Vue2Filters from 'vue2-filters'
+  import * as VueGoogleMaps from 'vue2-google-maps'
+  import * as VueMaterial from 'vue-material'
+
+  const api = axios.create({
+    baseURL: '/static/datasets/',
+    timeout: 999999
+  });
+
+  const datasets = [[
+    {
+      name: 'Desplazamientos y abandonos de tierras',
+      archive: 'conciencia/xDepartamentos_desplazamiento-abandono_RUV1985-2017.json',
+      geography: 'department',
+      label: 'personas fueron desplazadas o forzadas de abandonar sus tierras por causa del conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Niños, niñas y adolescentes victimas del conflicto',
+      archive: 'conciencia/xDepartamentos_nna-victimas_ESRI1985-2014.json',
+      geography: 'department',
+      label: 'niños, niñas y adolescentes fueron victimas del conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Niños y niñas vinculados',
+      archive: 'conciencia/xDepartamentos_nna-vinculados_RUV1985-2017.json',
+      geography: 'department',
+      label: 'niños, niñas y adolescentes fueron vinculados en el conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Actos terroristas',
+      archive: 'conciencia/xDepartamentos_actos-terroristas_RUV1985-2017.json',
+      geography: 'department',
+      label: 'actos terroristas fueron perpetrados entre 1985 y 2017'
+    },
+    {
+      name: 'Delitos sexuales',
+      archive: 'conciencia/xDepartamentos_delitos-sexuales_RUV1985-2017.json',
+      geography: 'department',
+      label: 'delitos sexuales atribuidos al conflicto fueron cometidos entre 1985 y 2017'
+    },
+    {
+      name: 'Homicidios',
+      archive: 'conciencia/xDepartamentos_homicidios_RUV1985-2017.json',
+      geography: 'department',
+      label: 'homicidios atribuidos al conflicto fueron cometidos entre 1985 y 2017'
+    },
+    {
+      name: 'Secuestros y desapariciones',
+      archive: 'conciencia/xDepartamentos_secuestros-desapariciones_RUV1985-2017.json',
+      geography: 'department',
+      label: 'secuestros y desapariciones atribuidos al conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Actos de tortura',
+      archive: 'conciencia/xDepartamentos_tortura_RUV1985-2017.json',
+      geography: 'department',
+      label: 'actos de tortura por causa del conflicto fueron cometidos entre 1985 y 2017'
+    }
+  ], [], []];
 
   Vue.use(VueGoogleMaps, {
     load: {
@@ -78,63 +169,250 @@
     }
   });
 
+  Vue.use(Vue2Filters);
+
+  Vue.material.registerTheme('default', {
+    primary: 'indigo',
+    accent: 'pink',
+    warn: 'deep-orange',
+  });
+
   export default {
     name: 'ap-map',
-    mounted: function () {},
+    created: () => {
+      console.log('created');
+    },
+    beforeRouteUpdate(to, from, next) {
+      if (to.params.theme) {
+        switch (to.params.theme) {
+          case 'conciencia':
+            this.datasets = datasets[0];
+            break;
+          case 'reparacion':
+            this.datasets = datasets[1];
+            break;
+          case 'reconciliacion':
+            this.datasets = datasets[2];
+            break;
+        }
+        this.resetMap();
+        this.$refs.leftSidenav.close();
+      }
+      console.log('to', to);
+      console.log('from', from);
+      next();
+    },
+    mounted: function () {
+      console.log('mounted');
+      switch (this.$route.params.theme) {
+        case 'conciencia':
+          this.datasets = datasets[0];
+          break;
+        case 'reparacion':
+          this.datasets = datasets[1];
+          break;
+        case 'reconciliacion':
+          this.datasets = datasets[2];
+          break;
+      }
+      api.get('map-fix.geojson', {
+        responseType: 'json', onDownloadProgress: function (progressEvent) {
+          console.log(progressEvent);
+        }
+      }).then((response) => {
+        console.log(response);
+        const ms = (new Date()).getTime();
+        console.log('=== started loading regions ===', ms);
+        let data = response.data.features;
+        for (let i = 0; i < data.length; i++) {
+          let dpt = [];
+          for (let j = 0; j < data[i].geometry.coordinates[0].length; j++) {
+            dpt.push({
+              lat: data[i].geometry.coordinates[0][j][1],
+              lng: data[i].geometry.coordinates[0][j][0]
+            });
+          }
+          this.dptBoundaries.push({
+            paths: dpt,
+            options: {
+              strokeColor: '#FF0000',
+              strokeOpacity: 0,
+              strokeWeight: 3,
+              fillColor: '#FF0000',
+              fillOpacity: 0,
+              visible: false,
+              name: data[i].properties.name,
+              stateCode: data[i].properties.state_code,
+              daneCode: data[i].properties['DANE:departamento']
+            }
+          });
+        }
+        console.log('=== ended loading regions ===', (new Date()).getTime() - ms);
+      }).catch((err) => {
+        console.error('error loading dataset!', err);
+      });
+    },
+    events: {},
     methods: {
-      show: function (marker) {
-        this.activeMarkers = marker;
-        switch (marker) {
-          case "reparacion":
-            this.message = "Proceso de Restablecimiento de Derechos";
-            break;
-          case "reconciliacion":
-            this.message = "Desmobilisados de grupos armados";
-            break;
-          case "testimonios":
-            this.message = "Testimonios: ";
-            break;
-          case "conciencia":
-            this.message = "Victimas de minas anti personales por region";
-            break;
-          default:
-            this.message = "Elementos del conflicto"
+      showLayer: function (layer) {
+        api.get(this.datasets[layer].archive, {responseType: 'json'}).then((response) => {
+          response.data.objects.sort((a, b) => {
+            if (+a.sum_registros < +b.sum_registros) {
+              return 1;
+            } else if (+a.sum_registros > +b.sum_registros) {
+              return -1;
+            }
+            return 0;
+          });
+          for (let i = 0; i < response.data.objects.length; i++) {
+            for (let j = 0; j < this.dptBoundaries.length; j++) {
+              if (+response.data.objects[i]['codigo'] === this.dptBoundaries[j].options.daneCode) {
+                this.dptBoundaries[j].options.strokeOpacity = .9;
+                this.dptBoundaries[j].options.fillOpacity = 1 - (i / response.data.objects.length);
+                this.dptBoundaries[j].options.visible = true;
+                this.stateBus.memoizedData[this.dptBoundaries[j].options.daneCode] = response.data.objects[i];
+              }
+            }
+          }
+          this.stateBus.memoizedData.properties = response.data.properties;
+          this.stateBus.activeDataset = this.datasets[layer];
+          setTimeout(function (self) {
+            return function () {
+              self.closeDialog('dialog2');
+            }
+          }(this), 0);
+        });
+      },
+      outlinePolygon: function (p, force) {
+        if ((!this.infoWinOpen || force) && this.stateBus.outlinedPolygon !== p.options.daneCode) {
+          for (let i = 0; i < this.dptBoundaries.length; i++) {
+            this.dptBoundaries[i].options.strokeOpacity = .5;
+            this.dptBoundaries[i].options.zIndex = 0;
+          }
+          p.options.zIndex = 999;
+          p.options.strokeOpacity = 1;
+          p.options.strokeColor = '#333333';
+          this.stateBus.outlinedPolygon = p.options.daneCode;
         }
       },
-      toggleInfoWindow: function (marker, idx) {
-        this.infoWindowPos = marker.position;
-        this.infoContent = marker.region + ': ' + marker.infoText;
-
+      resetPolygon(p) {
+        if (!this.infoWinOpen) {
+          for (let i = 0; i < this.dptBoundaries.length; i++) {
+            this.dptBoundaries[i].options.strokeOpacity = .9;
+          }
+          p.options.zIndex = 0;
+          p.options.strokeColor = p.options.fillColor;
+          this.stateBus.outlinedPolygon = null;
+        }
+      },
+      reinitPolygons() {
+        for (let i = 0; i < this.dptBoundaries.length; i++) {
+          this.dptBoundaries[i].options.visible = false;
+          this.dptBoundaries[i].options.strokeOpacity = 0;
+          this.dptBoundaries[i].options.fillOpacity = 0;
+        }
+      },
+      resetMap() {
+        this.mapFilters = '';
+        this.reinitInfoWindow();
+        this.reinitPolygons();
+      },
+      toggleInfoWindow: function ($event, p, idx) {
+//        this.infoWindowPos = p.position;
+        console.log('p', p);
+        console.log('memoizedData', this.stateBus.memoizedData);
+//        this.infoWindowPos = {lat: $event.latLng.lat(), lng: $event.latLng.lng()};
+//        this.infoContent = {
+//          locality: this.stateBus.memoizedData[p.options.daneCode].departamento,
+//          number: this.stateBus.memoizedData[p.options.daneCode].sum_registros,
+//          label: this.stateBus.memoizedData[p.options.daneCode].label || this.stateBus.activeDataset.label
+//        };
+//        console.log(this.infoContent);
         if (this.currentMidx === idx) {
           this.infoWinOpen = !this.infoWinOpen;
         } else {
           this.infoWinOpen = true;
           this.currentMidx = idx;
         }
+        if (this.infoWinOpen) {
+          this.outlinePolygon(p, true);
+          this.infoWindowPos = {lat: $event.latLng.lat(), lng: $event.latLng.lng()};
+          this.infoContent = {
+            locality: this.stateBus.memoizedData[p.options.daneCode].departamento,
+            number: this.stateBus.memoizedData[p.options.daneCode].sum_registros,
+            label: this.stateBus.memoizedData[p.options.daneCode].label || this.stateBus.activeDataset.label
+          };
+        }
       },
       reinitInfoWindow: function () {
         this.currentMidx = null;
         this.infoWinOpen = false;
+        this.resetPolygon();
+      },
+      openDialog(ref) {
+        this.$refs[ref].open();
+      },
+      closeDialog(ref) {
+        this.$refs[ref].close();
+      },
+      onOpen() {
+        console.log('Opened');
+      },
+      onClose(type) {
+        console.log('Closed', type);
+      },
+      toggleLeftSidenav() {
+        this.$refs.leftSidenav.toggle();
+      },
+      closeLeftSidenav() {
+        this.$refs.leftSidenav.close();
+      },
+      open(ref) {
+        console.log('Opened: ' + ref);
+      },
+      close(ref) {
+        console.log('Closed: ' + ref);
       }
     },
     data() {
       return {
-        center: {lat: 4.624335, lng: -74.063644},
-        zoom: 5,
+        checkbox: '',
+        mapFilters: '',
+        datasets: [],
+        stateBus: {
+          memoizedData: {},
+          outlinedPolygon: null,
+          activeDataset: {}
+        },
         infoContent: '',
+        center: {
+          lat: 4.624335,
+          lng: -74.063644
+        },
+        dptBoundaries: [],
+        zoom: 5,
+        mapOptions: {
+          disableDefaultUI: true,
+          zoomControl: true,
+          gestureHandling: 'greedy'
+        },
         infoWindowPos: {
           lat: 0,
           lng: 0
         },
-        message: "",
-        activeMarkers: 'conciencia',
+        markers: [{
+          position: {
+            lat: 4,
+            lng: -72
+          },
+          markerType: 'test'
+        }],
         infoWinOpen: false,
         currentMidx: null,
-        //optional: offset infowindow so it visually sits nicely on top of our marker
         infoOptions: {
           pixelOffset: {
-            width: 20,
-            height: -90
+            width: 0,
+            height: -35
           }
         },
         icon: require('../assets/Conciencia.svg')
@@ -144,28 +422,40 @@
 </script>
 
 <style>
-  body, html {
+  body,
+  html {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  #app, .full-height {
-    height: calc(100% - 25px);
+  #app,
+  .full-height {
+    height: 100%;
   }
 
-  .md-bottom-bar {
-    bottom: 0;
-    position: fixed;
+  .map-card {
+    width: 60%;
+    max-width: 600px;
   }
 
-  .opaque {
-    margin-top: -19px;
-    height: 57px !important;
+  .info-content {
+    max-width: 220px;
   }
 
-  .hidden {
-    display: none;
+  /* overwrite default */
+
+  .md-dialog {
+    width: 60%;
+    min-width: 310px;
+  }
+
+  .md-list-item .md-radio {
+    display: block;
+  }
+
+  .md-list-item .md-radio-container {
+    float: left;
   }
 </style>

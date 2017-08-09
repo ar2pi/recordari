@@ -7,7 +7,7 @@ import Mapbasic from '@/components/Mapbasic'
 import Mapmarkers from '@/components/Mapmarkers'
 import Mapclusters from '@/components/Mapclusters'
 import Mapregions from '@/components/Mapregions'
-import Mapui from '@/components/Mapui'
+// import Mapui from '@/components/Mapui'
 // import Map2 from '@/components/Map2'
 import Timeline from '@/components/Timeline'
 import Activities from '@/components/Activities'
@@ -26,11 +26,6 @@ export default new Router({
       path: '/inicio',
       name: 'Fork',
       component: Fork
-    },
-    {
-      path: '/map',
-      name: 'Map',
-      component: Map
     },
     {
       path: '/mapbasic',
@@ -53,9 +48,9 @@ export default new Router({
       component: Mapregions
     },
     {
-      path: '/mapui',
-      name: 'Mapui',
-      component: Mapui
+      path: '/mapa/:theme',
+      name: 'Map',
+      component: Map
     },
     // {
     //   path: '/mapa',
