@@ -31,7 +31,7 @@
         <div id="btn1"
              class="fork-element">
           <router-link tag="md-button"
-                       to="mapui"
+                       to="mapa/conciencia"
                        class="md-raised md-primary">
             <i class="ion ion-map"
                data-pack="default"
@@ -42,7 +42,7 @@
         <div id="btn2"
              class="fork-element">
           <router-link tag="md-button"
-                       to="mapui"
+                       to="mapa/reparacion"
                        class="md-raised md-primary">
             <i class="ion ion-map"
                data-pack="default"
@@ -53,7 +53,7 @@
         <div id="btn3"
              class="fork-element">
           <router-link tag="md-button"
-                       to="mapui"
+                       to="mapa/reconciliacion"
                        class="md-raised md-primary">
             <i class="ion ion-map"
                data-pack="default"
@@ -75,7 +75,7 @@
       </md-layout>
       <div class="md-fab md-fab-bottom-right">
         <router-link tag="md-button"
-                     to="mapui"
+                     to="docente"
                      class="md-raised md-primary md-dense">
           <i class="ion ion-map"
              data-pack="default"

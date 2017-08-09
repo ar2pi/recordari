@@ -5,7 +5,7 @@
       <md-layout md-vertical-align="center" md-align="center">
         <form style="width:100%;max-width:600px;" novalidate @submit.stop.prevent="submit">
           <md-input-container>
-            <label>Codigo de ingreso</label>
+            <label>Codigo de ingreso (1234)</label>
             <md-input v-model="loginCode"></md-input>
           </md-input-container>
           <md-button class="md-primary" @click.prevent="submit">Ingresar</md-button>
