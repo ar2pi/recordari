@@ -240,7 +240,7 @@ export default {
         this.datasets = datasets[2];
         break;
     }
-    api.get('map-fix.min.geojson', {
+    api.get('map-fix.squished.min.geojson', {
       responseType: 'json',
       onDownloadProgress: function(progressEvent) {
         // console.log(progressEvent);
