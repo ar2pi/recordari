@@ -17,9 +17,10 @@
         <div id="intro-fork"
              :class="($parent.loadedOnce) ? '' : 'transparent'"
              style="margin:auto;width:100%;">
-             <div class="md-fab md-fab-top-left">
-               <md-image :md-src="require('../assets/recordari_white.svg')" width="135"></md-image>
-             </div>
+          <div class="md-fab md-fab-top-left">
+            <md-image :md-src="require('../assets/recordari_white.svg')"
+                      width="135"></md-image>
+          </div>
           <!-- <md-layout md-flex="5">
             <md-image :md-src="require('../assets/recordari-min.svg')"
                       height="24"></md-image>
@@ -150,6 +151,26 @@
             Docente
           </router-link>
         </div>
+        <md-speed-dial md-mode="scale"
+                       class="md-fab-bottom-left">
+          <md-button class="md-fab"
+                     md-fab-trigger>
+            <md-icon md-icon-morph>close</md-icon>
+            <md-icon>share</md-icon>
+          </md-button>
+          <md-button class="md-fab md-mini md-clean">
+            <md-icon :md-src="require('../assets/twitter.svg')"></md-icon>
+          </md-button>
+          <md-button class="md-fab md-mini md-clean">
+            <md-icon :md-src="require('../assets/facebook.svg')"></md-icon>
+          </md-button>
+          <md-button class="md-fab md-mini md-clean">
+            <md-icon :md-src="require('../assets/instagram.svg')"></md-icon>
+          </md-button>
+          <md-button class="md-fab md-mini md-clean">
+            <md-icon :md-src="require('../assets/youtube.svg')"></md-icon>
+          </md-button>
+        </md-speed-dial>
       </md-layout>
     </md-layout>
   </md-layout>
@@ -232,16 +253,4 @@ export default {
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-
-
-/*.raised .md-button {*/
-
-
-/*-webkit-box-shadow: 0 0 0 0 !important;*/
-
-
-/*box-shadow: 0 0 0 0 !important;*/
-
-
-/*}*/
 </style>
