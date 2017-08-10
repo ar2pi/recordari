@@ -337,7 +337,6 @@
           }
           p.options.zIndex = 0;
           p.options.strokeColor = COLOR_STROKE;
-          this.stateBus.outlinedPolygon = null;
         }
       },
       reinitPolygons() {
@@ -359,14 +358,15 @@
           this.infoWindow.opened = true;
           this.infoWindow.currentId = idx;
         }
-        if (this.infoWindow.opened) {
-          if (this.stateBus.outlinedPolygon !== null && p.options.daneCode !== this.stateBus.outlinedPolygon) {
-            for (let i = 0; i < this.dptBoundaries.length; i++) {
-              if (+this.stateBus.outlinedPolygon === this.dptBoundaries[i].options.daneCode) {
-                this.resetPolygon(this.dptBoundaries[i], true);
-              }
+        if (this.stateBus.outlinedPolygon !== null && p.options.daneCode !== this.stateBus.outlinedPolygon) {
+          for (let i = 0; i < this.dptBoundaries.length; i++) {
+            if (+this.stateBus.outlinedPolygon === this.dptBoundaries[i].options.daneCode) {
+              this.resetPolygon(this.dptBoundaries[i], true);
             }
           }
+          this.stateBus.outlinedPolygon = null;
+        }
+        if (this.infoWindow.opened) {
           this.outlinePolygon(p, true);
           this.infoWindow.pos = {
             lat: (typeof $event.latLng.lat === 'function') ? $event.latLng.lat() : $event.latLng.lat,
@@ -388,6 +388,7 @@
               this.resetPolygon(this.dptBoundaries[i], true);
             }
           }
+          this.stateBus.outlinedPolygon = null;
         }
       },
       dive(center, location) {
