@@ -243,7 +243,7 @@ export default {
     api.get('map-fix.min.geojson', {
       responseType: 'json',
       onDownloadProgress: function(progressEvent) {
-        console.log(progressEvent);
+        // console.log(progressEvent);
       }
     }).then((response) => {
       console.log(response);
@@ -344,16 +344,6 @@ export default {
       this.reinitPolygons();
     },
     toggleInfoWindow: function($event, p, idx) {
-      //        this.infoWindow.pos = p.position;
-      console.log('p', p);
-      console.log('memoizedData', this.stateBus.memoizedData);
-      //        this.infoWindow.pos = {lat: $event.latLng.lat(), lng: $event.latLng.lng()};
-      //        this.infoWindow.content = {
-      //          locality: this.stateBus.memoizedData[p.options.daneCode].departamento,
-      //          number: this.stateBus.memoizedData[p.options.daneCode].sum_registros,
-      //          label: this.stateBus.memoizedData[p.options.daneCode].label || this.stateBus.activeDataset.label
-      //        };
-      //        console.log(this.infoWindow.content);
       if (this.infoWindow.currentId === idx) {
         this.infoWindow.opened = !this.infoWindow.opened;
       } else {
@@ -418,7 +408,7 @@ export default {
       datasets: [],
       dptBoundaries: [],
       map: {
-        zoom: 6,
+        zoom: 5,
         center: { lat: 4.624335, lng: -74.063644 },
         options: {
           disableDefaultUI: true,
@@ -468,10 +458,6 @@ html {
 .info-content {
   max-width: 220px;
 }
-
-
-
-
 
 /* overwrite default */
 
