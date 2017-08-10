@@ -111,42 +111,42 @@
                     </div>
                   </div>
                 </div>
-                <div class="row pill fork-element">
-                  <div id="btn4"
-                       :class="showElement === 'fe4' ? 'raised' : ''">
-                    <md-button class="md-raised md-primary fork-button"
-                               data-toggle="fe4"
-                               @click="toggleForkElement">
-                      Timeline
-                    </md-button>
-                    <div ref="fe4"
-                         class="row sm-valign-wrapper"
-                         style="opacity:0;overflow:hidden;"
-                         v-show="showElement === 'fe4'">
-                      <div class="col-md-5 text-right">
-                        <p class="sp-hinset--small">
-                          A continuacion puedes aprender mas sobre los eventos claves del conflicto a traves del tiempo</p>
-                      </div>
-                      <div class="col-md-1">
-                        <router-link tag="md-button"
-                                     to="cronos"
-                                     class="md-raised md-accent">
-                          Ver timeline
-                          <md-icon>keyboard_arrow_right</md-icon>
-                        </router-link>
-                      </div>
+              </div>
+              <div class="row pill fork-element">
+                <div id="btn4"
+                     :class="showElement === 'fe4' ? 'raised' : ''">
+                  <md-button class="md-raised md-primary fork-button"
+                             data-toggle="fe4"
+                             @click="toggleForkElement">
+                    Timeline
+                  </md-button>
+                  <div ref="fe4"
+                       class="row sm-valign-wrapper"
+                       style="opacity:0;overflow:hidden;"
+                       v-show="showElement === 'fe4'">
+                    <div class="col-md-5 text-right">
+                      <p class="sp-hinset--small">
+                        A continuacion puedes aprender mas sobre los eventos claves del conflicto a traves del tiempo</p>
+                    </div>
+                    <div class="col-md-1">
+                      <router-link tag="md-button"
+                                   to="cronos"
+                                   class="md-raised md-accent">
+                        Ver timeline
+                        <md-icon>keyboard_arrow_right</md-icon>
+                      </router-link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="md-fab md-fab-bottom-right">
-              <router-link tag="md-button"
-                           to="docente"
-                           class="md-raised md-accent md-dense">
-                Docente
-              </router-link>
-            </div>
+          </div>
+          <div class="md-fab md-fab-bottom-right">
+            <router-link tag="md-button"
+                         to="docente"
+                         class="md-raised md-accent md-dense">
+              Docente
+            </router-link>
           </div>
         </md-layout>
       </md-layout>
