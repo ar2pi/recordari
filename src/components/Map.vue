@@ -25,7 +25,7 @@
       </gmap-map>
 
       <div class="map-card md-fab md-fab-top-right"
-      v-show="tooltip.show">
+           v-show="tooltip.show">
         <md-card>
           <p class="md-body-2 sp-hinset">¿ Sabias que ?</p>
           <span class="md-body-1 sp-hinset">{{ tooltip.content }}</span>
@@ -305,7 +305,11 @@
             this.tooltip.content = this.datasets[layer].tooltip.content;
             this.tooltip.center = this.datasets[layer].tooltip.center;
             this.tooltip.location = this.datasets[layer].tooltip.location;
-            this.tooltip.show = true;
+            setTimeout(((self) => {
+              return () => {
+                self.tooltip.show = true;
+              }
+            })(this), 600);
           }
           setTimeout(function (self) {
             return function () {

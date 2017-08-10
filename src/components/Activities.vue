@@ -128,7 +128,7 @@
         <p class="md-display-3 text-center">ACTIVIDADES ACADÉMICAS</p>
 
         <span class="md-display-2">CONCIENCIA</span>
-        <div class="sm-valign-wrapper">
+        <div class="sm-valign-wrapper" style="margin-bottom: 95px;">
           <div class="sp-hinset">
             <span class="md-title">Actividad Académica 1: Conociendo lo Fundamental</span>
           </div>
