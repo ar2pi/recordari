@@ -1,212 +1,239 @@
 <template>
-<md-layout class="full-height">
-  <md-layout md-vertical-align="stretch">
-    <md-layout md-align="center"
-               md-vertical-align="center"
-               v-show="!initialized"
-               style="overflow:hidden;">
-      <md-layout md-flex="60">
-        <div id="intro-logo">
-          <md-image :md-src="require('../assets/recordari-min.svg')"></md-image>
-        </div>
-      </md-layout>
-    </md-layout>
-    <md-layout v-show="initialized">
-      <div id="intro-fork"
-           :class="($parent.loadedOnce) ? '' : 'transparent'"
-           style="margin:auto;">
-        <!-- <md-layout md-flex="5">
-        <md-image :md-src="require('../assets/recordari-min.svg')"
-                  height="24"></md-image>
-        <router-link tag="md-button"
-                     to="mapui"
-                     class="md-raised md-primary md-dense">
-          <i class="ion ion-map"
-             data-pack="default"
-             data-tags="gps, navigation, pin"></i> Docente
-        </router-link>
-    </md-layout> -->
-        <div class="container text-center">
-          <div class="row pill fork-element">
-            <div id="btn1"
-                 :class="showElement === 'fe1' ? 'raised' : ''">
-              <md-button class="md-raised md-primary fork-button"
-                         data-toggle="fe1"
-                         @click="toggleForkElement">
-                <i class="ion ion-map"></i> Conciencia
-              </md-button>
-              <div ref="fe1"
-                   class="row valign-wrapper"
-                   style="opacity:0;overflow:hidden;"
-                   v-show="showElement === 'fe1'">
-                <div class="col-md-5 text-right">
-                  <p class="sp-hinset--small">La historia en Colombia se parte en dos, antes y después de la guerra, atrás quedaron más de 50 años de conflicto armado que tanto daño causó a más de 8 millones de colombianos. La reconstrucción de un nuevo país es responsabilidad de
-                    todos los que habitamos en él, por eso tomar conciencia significa conocer las consecuencias de estos devastadores tiempos.</p>
+  <md-theme md-name="recordari">
+    <md-layout class="full-height">
+      <md-layout md-vertical-align="stretch">
+        <md-layout md-align="center"
+                   md-vertical-align="center"
+                   v-show="!initialized"
+                   style="overflow:hidden;">
+          <md-layout md-flex="60"
+                     md-align="center">
+            <div id="intro-logo">
+              <md-image :md-src="require('../assets/recordari-black.min.svg')"></md-image>
+            </div>
+          </md-layout>
+        </md-layout>
+        <md-layout v-show="initialized">
+          <div id="intro-fork"
+               :class="($parent.loadedOnce) ? '' : 'transparent'"
+               style="margin:auto;">
+            <!-- <md-layout md-flex="5">
+            <md-image :md-src="require('../assets/recordari-min.svg')"
+                      height="24"></md-image>
+            <router-link tag="md-button"
+                         to="mapui"
+                         class="md-raised md-accent md-dense">
+              <i class="ion ion-map"
+                 data-pack="default"
+                 data-tags="gps, navigation, pin"></i> Docente
+            </router-link>
+        </md-layout> -->
+            <div class="text-center">
+              <div class="row pill fork-element">
+                <div id="btn1"
+                     :class="showElement === 'fe1' ? 'raised' : ''">
+                  <md-button class="md-raised md-primary fork-button"
+                             data-toggle="fe1"
+                             @click="toggleForkElement">
+                    Conciencia
+                  </md-button>
+                  <div ref="fe1"
+                       class="row sm-valign-wrapper"
+                       style="opacity:0;overflow:hidden;"
+                       v-show="showElement === 'fe1'">
+                    <div class="col-md-5 text-right">
+                      <p class="sp-hinset--small">
+                        La historia en Colombia se parte en dos, antes y después de la guerra, atrás quedaron más de 50 años de conflicto armado que tanto daño causó a más de 8 millones de colombianos. La reconstrucción de un nuevo país es responsabilidad de
+                        todos los que habitamos en él, por eso tomar conciencia significa conocer las consecuencias de estos devastadores tiempos.</p>
+                    </div>
+                    <div class="col-md-1">
+                      <router-link tag="md-button"
+                                   to="mapa/conciencia"
+                                   class="md-raised md-accent">
+                        Ver mapa
+                        <md-icon>keyboard_arrow_right</md-icon>
+                      </router-link>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-1">
-                  <router-link tag="md-button"
-                               to="mapa/conciencia"
-                               class="md-raised md-primary">
-                    Ver mapa
-                    <md-icon>keyboard_arrow_right</md-icon>
-                  </router-link>
+              </div>
+              <div class="row pill fork-element">
+                <div id="btn2"
+                     :class="showElement === 'fe2' ? 'raised' : ''">
+                  <md-button class="md-raised md-primary fork-button"
+                             data-toggle="fe2"
+                             @click="toggleForkElement">
+                    Reparación
+                  </md-button>
+                  <div ref="fe2"
+                       class="row sm-valign-wrapper"
+                       style="opacity:0;overflow:hidden;"
+                       v-show="showElement === 'fe2'">
+                    <div class="col-md-5 text-right">
+                      <p class="sp-hinset--small">
+                        Según cada caso, las víctimas oficialmente declaradas, pueden acceder a la reparación y a la restitución de sus tierras por medio de la reparación judicial y administrativa.</p>
+                    </div>
+                    <div class="col-md-1">
+                      <router-link tag="md-button"
+                                   to="mapa/reparacion"
+                                   class="md-raised md-accent">
+                        Ver mapa
+                        <md-icon>keyboard_arrow_right</md-icon>
+                      </router-link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row pill fork-element">
+                <div id="btn3"
+                     :class="showElement === 'fe3' ? 'raised' : ''">
+                  <md-button class="md-raised md-primary fork-button"
+                             data-toggle="fe3"
+                             @click="toggleForkElement">
+                    Reconciliación
+                  </md-button>
+                  <div ref="fe3"
+                       class="row sm-valign-wrapper"
+                       style="opacity:0;overflow:hidden;"
+                       v-show="showElement === 'fe3'">
+                    <div class="col-md-5 text-right">
+                      <p class="sp-hinset--small">
+                        La reconciliación es el paso más importante para poder seguir con este proceso de paz que se está llevando a cabo en nuestro país. Si no existe un perdón verdadero entre todos los protagonistas del conflicto, la paz estable y duradera
+                        va a ser casi imposible.</p>
+                    </div>
+                    <div class="col-md-1">
+                      <router-link tag="md-button"
+                                   to="mapa/reconciliacion"
+                                   class="md-raised md-accent">
+                        Ver mapa
+                        <md-icon>keyboard_arrow_right</md-icon>
+                      </router-link>
+                    </div>
+                  </div>
+                </div>
+                <div class="row pill fork-element">
+                  <div id="btn4"
+                       :class="showElement === 'fe4' ? 'raised' : ''">
+                    <md-button class="md-raised md-primary fork-button"
+                               data-toggle="fe4"
+                               @click="toggleForkElement">
+                      Timeline
+                    </md-button>
+                    <div ref="fe4"
+                         class="row sm-valign-wrapper"
+                         style="opacity:0;overflow:hidden;"
+                         v-show="showElement === 'fe4'">
+                      <div class="col-md-5 text-right">
+                        <p class="sp-hinset--small">
+                          A continuacion puedes aprender mas sobre los eventos claves del conflicto a traves del tiempo</p>
+                      </div>
+                      <div class="col-md-1">
+                        <router-link tag="md-button"
+                                     to="cronos"
+                                     class="md-raised md-accent">
+                          Ver timeline
+                          <md-icon>keyboard_arrow_right</md-icon>
+                        </router-link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row pill fork-element">
-            <div id="btn2"
-                 :class="showElement === 'fe2' ? 'raised' : ''">
-              <md-button class="md-raised md-primary fork-button"
-                         data-toggle="fe2"
-                         @click="toggleForkElement">
-                <i class="ion ion-map"></i> Reparación
-              </md-button>
-              <div ref="fe2"
-                   class="row valign-wrapper"
-                   style="opacity:0;overflow:hidden;"
-                   v-show="showElement === 'fe2'">
-                <div class="col-md-5 text-right">
-                  <p class="sp-hinset--small">Según cada caso, las víctimas oficialmente declaradas, pueden acceder a la reparación y a la restitución de sus tierras por medio de la reparación judicial y administrativa.</p>
-                </div>
-                <div class="col-md-1">
-                  <router-link tag="md-button"
-                               to="mapa/reparacion"
-                               class="md-raised md-primary">
-                    Ver mapa
-                    <md-icon>keyboard_arrow_right</md-icon>
-                  </router-link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row pill fork-element">
-            <div id="btn3"
-                 :class="showElement === 'fe3' ? 'raised' : ''">
-              <md-button class="md-raised md-primary fork-button"
-                         data-toggle="fe3"
-                         @click="toggleForkElement">
-                <i class="ion ion-map"></i> Reconciliación
-              </md-button>
-              <div ref="fe3"
-                   class="row valign-wrapper"
-                   style="opacity:0;overflow:hidden;"
-                   v-show="showElement === 'fe3'">
-                <div class="col-md-5 text-right">
-                  <p class="sp-hinset--small">La reconciliación es el paso más importante para poder seguir con este proceso de paz que se está llevando a cabo en nuestro país. Si no existe un perdón verdadero entre todos los protagonistas del conflicto, la paz estable y duradera
-                    va a ser casi imposible.</p>
-                </div>
-                <div class="col-md-1">
-                  <router-link tag="md-button"
-                               to="mapa/reconciliacion"
-                               class="md-raised md-primary">
-                    Ver mapa
-                    <md-icon>keyboard_arrow_right</md-icon>
-                  </router-link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row pill fork-element">
-            <div id="btn4">
+            <div class="md-fab md-fab-bottom-right">
               <router-link tag="md-button"
-                           to="cronos"
-                           class="md-raised md-primary fork-button">
-                <i class="ion ion-map"
-                   data-pack="default"
-                   data-tags="gps, navigation, pin"></i> Timeline
+                           to="docente"
+                           class="md-raised md-accent md-dense">
+                Docente
               </router-link>
             </div>
           </div>
-        </div>
-        <div class="md-fab md-fab-bottom-right">
-          <router-link tag="md-button"
-                       to="docente"
-                       class="md-raised md-primary md-dense">
-            <i class="ion ion-map"
-               data-pack="default"
-               data-tags="gps, navigation, pin"></i> Docente
-          </router-link>
-        </div>
-      </div>
+        </md-layout>
+      </md-layout>
     </md-layout>
-  </md-layout>
-</md-layout>
+  </md-theme>
 </template>
 
 <script>
-import * as VueMaterial from 'vue-material'
-import anime from 'animejs'
-import Vue from 'vue'
+  import * as VueMaterial from 'vue-material'
+  import anime from 'animejs'
+  import Vue from 'vue'
 
-Vue.use(VueMaterial);
+  Vue.use(VueMaterial);
 
-export default {
-  name: 'ap-intro',
-  created() {
-    this.initialized = this.$parent.loadedOnce;
-  },
-  mounted() {
-    if (!self.initialized) {
-      setTimeout(((self) => {
-        return () => {
-          anime({
-            targets: '#intro-logo',
-            scale: { value: 3, duration: 1200, easing: 'linear' },
-            opacity: { value: 0, duration: 600, easing: 'easeInQuart' },
-            complete(a) {
-              self.initialized = true;
-              anime({
-                targets: '#intro-fork',
-                opacity: 1,
-                duration: 600,
-                easing: 'easeOutCubic',
-                complete() {
-                  self.$parent.$emit('loaded', self.initialized);
-                }
-              });
-              console.log(a);
-            }
-          });
-        }
-      })(this), 3000);
-    }
-  },
-  methods: {
-    toggleForkElement($event) {
-      const e = $event.target.dataset.toggle || '';
-      if (this.showElement !== e) {
-        this.showElement = e;
-        ((self) => anime({
-          targets: self.$refs[e],
-          opacity: { value: 1, duration: 400, easing: 'easeInQuart' },
-          complete(a) {
-            console.log(self.$refs);
+  export default {
+    name: 'ap-intro',
+    created() {
+      this.initialized = this.$parent.loadedOnce;
+    },
+    mounted() {
+      if (!self.initialized) {
+        setTimeout(((self) => {
+          return () => {
+            anime({
+              targets: '#intro-logo',
+              scale: {value: 3, duration: 1200, easing: 'linear'},
+              opacity: {value: 0, duration: 600, easing: 'easeInQuart'},
+              complete(a) {
+                self.initialized = true;
+                anime({
+                  targets: '#intro-fork',
+                  opacity: 1,
+                  duration: 600,
+                  easing: 'easeOutCubic',
+                  complete() {
+                    console.log('self.$parent', self.$parent);
+                    self.$parent.$emit('loaded', self.initialized);
+                  }
+                });
+                console.log(a);
+              }
+            });
           }
-        }))(this);
-      } else {
-        this.showElement = '';
+        })(this), 3000);
+      }
+    },
+    methods: {
+      toggleForkElement($event) {
+        const e = $event.target.dataset.toggle || '';
+        if (this.showElement !== e) {
+          this.showElement = e;
+          ((self) => anime({
+            targets: self.$refs[e],
+            opacity: {value: 1, duration: 400, easing: 'easeInQuart'},
+            complete(a) {
+              console.log(self.$refs);
+            }
+          }))(this);
+        } else {
+          this.showElement = '';
+        }
+      }
+    },
+    data() {
+      return {
+        initialized: false,
+        showElement: ''
       }
     }
-  },
-  data() {
-    return {
-      initialized: false,
-      showElement: ''
-    }
   }
-}
 </script>
 
 <style>
-.fork-button {
-  min-width: 178px;
-  width: 20%;
-}
+  .fork-button {
+    min-width: 178px;
+    width: 20%;
+  }
 
-.raised {
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-}
+  .raised {
+    color: rgba(255, 255, 255, .87);
+    background-color: rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  /*.raised .md-button {*/
+  /*-webkit-box-shadow: 0 0 0 0 !important;*/
+  /*box-shadow: 0 0 0 0 !important;*/
+  /*}*/
 </style>

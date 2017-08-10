@@ -432,6 +432,19 @@ html, body {
     align-items: center;
 }
 
+@media (min-width: 600px) {
+  .sm-valign-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 .clearfix:before,
 .clearfix:after,
 .container:before,
