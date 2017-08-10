@@ -6,6 +6,12 @@ Recordari App, a DatosDC project
 
 ```cat map-fix.min.geojson | simplify-geojson -t 0.01 > map-fix.squished.geojson```
 
+## Deploy  
+``` bash
+heroku git:remote -a recordari  
+git push heroku master
+```
+
 ## Build Setup
 
 ``` bash
