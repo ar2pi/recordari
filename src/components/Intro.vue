@@ -9,7 +9,7 @@
         <md-layout md-flex="60"
                    md-align="center">
           <div id="intro-logo">
-            <md-image :md-src="require('../assets/recordari-black.min.svg')"></md-image>
+            <md-image :md-src="require('../assets/recordari_white.svg')"></md-image>
           </div>
         </md-layout>
       </md-layout>
@@ -17,6 +17,9 @@
         <div id="intro-fork"
              :class="($parent.loadedOnce) ? '' : 'transparent'"
              style="margin:auto;width:100%;">
+             <div class="md-fab md-fab-top-left">
+               <md-image :md-src="require('../assets/recordari_white.svg')" width="135"></md-image>
+             </div>
           <!-- <md-layout md-flex="5">
             <md-image :md-src="require('../assets/recordari-min.svg')"
                       height="24"></md-image>
@@ -41,7 +44,7 @@
                      class="row sm-valign-wrapper"
                      style="opacity:0;overflow:hidden;"
                      v-show="showElement === 'fe1'">
-                  <div class="col-md-5 text-right">
+                  <div class="col-md-5">
                     <p class="sp-hinset--small">
                       La historia en Colombia se parte en dos, antes y después de la guerra, atrás quedaron más de 50 años de conflicto armado que tanto daño causó a más de 8 millones de colombianos. La reconstrucción de un nuevo país es responsabilidad de todos los que habitamos
                       en él, por eso tomar conciencia significa conocer las consecuencias de estos devastadores tiempos.</p>
@@ -69,7 +72,7 @@
                      class="row sm-valign-wrapper"
                      style="opacity:0;overflow:hidden;"
                      v-show="showElement === 'fe2'">
-                  <div class="col-md-5 text-right">
+                  <div class="col-md-5">
                     <p class="sp-hinset--small">
                       Según cada caso, las víctimas oficialmente declaradas, pueden acceder a la reparación y a la restitución de sus tierras por medio de la reparación judicial y administrativa.</p>
                   </div>
@@ -96,7 +99,7 @@
                      class="row sm-valign-wrapper"
                      style="opacity:0;overflow:hidden;"
                      v-show="showElement === 'fe3'">
-                  <div class="col-md-5 text-right">
+                  <div class="col-md-5">
                     <p class="sp-hinset--small">
                       La reconciliación es el paso más importante para poder seguir con este proceso de paz que se está llevando a cabo en nuestro país. Si no existe un perdón verdadero entre todos los protagonistas del conflicto, la paz estable y duradera va a ser casi imposible.</p>
                   </div>
@@ -123,7 +126,7 @@
                      class="row sm-valign-wrapper"
                      style="opacity:0;overflow:hidden;"
                      v-show="showElement === 'fe4'">
-                  <div class="col-md-5 text-right">
+                  <div class="col-md-5">
                     <p class="sp-hinset--small">
                       A continuacion puedes aprender mas sobre los eventos claves del conflicto a traves del tiempo</p>
                   </div>
@@ -225,8 +228,7 @@ export default {
 }
 
 .raised {
-  color: rgba(255, 255, 255, .87);
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(255, 255, 255, .4);
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }

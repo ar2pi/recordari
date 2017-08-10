@@ -80,7 +80,8 @@
                   @open="open('Left')"
                   @close="close('Left')">
         <md-toolbar class="md-large">
-          <div class="md-toolbar-container">
+          <div class="md-toolbar-container md-align-center">
+              <md-image :md-src="require('../assets/recordari_white.svg')" width="200"></md-image>
           </div>
         </md-toolbar>
         <p>
