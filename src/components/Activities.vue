@@ -4,14 +4,16 @@
 
       <md-layout class="full-height sp-hinset" id="doc-login" v-show="!initialized">
         <md-layout md-vertical-align="center" md-align="center">
-          <h3 class="md-display-2 text-center">Ingreso al espacio de docente</h3>
-          <form style="width:100%;max-width:600px;" novalidate @submit.stop.prevent="submit">
-            <md-input-container>
-              <label>Codigo de ingreso (1234)</label>
-              <md-input v-model="loginCode"></md-input>
-            </md-input-container>
-            <md-button class="md-accent" @click.prevent="submit">Ingresar</md-button>
-          </form>
+          <div>
+            <h3 class="md-display-2 text-center">Ingreso al espacio de docente</h3>
+            <form style="width:100%;max-width:600px;" novalidate @submit.stop.prevent="submit">
+              <md-input-container>
+                <label>Codigo de ingreso (1234)</label>
+                <md-input v-model="loginCode"></md-input>
+              </md-input-container>
+              <md-button class="md-accent" @click.prevent="submit">Ingresar</md-button>
+            </form>
+          </div>
         </md-layout>
       </md-layout>
 
