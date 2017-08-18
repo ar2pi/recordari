@@ -1,0 +1,311 @@
+{
+  "properties": {
+    "total": {
+      "pct_no": "0.5021",
+      "pct_si": "0.4978",
+      "total_no": "6431376",
+      "total_si": "6377482",
+      "diff_si-no": "53894"
+    },
+    "tipo": "departamento"
+  },
+  "objects": [
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "pct_no": "0.62",
+      "pct_si": "0.3799",
+      "total_no": "1057518",
+      "total_si": "648051",
+      "diff_si-no": "409467"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLÁNTICO",
+      "pct_no": "0.3946",
+      "pct_si": "0.6053",
+      "total_no": "168300",
+      "total_si": "258121",
+      "diff_si-no": "89821"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTÁ D.C.",
+      "pct_no": "0.4392",
+      "pct_si": "0.5607",
+      "total_no": "1114933",
+      "total_si": "1423612",
+      "diff_si-no": "308679"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLÍVAR",
+      "pct_no": "0.3976",
+      "pct_si": "0.6023",
+      "total_no": "137307",
+      "total_si": "208019",
+      "diff_si-no": "70712"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACÁ",
+      "pct_no": "0.4991",
+      "pct_si": "0.5008",
+      "total_no": "188170",
+      "total_si": "188840",
+      "diff_si-no": "670"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "pct_no": "0.5709",
+      "pct_si": "0.429",
+      "total_no": "180366",
+      "total_si": "135540",
+      "diff_si-no": "44826"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETÁ",
+      "pct_no": "0.5304",
+      "pct_si": "0.4695",
+      "total_no": "44282",
+      "total_si": "39197",
+      "diff_si-no": "5085"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "pct_no": "0.326",
+      "pct_si": "0.6739",
+      "total_no": "113776",
+      "total_si": "235218",
+      "diff_si-no": "121442"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "pct_no": "0.4933",
+      "pct_si": "0.5066",
+      "total_no": "117446",
+      "total_si": "120595",
+      "diff_si-no": "3149"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CÓRDOBA",
+      "pct_no": "0.3926",
+      "pct_si": "0.6073",
+      "total_no": "145611",
+      "total_si": "225223",
+      "diff_si-no": "79612"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "pct_no": "0.5652",
+      "pct_si": "0.4347",
+      "total_no": "437928",
+      "total_si": "336874",
+      "diff_si-no": "101074"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCÓ",
+      "pct_no": "0.2023",
+      "pct_si": "0.7976",
+      "total_no": "19095",
+      "total_si": "75257",
+      "diff_si-no": "56162"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "pct_no": "0.6077",
+      "pct_si": "0.3922",
+      "total_no": "185484",
+      "total_si": "119706",
+      "diff_si-no": "65778"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "pct_no": "0.3885",
+      "pct_si": "0.6114",
+      "total_no": "41566",
+      "total_si": "65417",
+      "diff_si-no": "23851"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "pct_no": "0.3946",
+      "pct_si": "0.6053",
+      "total_no": "86102",
+      "total_si": "132063",
+      "diff_si-no": "45961"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "pct_no": "0.6358",
+      "pct_si": "0.3641",
+      "total_no": "191489",
+      "total_si": "109676",
+      "diff_si-no": "81813"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "pct_no": "0.3518",
+      "pct_si": "0.6481",
+      "total_no": "136283",
+      "total_si": "251047",
+      "diff_si-no": "114764"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "pct_no": "0.6392",
+      "pct_si": "0.3607",
+      "total_no": "282183",
+      "total_si": "159255",
+      "diff_si-no": "122928"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "pct_no": "0.6013",
+      "pct_si": "0.3986",
+      "total_no": "110708",
+      "total_si": "73793",
+      "diff_si-no": "36915"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "pct_no": "0.5569",
+      "pct_si": "0.443",
+      "total_no": "171230",
+      "total_si": "136208",
+      "diff_si-no": "35022"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "pct_no": "0.5564",
+      "pct_si": "0.4435",
+      "total_no": "389598",
+      "total_si": "310555",
+      "diff_si-no": "79043"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "pct_no": "0.3811",
+      "pct_si": "0.6188",
+      "total_no": "84887",
+      "total_si": "137817",
+      "diff_si-no": "52930"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "pct_no": "0.5971",
+      "pct_si": "0.4028",
+      "total_no": "243150",
+      "total_si": "164061",
+      "diff_si-no": "79089"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "pct_no": "0.4755",
+      "pct_si": "0.5244",
+      "total_no": "574237",
+      "total_si": "633329",
+      "diff_si-no": "59092"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "pct_no": "0.5137",
+      "pct_si": "0.4862",
+      "total_no": "30274",
+      "total_si": "28653",
+      "diff_si-no": "1621"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "pct_no": "0.7114",
+      "pct_si": "0.2885",
+      "total_no": "89054",
+      "total_si": "36118",
+      "diff_si-no": "52936"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "pct_no": "0.3449",
+      "pct_si": "0.655",
+      "total_no": "23505",
+      "total_si": "44643",
+      "diff_si-no": "21138"
+    },
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRÉS",
+      "pct_no": "0.4498",
+      "pct_si": "0.5001",
+      "total_no": "4313",
+      "total_si": "5275",
+      "diff_si-no": "962"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "pct_no": "0.4335",
+      "pct_si": "0.5664",
+      "total_no": "4994",
+      "total_si": "6524",
+      "diff_si-no": "1530"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINÍA",
+      "pct_no": "0.4447",
+      "pct_si": "0.5552",
+      "total_no": "2664",
+      "total_si": "3326",
+      "diff_si-no": "662"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "pct_no": "0.4713",
+      "pct_si": "0.5286",
+      "total_no": "9924",
+      "total_si": "11132",
+      "diff_si-no": "1208"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPÉS",
+      "pct_no": "0.2194",
+      "pct_si": "0.7805",
+      "total_no": "1067",
+      "total_si": "3796",
+      "diff_si-no": "2729"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "pct_no": "0.4933",
+      "pct_si": "0.5066",
+      "total_no": "5977",
+      "total_si": "6139",
+      "diff_si-no": "162"
+    }
+  ]
+}
