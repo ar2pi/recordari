@@ -131,61 +131,69 @@ const api = axios.create({
   timeout: 999999
 });
 
-const datasets = [[
-  {
-    name: 'Desplazamientos y abandonos de tierras',
-    archive: 'conciencia/xDepartamentos_desplazamiento-abandono_RUV1985-2017.json',
-    geography: 'department',
-    label: 'personas fueron desplazadas o forzadas de abandonar sus tierras por causa del conflicto entre 1985 y 2017',
-    tooltip: {
-      center: { lat: 6.797495, lng: -75.539246 },
-      location: 5,
-      content: 'Se contabilizaron a lo menos 1,311,141 desplazamientos y abandonos forzados de tierras durante el conflicto. 377,375 de los cuales en Antioquia'
+const datasets = {
+  conciencia: [
+    {
+      name: 'Desplazamientos y abandonos de tierras',
+      archive: 'conciencia/xDepartamentos_desplazamiento-abandono_RUV1985-2017.json',
+      geography: 'department',
+      label: 'personas fueron desplazadas o forzadas de abandonar sus tierras por causa del conflicto entre 1985 y 2017',
+      tooltip: {
+        center: { lat: 6.797495, lng: -75.539246 },
+        location: 5,
+        content: 'Se contabilizaron a lo menos 1,311,141 desplazamientos y abandonos forzados de tierras durante el conflicto. 377,375 de los cuales en Antioquia'
+      }
+    },
+    {
+      name: 'Niños, niñas y adolescentes victimas del conflicto',
+      archive: 'conciencia/xDepartamentos_nna-victimas_ESRI1985-2014.json',
+      geography: 'department',
+      label: 'niños, niñas y adolescentes fueron victimas del conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Niños y niñas vinculados',
+      archive: 'conciencia/xDepartamentos_nna-vinculados_RUV1985-2017.json',
+      geography: 'department',
+      label: 'niños, niñas y adolescentes fueron vinculados en el conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Actos terroristas',
+      archive: 'conciencia/xDepartamentos_actos-terroristas_RUV1985-2017.json',
+      geography: 'department',
+      label: 'actos terroristas fueron perpetrados entre 1985 y 2017'
+    },
+    {
+      name: 'Delitos sexuales',
+      archive: 'conciencia/xDepartamentos_delitos-sexuales_RUV1985-2017.json',
+      geography: 'department',
+      label: 'delitos sexuales atribuidos al conflicto fueron cometidos entre 1985 y 2017'
+    },
+    {
+      name: 'Homicidios',
+      archive: 'conciencia/xDepartamentos_homicidios_RUV1985-2017.json',
+      geography: 'department',
+      label: 'homicidios atribuidos al conflicto fueron cometidos entre 1985 y 2017'
+    },
+    {
+      name: 'Secuestros y desapariciones',
+      archive: 'conciencia/xDepartamentos_secuestros-desapariciones_RUV1985-2017.json',
+      geography: 'department',
+      label: 'secuestros y desapariciones atribuidos al conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Actos de tortura',
+      archive: 'conciencia/xDepartamentos_tortura_RUV1985-2017.json',
+      geography: 'department',
+      label: 'actos de tortura por causa del conflicto fueron cometidos entre 1985 y 2017'
     }
-    },
-  {
-    name: 'Niños, niñas y adolescentes victimas del conflicto',
-    archive: 'conciencia/xDepartamentos_nna-victimas_ESRI1985-2014.json',
-    geography: 'department',
-    label: 'niños, niñas y adolescentes fueron victimas del conflicto entre 1985 y 2017'
-    },
-  {
-    name: 'Niños y niñas vinculados',
-    archive: 'conciencia/xDepartamentos_nna-vinculados_RUV1985-2017.json',
-    geography: 'department',
-    label: 'niños, niñas y adolescentes fueron vinculados en el conflicto entre 1985 y 2017'
-    },
-  {
-    name: 'Actos terroristas',
-    archive: 'conciencia/xDepartamentos_actos-terroristas_RUV1985-2017.json',
-    geography: 'department',
-    label: 'actos terroristas fueron perpetrados entre 1985 y 2017'
-    },
-  {
-    name: 'Delitos sexuales',
-    archive: 'conciencia/xDepartamentos_delitos-sexuales_RUV1985-2017.json',
-    geography: 'department',
-    label: 'delitos sexuales atribuidos al conflicto fueron cometidos entre 1985 y 2017'
-    },
-  {
-    name: 'Homicidios',
-    archive: 'conciencia/xDepartamentos_homicidios_RUV1985-2017.json',
-    geography: 'department',
-    label: 'homicidios atribuidos al conflicto fueron cometidos entre 1985 y 2017'
-    },
-  {
-    name: 'Secuestros y desapariciones',
-    archive: 'conciencia/xDepartamentos_secuestros-desapariciones_RUV1985-2017.json',
-    geography: 'department',
-    label: 'secuestros y desapariciones atribuidos al conflicto entre 1985 y 2017'
-    },
-  {
-    name: 'Actos de tortura',
-    archive: 'conciencia/xDepartamentos_tortura_RUV1985-2017.json',
-    geography: 'department',
-    label: 'actos de tortura por causa del conflicto fueron cometidos entre 1985 y 2017'
-    }
-  ], [], []];
+],
+  reparacion: [
+
+],
+  reconciliacion: [
+
+]
+};
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -208,19 +216,8 @@ export default {
   },
   beforeRouteUpdate(to, from, next) {
     if (to.params.theme) {
-      switch (to.params.theme) {
-        case 'conciencia':
-          this.datasets = datasets[0];
-          break;
-        case 'reparacion':
-          this.datasets = datasets[1];
-          break;
-        case 'reconciliacion':
-          this.datasets = datasets[2];
-          break;
-      }
+      this.datasets = datasets[`${to.params.theme}`];
       this.resetMap();
-      this.$refs.leftSidenav.close();
     }
     console.log('to', to);
     console.log('from', from);
@@ -228,17 +225,7 @@ export default {
   },
   mounted: function() {
     console.log('mounted');
-    switch (this.$route.params.theme) {
-      case 'conciencia':
-        this.datasets = datasets[0];
-        break;
-      case 'reparacion':
-        this.datasets = datasets[1];
-        break;
-      case 'reconciliacion':
-        this.datasets = datasets[2];
-        break;
-    }
+    this.datasets = datasets[`${this.$route.params.theme}`];
     api.get('map-fix.squished.min.geojson', {
       responseType: 'json',
       onDownloadProgress: function(progressEvent) {
@@ -312,6 +299,8 @@ export default {
               self.tooltip.show = true;
             }
           })(this), 600);
+        } else {
+          this.resetTooltip();
         }
         setTimeout(function(self) {
           return function() {
@@ -348,10 +337,20 @@ export default {
         this.dptBoundaries[i].options.fillOpacity = 0;
       }
     },
+    resetTooltip() {
+      this.tooltip = {
+        show: false,
+        content: '',
+        center: {},
+        location: null
+      }
+    },
     resetMap() {
       this.mapFilters = '';
       this.reinitInfoWindow();
       this.reinitPolygons();
+      this.resetTooltip();
+      this.$refs.leftSidenav.close();
     },
     toggleInfoWindow: function($event, p, idx) {
       if (this.infoWindow.currentId === idx) {
@@ -389,7 +388,7 @@ export default {
       this.infoWindow.currentId = null;
       this.infoWindow.opened = false;
       if (this.stateBus.outlinedPolygon !== null) {
-          let resettedPolygon = false;
+        let resettedPolygon = false;
         for (let i = 0; i < this.dptBoundaries.length; i++) {
           if (+this.stateBus.outlinedPolygon === this.dptBoundaries[i].options.daneCode) {
             this.resetPolygon(this.dptBoundaries[i], true);
@@ -497,7 +496,6 @@ html {
 .info-content {
   max-width: 220px;
 }
-
 
 
 /* overwrite default */
