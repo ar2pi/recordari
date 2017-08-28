@@ -188,10 +188,21 @@ const datasets = {
     }
 ],
   reparacion: [
-
+      {
+          name: 'Total de desmobilizados',
+          archive: 'reparacion/xDepartamentos_desmobilizados_ARN2003-2017.json',
+          geography: 'department',
+          label: 'desmobilizados de los grupos alzados en armas entre 2003 y 2017'
+      }
 ],
   reconciliacion: [
-
+      {
+          name: 'Resultados del plebiscito',
+          archive: 'reconciliacion/xDepartamentos_plebiscito_Wikipedia2016.json',
+          geography: 'department',
+          label_1: 'por el si',
+          label_2: 'por el no'
+      }
 ]
 };
 
@@ -223,7 +234,7 @@ export default {
     console.log('from', from);
     next();
   },
-  mounted: function() {
+  mounted() {
     console.log('mounted');
     this.datasets = datasets[`${this.$route.params.theme}`];
     api.get('map-fix.squished.min.geojson', {
@@ -268,7 +279,10 @@ export default {
   },
   events: {},
   methods: {
-    showLayer: function(layer) {
+    showLayer(layer) {
+
+        console.log(layer, this.datasets, this.datasets[layer]);
+
       api.get(this.datasets[layer].archive, { responseType: 'json' }).then((response) => {
         response.data.objects.sort((a, b) => {
           if (+a.sum_registros < +b.sum_registros) {
@@ -309,7 +323,7 @@ export default {
         }(this), 0);
       });
     },
-    outlinePolygon: function(p, force) {
+    outlinePolygon(p, force) {
       if ((!this.infoWindow.opened || force)) {
         for (let i = 0; i < this.dptBoundaries.length; i++) {
           this.dptBoundaries[i].options.strokeOpacity = .5;
@@ -352,7 +366,7 @@ export default {
       this.resetTooltip();
       this.$refs.leftSidenav.close();
     },
-    toggleInfoWindow: function($event, p, idx) {
+    toggleInfoWindow($event, p, idx) {
       if (this.infoWindow.currentId === idx) {
         this.infoWindow.opened = !this.infoWindow.opened;
       } else {
@@ -375,7 +389,7 @@ export default {
         this.outlinePolygon(p, true);
         this.infoWindow.pos = {
           lat: (typeof $event.latLng.lat === 'function') ? $event.latLng.lat() : $event.latLng.lat,
-          lng: (typeof $event.latLng.lat === 'function') ? $event.latLng.lng() : $event.latLng.lng
+          lng: (typeof $event.latLng.lng === 'function') ? $event.latLng.lng() : $event.latLng.lng
         };
         this.infoWindow.content = {
           locality: this.stateBus.memoizedData[p.options.daneCode].departamento,
@@ -384,7 +398,7 @@ export default {
         };
       }
     },
-    reinitInfoWindow: function() {
+    reinitInfoWindow() {
       this.infoWindow.currentId = null;
       this.infoWindow.opened = false;
       if (this.stateBus.outlinedPolygon !== null) {
