@@ -1,0 +1,204 @@
+{
+  "properties": {
+    "total": "172561",
+    "tipo": "departamento"
+  },
+  "objects": [{
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "0"
+    }, {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "45321"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "3240"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "14959"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2638"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "1752"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2773"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "5337"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "3944"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "7943"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "5800"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2115"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "1662"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2739"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "1470"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "7951"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "14357"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "5632"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "4705"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "1223"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2259"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "5902"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "3342"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2855"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "8355"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "3346"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "3726"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "4742"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "40"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "33"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "2281"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "95"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "hecho-victimizante": "Desaparición forzada",
+      "sum_registros": "114"
+    }
+  ]
+}

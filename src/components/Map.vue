@@ -157,6 +157,18 @@ const datasets = {
       label: 'niños, niñas y adolescentes fueron vinculados en el conflicto entre 1985 y 2017'
     },
     {
+      name: 'Desapariciones',
+      archive: 'conciencia/xDepartamentos_desapariciones_RUV1985-2017.json',
+      geography: 'department',
+      label: 'desapariciones forzadas por causa del conflicto entre 1985 y 2017'
+    },
+    {
+      name: 'Secuestros',
+      archive: 'conciencia/xDepartamentos_secuestros_RUV1985-2017.json',
+      geography: 'department',
+      label: 'secuestros por causa del conflicto entre 1985 y 2017'
+    },
+    {
       name: 'Actos terroristas',
       archive: 'conciencia/xDepartamentos_actos-terroristas_RUV1985-2017.json',
       geography: 'department',
@@ -173,12 +185,6 @@ const datasets = {
       archive: 'conciencia/xDepartamentos_homicidios_RUV1985-2017.json',
       geography: 'department',
       label: 'homicidios atribuidos al conflicto fueron cometidos entre 1985 y 2017'
-    },
-    {
-      name: 'Secuestros y desapariciones',
-      archive: 'conciencia/xDepartamentos_secuestros-desapariciones_RUV1985-2017.json',
-      geography: 'department',
-      label: 'secuestros y desapariciones atribuidos al conflicto entre 1985 y 2017'
     },
     {
       name: 'Actos de tortura',
