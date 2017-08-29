@@ -85,31 +85,40 @@
                     width="200"></md-image>
         </div>
       </md-toolbar>
-      <p>
+      <p class="pill">
         <router-link tag="md-button"
                      to="/mapa/conciencia"
-                     class="md-raised md-primary">Conciencia
+                     class="no-margin full-width"
+                     :class="$route.params.theme === 'conciencia' ? 'active-element' : 'md-raised md-primary'">Conciencia
         </router-link>
       </p>
-      <p>
+      <p class="pill">
         <router-link tag="md-button"
                      to="/mapa/reparacion"
-                     class="md-raised md-primary">Reparacion
+                     class="no-margin full-width"
+                     :class="$route.params.theme === 'reparacion' ? 'active-element' : 'md-raised md-primary'">Reparacion
         </router-link>
       </p>
-      <p>
+      <p class="pill">
         <router-link tag="md-button"
                      to="/mapa/reconciliacion"
-                     class="md-raised md-primary">Reconciliacion
+                     class="no-margin full-width"
+                     :class="$route.params.theme === 'reconciliacion' ? 'active-element' : 'md-raised md-primary'">Reconciliacion
         </router-link>
       </p>
-      <p>
+      <p class="pill">
         <router-link tag="md-button"
                      to="/cronos"
-                     class="md-raised md-primary">Timeline
+                     class="no-margin full-width"
+                     :class="$route.params.theme === 'timeline' ? 'active-element' : 'md-raised md-primary'">Timeline
         </router-link>
       </p>
     </md-sidenav>
+
+    <div class="bottom-title"
+         v-show="!!stateBus.activeDataset.name">
+         {{ stateBus.activeDataset.name }}
+    </div>
   </div>
 </md-theme>
 </template>
@@ -194,20 +203,20 @@ const datasets = {
     }
 ],
   reparacion: [
-      {
-          name: 'Total de desmobilizados',
-          archive: 'reparacion/xDepartamentos_desmobilizados_ARN2003-2017.json',
-          geography: 'department',
-          label: 'desmobilizados de los grupos alzados en armas entre 2003 y 2017'
+    {
+      name: 'Total de desmobilizados',
+      archive: 'reparacion/xDepartamentos_desmobilizados_ARN2003-2017.json',
+      geography: 'department',
+      label: 'desmobilizados de los grupos alzados en armas entre 2003 y 2017'
       }
 ],
   reconciliacion: [
-      {
-          name: 'Resultados del plebiscito',
-          archive: 'reconciliacion/xDepartamentos_plebiscito_Wikipedia2016.json',
-          geography: 'department',
-          label_1: 'por el si',
-          label_2: 'por el no'
+    {
+      name: 'Resultados del plebiscito',
+      archive: 'reconciliacion/xDepartamentos_plebiscito_Wikipedia2016.json',
+      geography: 'department',
+      label_1: 'por el si',
+      label_2: 'por el no'
       }
 ]
 };
@@ -276,7 +285,6 @@ export default {
           }
         });
       }
-      this.mapFilters = 0;
       this.showLayer(0);
       console.log('=== ended loading regions ===', (new Date()).getTime() - ms);
     }).catch((err) => {
@@ -287,7 +295,7 @@ export default {
   methods: {
     showLayer(layer) {
 
-        console.log(layer, this.datasets, this.datasets[layer]);
+      console.log(layer, this.datasets, this.datasets[layer]);
 
       api.get(this.datasets[layer].archive, { responseType: 'json' }).then((response) => {
         response.data.objects.sort((a, b) => {
@@ -310,6 +318,7 @@ export default {
         }
         this.stateBus.memoizedData.properties = response.data.properties;
         this.stateBus.activeDataset = this.datasets[layer];
+        this.mapFilters = layer;
         if (this.datasets[layer].tooltip) {
           this.tooltip.content = this.datasets[layer].tooltip.content;
           this.tooltip.center = this.datasets[layer].tooltip.center;
@@ -370,6 +379,7 @@ export default {
       this.reinitInfoWindow();
       this.reinitPolygons();
       this.resetTooltip();
+      this.showLayer(0);
       this.$refs.leftSidenav.close();
     },
     toggleInfoWindow($event, p, idx) {
@@ -517,6 +527,20 @@ html {
   max-width: 220px;
 }
 
+.active-element {
+  border-left: 2px solid #0174e1;
+  background-color: #eee;
+}
+
+.bottom-title {
+    position: fixed;
+    left: 96px;
+    bottom: 26px;
+    margin-right: 48px;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.07), 0 3px 1px -2px rgba(0, 0, 0, 0.06);
+}
 
 /* overwrite default */
 

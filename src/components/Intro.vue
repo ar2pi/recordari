@@ -158,16 +158,24 @@
             <md-icon md-icon-morph>close</md-icon>
             <md-icon>share</md-icon>
           </md-button>
-          <md-button class="md-fab md-mini md-clean">
+          <md-button class="md-fab md-mini md-clean"
+                     href="https://twitter.com/recordariapp"
+                     target="_blank">
             <md-icon :md-src="require('../assets/twitter.svg')"></md-icon>
           </md-button>
-          <md-button class="md-fab md-mini md-clean">
+          <md-button class="md-fab md-mini md-clean"
+                     href="https://www.facebook.com/recordariapp"
+                     target="_blank">
             <md-icon :md-src="require('../assets/facebook.svg')"></md-icon>
           </md-button>
-          <md-button class="md-fab md-mini md-clean">
+          <md-button class="md-fab md-mini md-clean"
+                     href="https://www.instagram.com/recordariapp"
+                     target="_blank">
             <md-icon :md-src="require('../assets/instagram.svg')"></md-icon>
           </md-button>
-          <md-button class="md-fab md-mini md-clean">
+          <md-button class="md-fab md-mini md-clean"
+                     href="https://www.youtube.com/channel/UCJXT3tpzILWwHGg_8mtIGWg"
+                     target="_blank">
             <md-icon :md-src="require('../assets/youtube.svg')"></md-icon>
           </md-button>
         </md-speed-dial>
