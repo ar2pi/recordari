@@ -1,203 +1,170 @@
 {
   "properties": {
-    "sum_registros": "27140",
+    "total": "27140",
     "tipo": "departamento"
   },
   "objects": [{
       "codigo": "88",
       "departamento": "SAN ANDRES",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "0"
     }, {
       "codigo": "5",
       "departamento": "ANTIOQUIA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "6675"
     },
     {
       "codigo": "8",
       "departamento": "ATLANTICO",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "267"
     },
     {
       "codigo": "11",
       "departamento": "BOGOTA, D.C.",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "2457"
     },
     {
       "codigo": "13",
       "departamento": "BOLIVAR",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "1282"
     },
     {
       "codigo": "15",
       "departamento": "BOYACA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "255"
     },
     {
       "codigo": "17",
       "departamento": "CALDAS",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "448"
     },
     {
       "codigo": "18",
       "departamento": "CAQUETA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "821"
     },
     {
       "codigo": "19",
       "departamento": "CAUCA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "1048"
     },
     {
       "codigo": "20",
       "departamento": "CESAR",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "1747"
     },
     {
       "codigo": "23",
       "departamento": "CORDOBA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "173"
     },
     {
       "codigo": "25",
       "departamento": "CUNDINAMARCA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "222"
     },
     {
       "codigo": "27",
       "departamento": "CHOCO",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "583"
     },
     {
       "codigo": "41",
       "departamento": "HUILA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "360"
     },
     {
       "codigo": "44",
       "departamento": "LA GUAJIRA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "272"
     },
     {
       "codigo": "47",
       "departamento": "MAGDALENA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "580"
     },
     {
       "codigo": "50",
       "departamento": "META",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "1109"
     },
     {
       "codigo": "52",
       "departamento": "NARIÑO",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "2236"
     },
     {
       "codigo": "54",
       "departamento": "NORTE DE SANTANDER",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "1890"
     },
     {
       "codigo": "63",
       "departamento": "QUINDIO",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "113"
     },
     {
       "codigo": "66",
       "departamento": "RISARALDA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "276"
     },
     {
       "codigo": "68",
       "departamento": "SANTANDER",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "981"
     },
     {
       "codigo": "70",
       "departamento": "SUCRE",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "694"
     },
     {
       "codigo": "73",
       "departamento": "TOLIMA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "370"
     },
     {
       "codigo": "76",
       "departamento": "VALLE DEL CAUCA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "733"
     },
     {
       "codigo": "81",
       "departamento": "ARAUCA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "270"
     },
     {
       "codigo": "85",
       "departamento": "CASANARE",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "557"
     },
     {
       "codigo": "86",
       "departamento": "PUTUMAYO",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "591"
     },
     {
       "codigo": "91",
       "departamento": "AMAZONAS",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "19"
     },
     {
       "codigo": "94",
       "departamento": "GUAINIA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "6"
     },
     {
       "codigo": "95",
       "departamento": "GUAVIARE",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "56"
     },
     {
       "codigo": "97",
       "departamento": "VAUPES",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "36"
     },
     {
       "codigo": "99",
       "departamento": "VICHADA",
-      "hecho-victimizante": "Secuestro",
       "sum_registros": "13"
     }
   ]

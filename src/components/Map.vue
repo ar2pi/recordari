@@ -306,17 +306,18 @@ export default {
           }
           return 0;
         });
+        this.stateBus.memoizedData.objects = [];
+        this.stateBus.memoizedData.properties = response.data.properties;
         for (let i = 0; i < response.data.objects.length; i++) {
           for (let j = 0; j < this.dptBoundaries.length; j++) {
             if (+response.data.objects[i]['codigo'] === this.dptBoundaries[j].options.daneCode) {
               this.dptBoundaries[j].options.strokeOpacity = .9;
               this.dptBoundaries[j].options.fillOpacity = 1 - (i / response.data.objects.length);
               this.dptBoundaries[j].options.visible = true;
-              this.stateBus.memoizedData[this.dptBoundaries[j].options.daneCode] = response.data.objects[i];
+              this.stateBus.memoizedData.objects[this.dptBoundaries[j].options.daneCode] = response.data.objects[i];
             }
           }
         }
-        this.stateBus.memoizedData.properties = response.data.properties;
         this.stateBus.activeDataset = this.datasets[layer];
         this.mapFilters = layer;
         if (this.datasets[layer].tooltip) {
@@ -408,9 +409,9 @@ export default {
           lng: (typeof $event.latLng.lng === 'function') ? $event.latLng.lng() : $event.latLng.lng
         };
         this.infoWindow.content = {
-          locality: this.stateBus.memoizedData[p.options.daneCode].departamento,
-          number: this.stateBus.memoizedData[p.options.daneCode].sum_registros,
-          label: this.stateBus.memoizedData[p.options.daneCode].label || this.stateBus.activeDataset.label
+          locality: this.stateBus.memoizedData.objects[p.options.daneCode].departamento,
+          number: this.stateBus.memoizedData.objects[p.options.daneCode].sum_registros,
+          label: this.stateBus.memoizedData.objects[p.options.daneCode].label || this.stateBus.activeDataset.label
         };
       }
     },
