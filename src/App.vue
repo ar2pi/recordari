@@ -49,6 +49,7 @@ Vue.material.registerTheme({
   recordari: {
     primary: 'cusblue',
     accent: 'cusred',
+    warn: 'yellow',
     background: 'white'
   }
 });

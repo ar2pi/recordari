@@ -517,6 +517,9 @@ html, body {
 .fit-image {
   object-fit: contain;
 }
+.sp-stack {
+  margin-bottom: 16px;
+}
 .sp-hinset {
   padding-left: 16px;
   padding-right: 16px;
