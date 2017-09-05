@@ -1,6 +1,6 @@
 {
   "properties": {
-    "total": "82239",
+    "total": "7141",
     "tipo": "departamento"
   },
   "objects": [
@@ -12,152 +12,152 @@
     {
       "codigo": "5",
       "departamento": "ANTIOQUIA",
-      "sum_registros": "28375"
+      "sum_registros": "1344"
     },
     {
       "codigo": "8",
       "departamento": "ATLANTICO",
-      "sum_registros": "253"
+      "sum_registros": "21"
     },
     {
       "codigo": "11",
       "departamento": "BOGOTA, D.C.",
-      "sum_registros": "25"
+      "sum_registros": "118"
     },
     {
       "codigo": "13",
       "departamento": "BOLIVAR",
-      "sum_registros": "2162"
+      "sum_registros": "181"
     },
     {
       "codigo": "15",
       "departamento": "BOYACA",
-      "sum_registros": "6150"
+      "sum_registros": "121"
     },
     {
       "codigo": "17",
       "departamento": "CALDAS",
-      "sum_registros": "1053"
+      "sum_registros": "131"
     },
     {
       "codigo": "18",
       "departamento": "CAQUETA",
-      "sum_registros": "976"
+      "sum_registros": "547"
     },
     {
       "codigo": "19",
       "departamento": "CAUCA",
-      "sum_registros": "3906"
+      "sum_registros": "483"
     },
     {
       "codigo": "20",
       "departamento": "CESAR",
-      "sum_registros": "825"
+      "sum_registros": "121"
     },
     {
       "codigo": "23",
       "departamento": "CORDOBA",
-      "sum_registros": "476"
+      "sum_registros": "72"
     },
     {
       "codigo": "25",
       "departamento": "CUNDINAMARCA",
-      "sum_registros": "8120"
+      "sum_registros": "157"
     },
     {
       "codigo": "27",
       "departamento": "CHOCO",
-      "sum_registros": "1620"
+      "sum_registros": "291"
     },
     {
       "codigo": "41",
       "departamento": "HUILA",
-      "sum_registros": "2220"
+      "sum_registros": "152"
     },
     {
       "codigo": "44",
       "departamento": "LA GUAJIRA",
-      "sum_registros": "150"
+      "sum_registros": "36"
     },
     {
       "codigo": "47",
       "departamento": "MAGDALENA",
-      "sum_registros": "510"
+      "sum_registros": "64"
     },
     {
       "codigo": "50",
       "departamento": "META",
-      "sum_registros": "3074"
+      "sum_registros": "638"
     },
     {
       "codigo": "52",
       "departamento": "NARIÑO",
-      "sum_registros": "4288"
+      "sum_registros": "305"
     },
     {
       "codigo": "54",
       "departamento": "NORTE DE SANTANDER",
-      "sum_registros": "1600"
+      "sum_registros": "151"
     },
     {
       "codigo": "63",
       "departamento": "QUINDIO",
-      "sum_registros": "276"
+      "sum_registros": "22"
     },
     {
       "codigo": "66",
       "departamento": "RISARALDA",
-      "sum_registros": "602"
+      "sum_registros": "89"
     },
     {
       "codigo": "68",
       "departamento": "SANTANDER",
-      "sum_registros": "5916"
+      "sum_registros": "205"
     },
     {
       "codigo": "70",
       "departamento": "SUCRE",
-      "sum_registros": "650"
+      "sum_registros": "57"
     },
     {
       "codigo": "73",
       "departamento": "TOLIMA",
-      "sum_registros": "3572"
+      "sum_registros": "413"
     },
     {
       "codigo": "76",
       "departamento": "VALLE DEL CAUCA",
-      "sum_registros": "2898"
+      "sum_registros": "266"
     },
     {
       "codigo": "81",
       "departamento": "ARAUCA",
-      "sum_registros": "315"
+      "sum_registros": "267"
     },
     {
       "codigo": "85",
       "departamento": "CASANARE",
-      "sum_registros": "1083"
+      "sum_registros": "227"
     },
     {
       "codigo": "86",
       "departamento": "PUTUMAYO",
-      "sum_registros": "845"
+      "sum_registros": "360"
     },
     {
       "codigo": "91",
       "departamento": "AMAZONAS",
-      "sum_registros": "44"
+      "sum_registros": "14"
     },
     {
       "codigo": "94",
       "departamento": "GUAINIA",
-      "sum_registros": "63"
+      "sum_registros": "21"
     },
     {
       "codigo": "95",
       "departamento": "GUAVIARE",
-      "sum_registros": "104"
+      "sum_registros": "163"
     },
     {
       "codigo": "97",
@@ -167,7 +167,7 @@
     {
       "codigo": "99",
       "departamento": "VICHADA",
-      "sum_registros": "52"
+      "sum_registros": "68"
     }
   ]
 }
