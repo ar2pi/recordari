@@ -343,6 +343,7 @@
           context.dptBoundaries[j].options.strokeOpacity = .9;
           context.dptBoundaries[j].options.fillColor = COLORS[0].COLOR_FILL;
           context.dptBoundaries[j].options.fillOpacity = 1 - (i / response.data.objects.length);
+          context.dptBoundaries[j].options.colorMemo = COLORS[0];
           context.dptBoundaries[j].options.visible = true;
           if(!context.stateBus.memoizedData.objects[context.dptBoundaries[j].options.daneCode]) {
             context.stateBus.memoizedData.objects[context.dptBoundaries[j].options.daneCode] = response.data.objects[i];
@@ -404,6 +405,7 @@
             context.dptBoundaries[k].options.strokeOpacity = .9;
             context.dptBoundaries[k].options.fillColor = COLORS[i].COLOR_FILL;
             context.dptBoundaries[k].options.fillOpacity = 1 - (j / groups[i].length);
+            context.dptBoundaries[k].options.colorMemo = COLORS[i];
             context.dptBoundaries[k].options.visible = true;
             if(!context.stateBus.memoizedData.objects[context.dptBoundaries[k].options.daneCode]) {
               context.stateBus.memoizedData.objects[context.dptBoundaries[k].options.daneCode] = groups[i][j];
@@ -598,7 +600,7 @@
             this.dptBoundaries[i].options.strokeOpacity = .9;
           }
           p.options.zIndex = 0;
-          p.options.strokeColor = COLOR_STROKE;
+          p.options.strokeColor = p.options.colorMemo.COLOR_STROKE;
         }
       },
       reinitPolygons() {
@@ -625,18 +627,37 @@
         this.$refs.leftSidenav.close();
       },
       setInfoWindowContent(p) {
-        if (!!this.stateBus.memoizedData.conversion) {
-          this.infoWindow.content = {
-            locality: this.stateBus.memoizedData.conversion.objects[p.options.daneCode].departamento,
-            number: percentage(this.stateBus.memoizedData.conversion.objects[p.options.daneCode].quantifier, 2),
-            label: this.stateBus.memoizedData.conversion.objects[p.options.daneCode].label
-          };
-        } else {
-          this.infoWindow.content = {
-            locality: this.stateBus.memoizedData.objects[p.options.daneCode].departamento,
-            number: this.$options.filters.currency(this.stateBus.memoizedData.objects[p.options.daneCode].sum_registros, '', 0),
-            label: this.stateBus.memoizedData.objects[p.options.daneCode].label || this.stateBus.activeDataset.label
-          };
+        switch (this.stateBus.memoizedData.properties.tipo) {
+          case 'departamento':
+            if (!!this.stateBus.memoizedData.conversion) {
+              this.infoWindow.content = {
+                locality: this.stateBus.memoizedData.conversion.objects[p.options.daneCode].departamento,
+                number: percentage(this.stateBus.memoizedData.conversion.objects[p.options.daneCode].quantifier, 2),
+                label: this.stateBus.memoizedData.conversion.objects[p.options.daneCode].label
+              };
+            } else {
+              this.infoWindow.content = {
+                locality: this.stateBus.memoizedData.objects[p.options.daneCode].departamento,
+                number: this.$options.filters.currency(this.stateBus.memoizedData.objects[p.options.daneCode].sum_registros, '', 0),
+                label: this.stateBus.memoizedData.objects[p.options.daneCode].label || this.stateBus.activeDataset.label
+              };
+            }
+            break;
+          case 'departamento_diff_pct':
+            let pct, label;
+            if(this.stateBus.memoizedData.objects[p.options.daneCode].pct_1 > this.stateBus.memoizedData.objects[p.options.daneCode].pct_2) {
+              pct = this.stateBus.memoizedData.objects[p.options.daneCode].pct_1;
+              label = 'votos por el no';
+            } else {
+              pct = this.stateBus.memoizedData.objects[p.options.daneCode].pct_2;
+              label = 'votos por el si';
+            }
+            this.infoWindow.content = {
+              locality: this.stateBus.memoizedData.objects[p.options.daneCode].departamento,
+              number: percentage(pct, 2),
+              label
+            };
+            break;
         }
       },
       toggleInfoWindow($event, p, idx) {
