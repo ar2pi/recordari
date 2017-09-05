@@ -60,7 +60,7 @@
       <md-button class="md-fab md-fab-top-right md-mini md-warn"
                  id="convert-data"
                  @click="toggleConvert(stateBus.activeDataset.convertType)"
-                 v-show="conversions.show">
+                 v-show="!!stateBus.activeDataset.convertType">
         <strong class="font18">{{ conversions.sign }}</strong>
       </md-button>
 
@@ -812,7 +812,6 @@
           location: null
         },
         conversions: {
-          show: true,
           active: false,
           sign: '%',
           convertedData: {}
@@ -839,6 +838,7 @@
 
   .map-card {
     width: 60%;
+    min-width: 225px;
     max-width: 600px;
   }
 
@@ -866,7 +866,7 @@
   }
 
   .dialog-large .md-dialog {
-    min-width: 80%;
+    width: 80%;
   }
 
   /* overwrite default */
