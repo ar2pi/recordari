@@ -10,8 +10,8 @@
                           @closeclick="reinitInfoWindow()">
           <div class="info-content">
             <strong>{{ infoWindow.content.locality }}</strong>
-            <p><span class="md-subheading">{{ infoWindow.content.number | currency('', 0) }}</span>
-              {{ infoWindow.content.label }}</p>
+            <p><span class="md-subheading">{{ infoWindow.content.number }}</span>
+              <span v-html="infoWindow.content.label"></span></p>
           </div>
         </gmap-info-window>
         <gmap-polygon :key="index"
@@ -56,6 +56,13 @@
           </md-button>
         </md-dialog-actions>
       </md-dialog>
+
+      <md-button class="md-fab md-fab-top-right md-mini md-warn"
+                 id="convert-data"
+                 @click="toggleConvert(stateBus.activeDataset.convertType)"
+                 v-show="conversions.show">
+        <strong class="font18">{{ conversions.sign }}</strong>
+      </md-button>
 
       <md-button class="md-fab md-fab-bottom-left fab-second-bottom md-warn"
                  id="modal-info"
@@ -188,9 +195,10 @@
         tooltip: {
           center: {lat: 6.797495, lng: -75.539246},
           location: 5,
-          content: 'Desde 1985 a 2017 8´504.127 personas estan registradas como victimas del conflicto armado. 1´636.533 de las cuales en Antioquia.'
+          content: 'Desde 1985 a 2017 8´504.127 personas estan registradas como victimas del conflicto armado, de las cuales 1´636.533 en Antioquia.'
         },
-        modal: 'conciencia/victimas-general.html'
+        modal: 'conciencia/victimas-general.html',
+        convertType: '%'
       },
       {
         name: 'Desplazamientos y abandonos de tierras',
@@ -200,9 +208,10 @@
         tooltip: {
           center: {lat: 6.797495, lng: -75.539246},
           location: 5,
-          content: 'Desde 1985 a 2017 se presentaron 1´311.141 casos de desplazamiento y abandono forzado de tierras durante el conflicto armado en el país, de los cuales Antioquia presenta la cifra más alta de despojo con 377. 375 colombianos afectados.'
+          content: 'Desde 1985 a 2017 se presentaron 7´319.303 casos de desplazamiento y abandono forzado de tierras durante el conflicto armado en el país, de los cuales Antioquia presenta la cifra más alta de despojo con 1´377.563 colombianos afectados.'
         },
-        modal: 'conciencia/desplazamiento-abandono.html'
+        modal: 'conciencia/desplazamiento-abandono.html',
+        convertType: '%'
       },
       {
         name: 'Niños, niñas y adolescentes víctimas del conflicto',
@@ -214,7 +223,8 @@
           location: 76,
           content: 'El departamento que más registra NNA víctimas del conflicto armado es Valle del Cauca con 22.928, seguido de Antioquia con 10.636 y Chocó con 6.308 casos.'
         },
-        modal: 'conciencia/nna-victimas.html'
+        modal: 'conciencia/nna-victimas.html',
+        convertType: '%'
       },
       {
         name: 'Niños y niñas reclutados por grupos armados',
@@ -224,14 +234,16 @@
         tooltip: {
           content: 'Desde 1999 cerca de 6.000 NNA se escaparon de los grupos armados o fueron liberados por la fuerza pública. 1 de cada 6 niños reclutados pertenecen a comunidades afrodescendientes e indígenas. La edad promedio de reclutamiento es de 13 años.'
         },
-        modal: 'conciencia/nna-vinculados.html'
+        modal: 'conciencia/nna-vinculados.html',
+        convertType: '%'
       },
       {
         name: 'Victimas de minas antipersonales',
         archive: 'conciencia/xDepartamentos_map_RUV1985-2017.json',
         geography: 'department',
         label: 'victimas directas de minas, municiones sin explotar y artefactos explosivos entre 1985 y 2017',
-        modal: 'conciencia/map.html'
+        modal: 'conciencia/map.html',
+        convertType: '%'
       },
       {
         name: 'Desapariciones forzosas',
@@ -240,7 +252,8 @@
         label: 'desapariciones forzadas por causa del conflicto entre 1985 y 2017',
         tooltip: {
           content: 'El departamento que más presenta casos  de desaparición es Antioquia. Según el Centro de Memoria Histórica  Entre 1970 y 2015 aproximadamente 60.630 personas han sido desaparecidas.  Por día, tres personas han sido víctimas de desaparición.'
-        }
+        },
+        convertType: '%'
       },
       {
         name: 'Secuestros',
@@ -249,7 +262,8 @@
         label: 'secuestros por causa del conflicto entre 1985 y 2017',
         tooltip: {
           center: 'En el año 2000 se presentó la cifra más alta de secuestros con 3500 registros de retenciones ilegales, producidas en su mayoría por las Farc y el Eln. La más baja fue en el año 2016 con 205 secuestros a nivel nacional.'
-        }
+        },
+        convertType: '%'
       },
       {
         name: 'Actos terroristas',
@@ -258,7 +272,8 @@
         label: 'victimas de actos terroristas, atentados, combates y hostigamientos perpetrados entre 1985 y 2017',
         tooltip: {
           center: 'Según el índice de Terrorismo Mundial, Colombia es el país con más atentados en la Latinoamérica, seguido de Paraguay, México y Chile. A nivel mundial Colombia está en el puesto 17 de los países con más casos de acciones terroristas.'
-        }
+        },
+        convertType: '%'
       },
       {
         name: 'Violencia sexual',
@@ -267,19 +282,22 @@
         label: 'delitos sexuales atribuidos al conflicto fueron cometidos entre 1985 y 2017',
         tooltip: {
           content: 'Según 12 organizaciones defensoras de los derechos humanos,  en el 90% de los casos de violencia sexual en el conflicto armado la impunidad persiste.'
-        }
+        },
+        convertType: '%'
       },
       {
         name: 'Homicidios',
         archive: 'conciencia/xDepartamentos_homicidios_RUV1985-2017.json',
         geography: 'department',
-        label: 'homicidios atribuidos al conflicto fueron cometidos entre 1985 y 2017'
+        label: 'homicidios atribuidos al conflicto fueron cometidos entre 1985 y 2017',
+        convertType: '%'
       },
       {
         name: 'Actos de tortura',
         archive: 'conciencia/xDepartamentos_tortura_RUV1985-2017.json',
         geography: 'department',
-        label: 'victimas de actos de tortura por causa del conflicto entre 1985 y 2017'
+        label: 'victimas de actos de tortura por causa del conflicto entre 1985 y 2017',
+        convertType: '%'
       }
     ],
     reparacion: [
@@ -293,7 +311,8 @@
         label: 'desmobilizados de los grupos alzados en armas entre 2003 y 2017',
         tooltip: {
           content: 'Según cifras de la Agencia Colombiana para la reintegración, hasta el momento hay 59.391 ex combatientes que se vincularon al proceso de desmovilización y reintegración, de los cuales el 89% son hombres y el 11% mujeres.'
-        }
+        },
+        convertType: '%'
       },
       {
         name: 'Resultados del plebiscito',
@@ -314,8 +333,9 @@
       }
       return 0;
     });
-    context.stateBus.memoizedData.objects = [];
+    context.stateBus.memoizedData.objects = {};
     context.stateBus.memoizedData.properties = response.data.properties;
+    context.stateBus.memoizedData.dataLength = 0;
     for (let i = 0; i < response.data.objects.length; i++) {
       for (let j = 0; j < context.dptBoundaries.length; j++) {
         if (+response.data.objects[i]['codigo'] === context.dptBoundaries[j].options.daneCode) {
@@ -324,7 +344,10 @@
           context.dptBoundaries[j].options.fillColor = COLORS[0].COLOR_FILL;
           context.dptBoundaries[j].options.fillOpacity = 1 - (i / response.data.objects.length);
           context.dptBoundaries[j].options.visible = true;
-          context.stateBus.memoizedData.objects[context.dptBoundaries[j].options.daneCode] = response.data.objects[i];
+          if(!context.stateBus.memoizedData.objects[context.dptBoundaries[j].options.daneCode]) {
+            context.stateBus.memoizedData.objects[context.dptBoundaries[j].options.daneCode] = response.data.objects[i];
+            context.stateBus.memoizedData.dataLength++;
+          }
         }
       }
     }
@@ -370,8 +393,9 @@
         return 0;
       });
     }
-    context.stateBus.memoizedData.objects = [];
+    context.stateBus.memoizedData.objects = {};
     context.stateBus.memoizedData.properties = response.data.properties;
+    context.stateBus.memoizedData.dataLength = 0;
     for (let i = 0; i < groups.length; i++) {
       for (let j = 0; j < groups[i].length; j++) {
         for (let k = 0; k < context.dptBoundaries.length; k++) {
@@ -381,7 +405,10 @@
             context.dptBoundaries[k].options.fillColor = COLORS[i].COLOR_FILL;
             context.dptBoundaries[k].options.fillOpacity = 1 - (j / groups[i].length);
             context.dptBoundaries[k].options.visible = true;
-            context.stateBus.memoizedData.objects[context.dptBoundaries[k].options.daneCode] = groups[i][j];
+            if(!context.stateBus.memoizedData.objects[context.dptBoundaries[k].options.daneCode]) {
+              context.stateBus.memoizedData.objects[context.dptBoundaries[k].options.daneCode] = groups[i][j];
+              context.stateBus.memoizedData.dataLength++;
+            }
           }
         }
       }
@@ -409,6 +436,18 @@
     }(context), 0);
   }
 
+  function fetchPoblationInfo(context) {
+    api.get('xDepartamentos_poblacion-colombia_DANE2017.json', {responseType: 'json'}).then((response) => {
+      context.poblationInfo.properties = response.data.properties;
+      context.poblationInfo.objects = {};
+      for(let i = 0; i < response.data.objects.length; i++) {
+        context.poblationInfo[response.data.objects[i].codigo] = response.data.objects[i];
+      }
+    }).catch((err) => {
+      console.error('error loading dataset!', err);
+    });
+  }
+
   function fetchModalInfo(context, content) {
     pages.get(content, {responseType: 'text'}).then((response) => {
       context.modalInfo = response.data;
@@ -416,6 +455,15 @@
       console.error('error loading dataset info!', err);
     });
     ;
+  }
+
+  function percentage(value, decimals) {
+    value = value || 0;
+    decimals = decimals || 0;
+    value = value * 100;
+    value = Math.round(value * Math.pow(10, decimals)) / Math.pow(10, decimals);
+    value = value + '%';
+    return value;
   }
 
   Vue.use(VueGoogleMaps, {
@@ -477,6 +525,7 @@
           });
         }
         this.showLayer(0);
+        fetchPoblationInfo(this);
         console.log('=== ended loading regions ===', (new Date()).getTime() - ms);
       }).catch((err) => {
         console.error('error loading dataset!', err);
@@ -518,6 +567,31 @@
           this.stateBus.outlinedPolygon = p.options.daneCode;
         }
       },
+      resetPolygonsOrder() {
+        let objectsArr = [];
+        for(let i in this.stateBus.memoizedData.objects) {
+          objectsArr.push(this.stateBus.memoizedData.objects[i]);
+        }
+        objectsArr.sort((a, b) => {
+          if (+a.sum_registros < +b.sum_registros) {
+            return 1;
+          } else if (+a.sum_registros > +b.sum_registros) {
+            return -1;
+          }
+          return 0;
+        });
+        for (let i = 0; i < objectsArr.length; i++) {
+          for (let j = 0; j < this.dptBoundaries.length; j++) {
+            if (+objectsArr[i]['codigo'] === this.dptBoundaries[j].options.daneCode) {
+              this.dptBoundaries[j].options.strokeColor = COLORS[0].COLOR_STROKE;
+              this.dptBoundaries[j].options.strokeOpacity = .9;
+              this.dptBoundaries[j].options.fillColor = COLORS[0].COLOR_FILL;
+              this.dptBoundaries[j].options.fillOpacity = 1 - (i / objectsArr.length);
+              this.dptBoundaries[j].options.visible = true;
+            }
+          }
+        }
+      },
       resetPolygon(p, force) {
         if (!this.infoWindow.opened || force) {
           for (let i = 0; i < this.dptBoundaries.length; i++) {
@@ -550,6 +624,21 @@
         this.showLayer(0);
         this.$refs.leftSidenav.close();
       },
+      setInfoWindowContent(p) {
+        if (!!this.stateBus.memoizedData.conversion) {
+          this.infoWindow.content = {
+            locality: this.stateBus.memoizedData.conversion.objects[p.options.daneCode].departamento,
+            number: percentage(this.stateBus.memoizedData.conversion.objects[p.options.daneCode].quantifier, 2),
+            label: this.stateBus.memoizedData.conversion.objects[p.options.daneCode].label
+          };
+        } else {
+          this.infoWindow.content = {
+            locality: this.stateBus.memoizedData.objects[p.options.daneCode].departamento,
+            number: this.$options.filters.currency(this.stateBus.memoizedData.objects[p.options.daneCode].sum_registros, '', 0),
+            label: this.stateBus.memoizedData.objects[p.options.daneCode].label || this.stateBus.activeDataset.label
+          };
+        }
+      },
       toggleInfoWindow($event, p, idx) {
         if (this.infoWindow.currentId === idx) {
           this.infoWindow.opened = !this.infoWindow.opened;
@@ -575,11 +664,7 @@
             lat: (typeof $event.latLng.lat === 'function') ? $event.latLng.lat() : $event.latLng.lat,
             lng: (typeof $event.latLng.lng === 'function') ? $event.latLng.lng() : $event.latLng.lng
           };
-          this.infoWindow.content = {
-            locality: this.stateBus.memoizedData.objects[p.options.daneCode].departamento,
-            number: this.stateBus.memoizedData.objects[p.options.daneCode].sum_registros,
-            label: this.stateBus.memoizedData.objects[p.options.daneCode].label || this.stateBus.activeDataset.label
-          };
+          this.setInfoWindowContent(p);
         }
       },
       reinitInfoWindow() {
@@ -611,6 +696,61 @@
         }
         this.tooltip.show = false;
       },
+      toggleConvert(convertType) {
+        if (this.conversions.sign === '%') {
+          let convertBuffer = [];
+          let totalBuffer = 0;
+          for (let i in this.stateBus.memoizedData.objects) {
+            convertBuffer.push({
+              codigo: this.stateBus.memoizedData.objects[i].codigo,
+              departamento: this.stateBus.memoizedData.objects[i].departamento,
+              sum_registros: +this.stateBus.memoizedData.objects[i].sum_registros / +this.poblationInfo[+this.stateBus.memoizedData.objects[i].codigo].sum_registros
+            });
+          }
+          convertBuffer.forEach((e) => {
+            totalBuffer += e.sum_registros;
+          });
+          convertBuffer.forEach((e) => {
+            e.comp_registros = e.sum_registros / totalBuffer;
+          });
+          convertBuffer.sort((a, b) => {
+            if (+a.sum_registros < +b.sum_registros) {
+              return 1;
+            } else if (+a.sum_registros > +b.sum_registros) {
+              return -1;
+            }
+            return 0;
+          });
+          this.stateBus.memoizedData.conversion = {objects:{}};
+          for (let i = 0; i < convertBuffer.length; i++) {
+            this.stateBus.memoizedData.conversion.objects[convertBuffer[i].codigo] = {
+              departamento: convertBuffer[i].departamento,
+              quantifier: convertBuffer[i].comp_registros,
+              label: 'indice relativo a los otros departamentos segun el numero de casos por total de poblacion'
+            }
+          }
+          for (let i = 0; i < convertBuffer.length; i++) {
+            for (let j = 0; j < this.dptBoundaries.length; j++) {
+              if (+convertBuffer[i]['codigo'] === this.dptBoundaries[j].options.daneCode) {
+                this.dptBoundaries[j].options.strokeColor = COLORS[0].COLOR_STROKE;
+                this.dptBoundaries[j].options.strokeOpacity = .9;
+                this.dptBoundaries[j].options.fillColor = COLORS[0].COLOR_FILL;
+                this.dptBoundaries[j].options.fillOpacity = 1 - (i / convertBuffer.length);
+                this.dptBoundaries[j].options.visible = true;
+              }
+            }
+          }
+        } else if (this.conversions.sign === 'x') {
+          this.resetPolygonsOrder();
+          delete this.stateBus.memoizedData.conversion;
+        }
+        if (this.infoWindow.opened) {
+          this.outlinePolygon(this.dptBoundaries[this.infoWindow.currentId], true);
+          this.setInfoWindowContent(this.dptBoundaries[this.infoWindow.currentId]);
+        }
+        this.conversions.active = !this.conversions.active;
+        this.conversions.sign = this.conversions.sign === 'x' ? convertType : 'x';
+      },
       openDialog(ref) {
         this.$refs[ref].open();
       },
@@ -640,6 +780,7 @@
         },
         datasets: [],
         dptBoundaries: [],
+        poblationInfo: {},
         map: {
           zoom: 5,
           center: {lat: 4.624335, lng: -74.063644},
@@ -669,6 +810,12 @@
           content: '',
           center: {},
           location: null
+        },
+        conversions: {
+          show: true,
+          active: false,
+          sign: '%',
+          convertedData: {}
         },
         modalInfo: null
       }
@@ -739,5 +886,9 @@
 
   .md-sidenav .md-sidenav-content {
     max-width: 80%;
+  }
+
+  .md-dialog p {
+    margin: 1em 0;
   }
 </style>

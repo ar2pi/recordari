@@ -543,3 +543,7 @@ html, body {
 .pill {
     margin: 1em;
 }
+
+.font18 {
+  font-size: 18px;
+}
