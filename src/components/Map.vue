@@ -149,6 +149,10 @@
                        :class="$route.params.theme === 'timeline' ? 'active-element' : 'md-raised md-primary'">Timeline
           </router-link>
         </p>
+        <div class="bottom-left-sidenav">
+          <div class="brick-unit"><img :src="require('../assets/dane.png')" class="" width="50" title="DANE" /></div>
+          <div class="brick-unit"><img :src="require('../assets/arn.jpg')" class="img-circle" width="50" title="DANE" /></div>
+        </div>
       </md-sidenav>
 
       <div class="bottom-title"
@@ -888,6 +892,12 @@
 
   .dialog-large .md-dialog {
     width: 80%;
+  }
+
+  .bottom-left-sidenav {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
   }
 
   /* overwrite default */
