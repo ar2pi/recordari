@@ -150,8 +150,27 @@
           </router-link>
         </p>
         <div class="bottom-left-sidenav">
-          <div class="brick-unit"><img :src="require('../assets/dane.png')" class="" width="50" title="DANE" /></div>
-          <div class="brick-unit"><img :src="require('../assets/arn.jpg')" class="img-circle" width="50" title="DANE" /></div>
+          <p class="md-subheading">Fuentes de datos:</p>
+          <div class="brick-unit">
+            <md-tooltip md-direction="top">Departamento Administrativo Nacional de Estadística</md-tooltip>
+            <img :src="require('../assets/dane_100.png')" class="img-rounded" width="50" alt="DANE" />
+          </div>
+          <div class="brick-unit">
+            <md-tooltip md-direction="top">Registro Único de Víctimas y Agencia para la Reincorporación y la Normalización</md-tooltip>
+            <img :src="require('../assets/arn_100.png')" class="img-circle" width="50" alt="RUV y ARN" />
+          </div>
+          <div class="brick-unit">
+            <md-tooltip md-direction="top">Instituto Colombiano de Bienestar Familiar</md-tooltip>
+            <img :src="require('../assets/icbf_100.png')" class="img-rounded" width="50" alt="ICBF" />
+          </div>
+          <div class="brick-unit">
+            <md-tooltip md-direction="top">Registro Único de Predios y Territorios Abandonados</md-tooltip>
+            <img :src="require('../assets/rupta_100.png')" class="img-rounded" width="50" alt="RUPTA" />
+          </div>
+          <div class="brick-unit">
+            <md-tooltip md-direction="top">Registraduria Nacional del Estado Civil</md-tooltip>
+            <img :src="require('../assets/registraduria_100.png')" class="img-rounded" width="50" alt="Registraduria" />
+          </div>
         </div>
       </md-sidenav>
 
@@ -305,7 +324,27 @@
       }
     ],
     reparacion: [
-
+      {
+        name: 'Victimas con reconocimiento sentencias y auto',
+        archive: 'reparacion/xDepartamentos_sentencias_RUV1985-2017.json',
+        geography: 'department',
+        label: 'personas que han sido reconocidas como victimas del conflicto armado en el cumplimiento de la sentencia 280 de 2013 y la auto 119 de 2013',
+        convertType: '%'
+      },
+      {
+        name: 'Niños y niñas desvinculados',
+        archive: 'reparacion/xDepartamentos_desvinculados_ICBF2012-2014.json',
+        geography: 'department',
+        label: 'niños y niñas desvinculados del conflicto entre 2012 y 2014',
+        convertType: '%'
+      },
+      {
+        name: 'Niños y niñas que ingresan al Proceso de Restablecimiento de Derechos',
+        archive: 'reparacion/xDepartamentos_pard_ICBF2011-2016.json',
+        geography: 'department',
+        label: 'niños y niñas que ingresan al Proceso Administrativo de Restablecimiento de Derechos (PARD) entre 2011 y 2016',
+        convertType: '%'
+      }
     ],
     reconciliacion: [
       {
