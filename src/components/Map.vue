@@ -357,6 +357,7 @@
       }
     }
     context.stateBus.activeDataset = context.datasets[layer];
+    context.conversions.sign = context.datasets[layer].convertType;
     context.mapFilters = layer;
     context.reinitInfoWindow();
     if (context.datasets[layer].tooltip) {
@@ -540,9 +541,6 @@
     events: {},
     methods: {
       showLayer(layer) {
-
-        console.log(layer, this.datasets, this.datasets[layer]);
-
         api.get(this.datasets[layer].archive, {responseType: 'json'}).then((response) => {
           switch (response.data.properties.tipo) {
             case 'departamento':
