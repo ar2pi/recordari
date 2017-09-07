@@ -114,8 +114,10 @@
                   @close="close('Left')">
         <md-toolbar class="md-large">
           <div class="md-toolbar-container md-align-center">
-            <md-image :md-src="require('../assets/recordari_white.svg')"
-                      width="200"></md-image>
+            <router-link to="/">
+              <md-image :md-src="require('../assets/recordari_white.svg')"
+                        width="200"></md-image>
+            </router-link>
           </div>
         </md-toolbar>
         <p class="pill">
@@ -378,8 +380,8 @@
       return 0;
     });
     context.stateBus.memoizedData.objects = {};
-    context.stateBus.memoizedData.properties = response.data.properties;
     context.stateBus.memoizedData.dataLength = 0;
+    context.stateBus.memoizedData.properties = response.data.properties;
     for (let i = 0; i < response.data.objects.length; i++) {
       for (let j = 0; j < context.dptBoundaries.length; j++) {
         if (+response.data.objects[i]['codigo'] === context.dptBoundaries[j].options.daneCode) {
@@ -396,27 +398,6 @@
         }
       }
     }
-    context.stateBus.activeDataset = context.datasets[layer];
-    context.conversions.sign = context.datasets[layer].convertType;
-    context.mapFilters = layer;
-    context.reinitInfoWindow();
-    if (context.datasets[layer].tooltip) {
-      context.tooltip.content = context.datasets[layer].tooltip.content;
-      context.tooltip.center = context.datasets[layer].tooltip.center;
-      context.tooltip.location = context.datasets[layer].tooltip.location;
-      setTimeout(((self) => {
-        return () => {
-          self.tooltip.show = true;
-        }
-      })(context), 600);
-    } else {
-      context.resetTooltip();
-    }
-    setTimeout(function (self) {
-      return function () {
-        self.closeDialog('dialog2');
-      }
-    }(context), 0);
   }
 
   function handleDiffDepartments(context, layer, response) {
@@ -440,8 +421,8 @@
       });
     }
     context.stateBus.memoizedData.objects = {};
-    context.stateBus.memoizedData.properties = response.data.properties;
     context.stateBus.memoizedData.dataLength = 0;
+    context.stateBus.memoizedData.properties = response.data.properties;
     for (let i = 0; i < groups.length; i++) {
       for (let j = 0; j < groups[i].length; j++) {
         for (let k = 0; k < context.dptBoundaries.length; k++) {
@@ -460,14 +441,20 @@
         }
       }
     }
+  }
 
+  function registerLayer(context, layer) {
     context.stateBus.activeDataset = context.datasets[layer];
     context.mapFilters = layer;
     context.reinitInfoWindow();
+    context.reinitInfoModal();
+    if (context.datasets[layer].convertType) {
+      context.conversions.sign = context.datasets[layer].convertType;
+    }
     if (context.datasets[layer].tooltip) {
       context.tooltip.content = context.datasets[layer].tooltip.content;
-      context.tooltip.center = context.datasets[layer].tooltip.center;
-      context.tooltip.location = context.datasets[layer].tooltip.location;
+      context.tooltip.center = context.datasets[layer].tooltip.center || null;
+      context.tooltip.location = context.datasets[layer].tooltip.location || null;
       setTimeout(((self) => {
         return () => {
           self.tooltip.show = true;
@@ -590,6 +577,7 @@
               handleDiffDepartments(this, layer, response);
               break;
           }
+          registerLayer(this, layer);
           setTimeout(function (self) {
             return function () {
               if (self.datasets[layer].modal === self.stateBus.activeDataset.modal) {
@@ -745,6 +733,9 @@
             this.stateBus.outlinedPolygon = null;
           }
         }
+      },
+      reinitInfoModal() {
+        this.modalInfo = '';
       },
       dive(center, location) {
         if (!!center && !!location) {

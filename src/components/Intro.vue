@@ -142,6 +142,33 @@
                 </div>
               </div>
             </div>
+            <div class="row pill fork-element">
+              <div id="btn5"
+                   :class="showElement === 'fe5' ? 'raised' : ''">
+                <md-button class="md-raised md-primary fork-button"
+                           data-toggle="fe5"
+                           @click="toggleForkElement">
+                  Historias
+                </md-button>
+                <div ref="fe5"
+                     class="row sm-valign-wrapper"
+                     style="opacity:0;overflow:hidden;"
+                     v-show="showElement === 'fe5'">
+                  <div class="col-md-5">
+                    <p class="sp-hinset--small">
+                      ¡Descubre historias de gente como tu, actores del cambio y constructores de paz!</p>
+                  </div>
+                  <div class="">
+                    <router-link tag="md-button"
+                                 to="historias"
+                                 class="md-raised md-accent">
+                      Ver historias
+                      <md-icon>keyboard_arrow_right</md-icon>
+                    </router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="md-fab md-fab-bottom-right">
