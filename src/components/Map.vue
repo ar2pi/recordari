@@ -152,23 +152,23 @@
         <div class="bottom-left-sidenav">
           <p class="md-subheading">Fuentes de datos:</p>
           <div class="brick-unit">
-            <md-tooltip md-direction="top">Departamento Administrativo Nacional de Estadística</md-tooltip>
+            <md-tooltip md-direction="right">Departamento Administrativo Nacional de Estadística</md-tooltip>
             <img :src="require('../assets/dane_100.png')" class="img-rounded" width="50" alt="DANE" />
           </div>
           <div class="brick-unit">
-            <md-tooltip md-direction="top">Registro Único de Víctimas y Agencia para la Reincorporación y la Normalización</md-tooltip>
+            <md-tooltip md-direction="right">Registro Único de Víctimas y Agencia para la Reincorporación y la Normalización</md-tooltip>
             <img :src="require('../assets/arn_100.png')" class="img-circle" width="50" alt="RUV y ARN" />
           </div>
           <div class="brick-unit">
-            <md-tooltip md-direction="top">Instituto Colombiano de Bienestar Familiar</md-tooltip>
+            <md-tooltip md-direction="right">Instituto Colombiano de Bienestar Familiar</md-tooltip>
             <img :src="require('../assets/icbf_100.png')" class="img-rounded" width="50" alt="ICBF" />
           </div>
           <div class="brick-unit">
-            <md-tooltip md-direction="top">Registro Único de Predios y Territorios Abandonados</md-tooltip>
+            <md-tooltip md-direction="right">Registro Único de Predios y Territorios Abandonados</md-tooltip>
             <img :src="require('../assets/rupta_100.png')" class="img-rounded" width="50" alt="RUPTA" />
           </div>
           <div class="brick-unit">
-            <md-tooltip md-direction="top">Registraduria Nacional del Estado Civil</md-tooltip>
+            <md-tooltip md-direction="right">Registraduria Nacional del Estado Civil</md-tooltip>
             <img :src="require('../assets/registraduria_100.png')" class="img-rounded" width="50" alt="Registraduria" />
           </div>
         </div>
@@ -211,14 +211,14 @@
   const datasets = {
     conciencia: [
       {
-        name: 'Victimas del conflicto armado',
+        name: 'Víctimas del conflicto armado',
         archive: 'conciencia/xDepartamentos_victimas-general_RUV1985-2017.json',
         geography: 'department',
         label: 'victimas directas del conflicto armado entre 1985 y 2017',
         tooltip: {
           center: {lat: 6.797495, lng: -75.539246},
           location: 5,
-          content: 'Desde 1985 a 2017 8´504.127 personas estan registradas como victimas del conflicto armado, de las cuales 1´636.533 en Antioquia.'
+          content: 'Desde 1985 a 2017 8´504.127 personas están registradas como víctimas del conflicto armado, de las cuales 1´636.533 en Antioquia.'
         },
         modal: 'conciencia/victimas-general.html',
         convertType: '%'
@@ -244,7 +244,7 @@
         tooltip: {
           center: {lat: 3.718662, lng: -76.552734},
           location: 76,
-          content: 'El departamento que más registra NNA víctimas del conflicto armado es Valle del Cauca con 22.928, seguido de Antioquia con 10.636 y Chocó con 6.308 casos.'
+          content: 'Más de dos millones de víctimas son niños, niñas y adolescentes, es decir uno de cada tres víctimas pertenecen a esta población, de los cuales 49% son niñas. 46.630 pertenecen a pueblos indígenas. 864 niños y 245 niñas han sido víctimas de minas antipersonal.'
         },
         modal: 'conciencia/nna-victimas.html',
         convertType: '%'
@@ -257,15 +257,16 @@
         tooltip: {
           content: 'Desde 1999 cerca de 6.000 NNA se escaparon de los grupos armados o fueron liberados por la fuerza pública. 1 de cada 6 niños reclutados pertenecen a comunidades afrodescendientes e indígenas. La edad promedio de reclutamiento es de 13 años.'
         },
-        modal: 'conciencia/nna-vinculados.html',
         convertType: '%'
       },
       {
-        name: 'Victimas de minas antipersonales',
+        name: 'Víctimas de minas antipersonal',
         archive: 'conciencia/xDepartamentos_map_RUV1985-2017.json',
         geography: 'department',
         label: 'victimas directas de minas, municiones sin explotar y artefactos explosivos entre 1985 y 2017',
-        modal: 'conciencia/map.html',
+        tooltip: {
+          content: 'Según datos de la Unidad de Víctimas los niños y adolescentes de sexo masculino han sido las principales víctimas de minas antipersonal.'
+        },
         convertType: '%'
       },
       {
