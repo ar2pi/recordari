@@ -168,19 +168,19 @@
           </div>
           <div class="brick-unit">
             <md-tooltip md-direction="right">Registro Único de Víctimas y Agencia para la Reincorporación y la Normalización</md-tooltip>
-            <img :src="require('../assets/arn_100.png')" class="img-circle" width="50" alt="RUV y ARN" />
+            <img :src="require('../assets/arn_100.png')" class="img-circle" width="40" alt="RUV y ARN" />
           </div>
           <div class="brick-unit">
             <md-tooltip md-direction="right">Instituto Colombiano de Bienestar Familiar</md-tooltip>
-            <img :src="require('../assets/icbf_100.png')" class="img-rounded" width="50" alt="ICBF" />
+            <img :src="require('../assets/icbf_100.png')" class="img-rounded" width="40" alt="ICBF" />
           </div>
           <div class="brick-unit">
             <md-tooltip md-direction="right">Registro Único de Predios y Territorios Abandonados</md-tooltip>
-            <img :src="require('../assets/rupta_100.png')" class="img-rounded" width="50" alt="RUPTA" />
+            <img :src="require('../assets/rupta_100.png')" class="img-rounded" width="40" alt="RUPTA" />
           </div>
           <div class="brick-unit">
             <md-tooltip md-direction="right">Registraduria Nacional del Estado Civil</md-tooltip>
-            <img :src="require('../assets/registraduria_100.png')" class="img-rounded" width="50" alt="Registraduria" />
+            <img :src="require('../assets/registraduria_100.png')" class="img-rounded" width="40" alt="Registraduria" />
           </div>
         </div>
       </md-sidenav>
@@ -930,10 +930,15 @@
     width: 80%;
   }
 
-  .bottom-left-sidenav {
-    position: absolute;
-    bottom: 1em;
-    left: 1em;
+  @media (min-width: 600px) {
+    .bottom-left-sidenav {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+    }
+    .bottom-left-sidenav img {
+      width: 50px;
+    }
   }
 
   /* overwrite default */
