@@ -257,6 +257,7 @@
         tooltip: {
           content: 'Desde 1999 cerca de 6.000 NNA se escaparon de los grupos armados o fueron liberados por la fuerza pública. 1 de cada 6 niños reclutados pertenecen a comunidades afrodescendientes e indígenas. La edad promedio de reclutamiento es de 13 años.'
         },
+        modal: 'conciencia/nna-reclutados.html',
         convertType: '%'
       },
       {
