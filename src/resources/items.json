@@ -1,10 +1,12 @@
 [
   {
+    "id": "1",
     "url": "cuentanos-tu-historia",
     "title": "¡ Cuentanos tu historia !",
     "description": "Contactanos en las redes o por correo y miremos juntos como compartir tu historia!"
   },
   {
+    "id": "2",
     "url": "sobreviviente-victima-de",
     "title": "Sobreviviente victima de ...",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.",
@@ -12,6 +14,7 @@
     "img": "vichada.jpg"
   },
   {
+    "id": "3",
     "url": "escolares-le-envian-carta-a",
     "title": "Escolares le envian carta a...",
     "description": "Lorem ipsum machin truc",

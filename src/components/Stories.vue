@@ -1,99 +1,104 @@
 <template>
-<md-theme md-name="recordari">
-  <div class="full-height doc-content-wrapper">
+  <md-theme md-name="recordari">
+    <div class="full-height doc-content-wrapper">
 
-    <md-layout md-align="center">
-      <md-layout md-flex="85"
-                 md-flex-small="100">
+      <md-layout md-align="center">
+        <md-layout md-flex="85"
+                   md-flex-small="100">
 
-        <div v-masonry
-             transition-duration="0.3s"
-             item-selector=".item"
-             class="full-width">
-          <div v-masonry-tile
-               class="item"
-               v-for="(item, index) in items">
-            <div class="clearfix sp-stack sp-hinset">
-              <md-card class="card-item">
-                <md-card-media v-if="item.img"
-                               md-ratio="16:9">
-                  <img :src="require('../assets/stories/' + item.img)"
-                       alt="Coffee House">
-                </md-card-media>
+          <div v-masonry
+               transition-duration="0.3s"
+               item-selector=".item"
+               class="full-width">
+            <div v-masonry-tile
+                 class="item"
+                 v-for="(item, index) in items">
+              <div class="clearfix sp-stack sp-hinset">
+                <md-card class="card-item">
+                  <md-card-media v-if="item.img"
+                                 md-ratio="16:9">
+                    <md-image :md-src="require('../assets/stories/' + item.img)"
+                              :alt="item.title"></md-image>
+                  </md-card-media>
 
-                <md-card-header>
-                  <h2 class="md-title">{{ item.title }}</h2>
-                  <div v-if="item.location"
-                       class="md-subhead">
-                    <md-icon>location_on</md-icon>
-                    <span>{{ item.location }}</span>
-                  </div>
-                </md-card-header>
+                  <md-card-header>
+                    <h2 class="md-title">{{ item.title }}</h2>
+                    <div v-if="item.location"
+                         class="md-subhead">
+                      <md-icon>location_on</md-icon>
+                      <span>{{ item.location }}</span>
+                    </div>
+                  </md-card-header>
 
-                <md-card-content v-if="item.description">
-                  <span>{{ item.description }}</span>
-                </md-card-content>
+                  <md-card-content v-if="item.description">
+                    <span>{{ item.description }}</span>
+                  </md-card-content>
 
-                <md-card-actions>
-                  <router-link tag="md-button"
-                               :to="'/historias/' + item.url"
-                               class="md-primary">Ver más
-                    <md-icon>keyboard_arrow_right</md-icon>
-                  </router-link>
-                </md-card-actions>
-              </md-card>
+                  <md-card-actions>
+                    <router-link tag="md-button"
+                                 :to="'/historias/' + item.url"
+                                 class="md-primary">Ver más
+                      <md-icon>keyboard_arrow_right</md-icon>
+                    </router-link>
+                  </md-card-actions>
+                </md-card>
+              </div>
             </div>
           </div>
-        </div>
 
+        </md-layout>
       </md-layout>
-    </md-layout>
 
-  </div>
-</md-theme>
+    </div>
+  </md-theme>
 </template>
 
 <script>
-import Vue from 'vue'
-import VueMaterial from 'vue-material'
-import VueMasonryPlugin from 'vue-masonry'
-import items from '../resources/items.json'
+  import Vue from 'vue'
+  import VueMaterial from 'vue-material'
+  import VueMasonryPlugin from 'vue-masonry'
+  import items from '../resources/items.json'
+  import MdImage from "../../node_modules/vue-material/src/components/mdImage/mdImage.vue";
 
-Vue.use(VueMasonryPlugin);
+  Vue.use(VueMasonryPlugin);
 
-export default {
-  name: 'ap-stories',
-  data() {
-    return {
-      items
+  export default {
+    components: {MdImage},
+    name: 'ap-stories',
+    data() {
+      return {
+        items
+      }
     }
   }
-}
 </script>
 
 <style>
-.doc-content-wrapper {
-  background-color: #f9f9f9;
-  padding: 36px 0;
-}
+  .doc-content-wrapper {
+    background-color: #f9f9f9;
+    padding: 36px 0;
+  }
 
-.item {
-  width: 100%;
-}
-@media (min-width: 960px) {
   .item {
-    width: 50%;
+    width: 100%;
   }
-}
-@media (min-width: 1280px) {
-  .item {
-    width: 33.3330%;
+
+  @media (min-width: 960px) {
+    .item {
+      width: 50%;
+    }
   }
-}
-@media (min-width: 1920px) {
-  .item {
-    width: 25%;
-    max-width: 400px;
+
+  @media (min-width: 1280px) {
+    .item {
+      width: 33.3330%;
+    }
   }
-}
+
+  @media (min-width: 1920px) {
+    .item {
+      width: 25%;
+      max-width: 400px;
+    }
+  }
 </style>

@@ -486,7 +486,6 @@
     }).catch((err) => {
       console.error('error loading dataset info!', err);
     });
-    ;
   }
 
   function percentage(value, decimals) {

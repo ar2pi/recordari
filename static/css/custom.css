@@ -526,19 +526,18 @@ html, body {
   object-fit: contain;
 }
 .sp-stack {
-  margin-bottom: 16px;
+  margin-bottom: 1em;
+}
+.sp-stack--big {
+  margin-bottom: 2em;
 }
 .sp-hinset {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.sp-hinset-left--small {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .sp-hinset--small {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: .5em;
+  padding-right: .5em;
 }
 .sp-fill {
   position: absolute;
