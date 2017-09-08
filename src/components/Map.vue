@@ -192,8 +192,6 @@
   import * as VueMaterial from 'vue-material'
   import styles from '../datasets/styles.json'
 
-  const COLOR_STROKE = '#B71C1C';
-  const COLOR_FILL = '#F44336';
   const COLORS = [
     {COLOR_STROKE: '#B71C1C', COLOR_FILL: '#F44336'},
     {COLOR_STROKE: '#0174e1', COLOR_FILL: '#27A2ED'}
@@ -546,10 +544,10 @@
           this.dptBoundaries.push({
             paths: dpt,
             options: {
-              strokeColor: COLOR_STROKE,
+              strokeColor: COLORS[0].COLOR_STROKE,
               strokeOpacity: 0,
               strokeWeight: 3,
-              fillColor: COLOR_FILL,
+              fillColor: COLORS[0].COLOR_FILL,
               fillOpacity: 0,
               visible: false,
               name: data[i].properties.n,

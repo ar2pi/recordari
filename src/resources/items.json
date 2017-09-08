@@ -1,0 +1,21 @@
+[
+  {
+    "url": "cuentanos-tu-historia",
+    "title": "¡ Cuentanos tu historia !",
+    "description": "Contactanos en las redes o por correo y miremos juntos como compartir tu historia!"
+  },
+  {
+    "url": "sobreviviente-victima-de",
+    "title": "Sobreviviente victima de ...",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.",
+    "location": "Vichada",
+    "img": "vichada.jpg"
+  },
+  {
+    "url": "escolares-le-envian-carta-a",
+    "title": "Escolares le envian carta a...",
+    "description": "Lorem ipsum machin truc",
+    "location": "Bogotá, D.C.",
+    "img": "entry2.jpg"
+  }
+]

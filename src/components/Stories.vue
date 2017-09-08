@@ -7,7 +7,6 @@
                  md-flex-small="100">
 
         <div v-masonry
-             v-show="!story"
              transition-duration="0.3s"
              item-selector=".item"
              class="full-width">
@@ -15,8 +14,7 @@
                class="item"
                v-for="(item, index) in items">
             <div class="clearfix sp-stack sp-hinset">
-              <md-card class="card-example"
-                       style="max-width:300px">
+              <md-card class="card-item">
                 <md-card-media v-if="item.img"
                                md-ratio="16:9">
                   <img :src="require('../assets/stories/' + item.img)"
@@ -48,9 +46,6 @@
           </div>
         </div>
 
-        <div v-if="!!story">
-          {{ story.title }}
-        </div>
       </md-layout>
     </md-layout>
 
@@ -62,59 +57,15 @@
 import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import VueMasonryPlugin from 'vue-masonry'
+import items from '../resources/items.json'
 
 Vue.use(VueMasonryPlugin);
 
 export default {
   name: 'ap-stories',
-  mounted() {
-    console.log('mounted', this.$route.params);
-    if (this.$route.params.story) {
-      for (let i = 0; i < this.items.length; i++) {
-        if (this.items[i].url === this.$route.params.story) {
-          this.story = this.items[i];
-          console.log('ok');
-        }
-      }
-    }
-  },
-  beforeRouteUpdate(to, from, next) {
-    if (to.params.story) {
-      for (let i = 0; i < this.items.length; i++) {
-        if (this.items[i].url === to.params.story) {
-          this.story = this.items[i];
-          console.log('ok');
-        }
-      }
-    }
-    console.log('to', to);
-    console.log('from', from);
-    next();
-  },
   data() {
     return {
-      story: null,
-      items: [
-        {
-          url: 'cuentanos-tu-historia',
-          title: '¡ Cuentanos tu historia !',
-          description: 'Contactanos en las redes o por correo y miremos juntos como compartir tu historia!'
-        },
-        {
-          url: 'sobreviviente-victima-de',
-          title: 'Sobreviviente victima de ...',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.',
-          location: 'Vichada',
-          img: 'vichada.jpg'
-        },
-        {
-          url: 'escolares-le-envian-carta-a',
-          title: 'Escolares le envian carta a...',
-          description: 'Lorem ipsum machin truc',
-          location: 'Bogotá, D.C.',
-          img: 'entry2.jpg'
-        }
-      ]
+      items
     }
   }
 }
@@ -126,18 +77,23 @@ export default {
   padding: 36px 0;
 }
 
-
-/*.item-move {
-  transition: all .5s cubic-bezier(.55, 0, .1, 1);
-  -webkit-transition: all .5s cubic-bezier(.55, 0, .1, 1);
+.item {
+  width: 100%;
 }
-
-.item-container {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  overflow: auto;
-}*/
+@media (min-width: 960px) {
+  .item {
+    width: 50%;
+  }
+}
+@media (min-width: 1280px) {
+  .item {
+    width: 33.3330%;
+  }
+}
+@media (min-width: 1920px) {
+  .item {
+    width: 25%;
+    max-width: 400px;
+  }
+}
 </style>
