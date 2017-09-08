@@ -148,7 +148,16 @@
           <router-link tag="md-button"
                        to="/cronos"
                        class="no-margin full-width"
-                       :class="$route.params.theme === 'timeline' ? 'active-element' : 'md-raised md-primary'">Timeline
+                       :class="$route.params.theme === 'timeline' ? 'active-element' : 'md-raised md-primary'">
+            Timeline
+          </router-link>
+        </p>
+        <p class="pill">
+          <router-link tag="md-button"
+                       to="/historias"
+                       class="no-margin full-width"
+                       :class="$route.params.theme === 'historias' ? 'active-element' : 'md-raised md-primary'">
+            Historias
           </router-link>
         </p>
         <div class="bottom-left-sidenav">

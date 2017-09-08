@@ -1,5 +1,10 @@
 <template>
-  <md-theme md-name="recordari">
+  <md-theme md-name="recordari" class="full-height">
+    <router-link tag="md-button"
+                 to="/"
+                 class="md-raised md-primary md-fab md-fab-top-left">
+      <md-icon>home</md-icon>
+    </router-link>
     <div class="full-height doc-content-wrapper">
 
       <md-layout md-align="center">
