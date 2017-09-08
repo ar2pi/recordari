@@ -1,6 +1,6 @@
 <template>
 <md-theme md-name="recordari">
-  <div class="valign-wrapper full-height">
+  <div class="doc-content-wrapper full-height">
     <router-link tag="md-button"
                  to="/"
                  class="md-raised md-primary md-fab md-fab-top-left">
@@ -26,5 +26,8 @@ export default {
 <style>
 iframe {
   height: 100% !important;
+}
+.doc-content-wrapper {
+  background-color: #f9f9f9;
 }
 </style>
