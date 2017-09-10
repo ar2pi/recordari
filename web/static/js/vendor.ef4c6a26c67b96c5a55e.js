@@ -42699,7 +42699,7 @@ function hasOwnProperty(obj, prop) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const getImageLightness = (image, onLoad, onError) => {
+function getImageLightness(image, onLoad, onError) {
   let canvas = document.createElement('canvas');
 
   image.crossOrigin = 'Anonymous';
@@ -42736,7 +42736,7 @@ const getImageLightness = (image, onLoad, onError) => {
   };
 
   image.onerror = onError;
-};
+}
 
 /* harmony default export */ __webpack_exports__["a"] = (getImageLightness);
 
@@ -48690,4 +48690,4 @@ function applyToTag (styleElement, obj) {
 
 /***/ })
 ]);
-//# sourceMappingURL=vendor.fd875d6e90f1507633ad.js.map
+//# sourceMappingURL=vendor.ef4c6a26c67b96c5a55e.js.map
