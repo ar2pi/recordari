@@ -42699,20 +42699,20 @@ function hasOwnProperty(obj, prop) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const getImageLightness = (image, onLoad, onError) => {
-  let canvas = document.createElement('canvas');
+var getImageLightness = function getImageLightness(image, onLoad, onError) {
+  var canvas = document.createElement('canvas');
 
   image.crossOrigin = 'Anonymous';
 
-  image.onload = function() {
-    let colorSum = 0;
-    let ctx;
-    let imageData;
-    let imageMetadata;
-    let r;
-    let g;
-    let b;
-    let average;
+  image.onload = function () {
+    var colorSum = 0;
+    var ctx = void 0;
+    var imageData = void 0;
+    var imageMetadata = void 0;
+    var r = void 0;
+    var g = void 0;
+    var b = void 0;
+    var average = void 0;
 
     canvas.width = this.width;
     canvas.height = this.height;
@@ -42723,7 +42723,7 @@ const getImageLightness = (image, onLoad, onError) => {
     imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     imageMetadata = imageData.data;
 
-    for (let x = 0, len = imageMetadata.length; x < len; x += 4) {
+    for (var x = 0, len = imageMetadata.length; x < len; x += 4) {
       r = imageMetadata[x];
       g = imageMetadata[x + 1];
       b = imageMetadata[x + 2];
@@ -48690,4 +48690,4 @@ function applyToTag (styleElement, obj) {
 
 /***/ })
 ]);
-//# sourceMappingURL=vendor.fd875d6e90f1507633ad.js.map
+//# sourceMappingURL=vendor.2e81fc97dfcd8397ece9.js.map
