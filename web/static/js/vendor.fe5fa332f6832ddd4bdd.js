@@ -42699,20 +42699,20 @@ function hasOwnProperty(obj, prop) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var getImageLightness = function getImageLightness(image, onLoad, onError) {
-  var canvas = document.createElement('canvas');
+/* harmony default export */ __webpack_exports__["a"] = (function(image, onLoad, onError) {
+  let canvas = document.createElement('canvas');
 
   image.crossOrigin = 'Anonymous';
 
-  image.onload = function () {
-    var colorSum = 0;
-    var ctx = void 0;
-    var imageData = void 0;
-    var imageMetadata = void 0;
-    var r = void 0;
-    var g = void 0;
-    var b = void 0;
-    var average = void 0;
+  image.onload = function() {
+    let colorSum = 0;
+    let ctx;
+    let imageData;
+    let imageMetadata;
+    let r;
+    let g;
+    let b;
+    let average;
 
     canvas.width = this.width;
     canvas.height = this.height;
@@ -42723,7 +42723,7 @@ var getImageLightness = function getImageLightness(image, onLoad, onError) {
     imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     imageMetadata = imageData.data;
 
-    for (var x = 0, len = imageMetadata.length; x < len; x += 4) {
+    for (let x = 0, len = imageMetadata.length; x < len; x += 4) {
       r = imageMetadata[x];
       g = imageMetadata[x + 1];
       b = imageMetadata[x + 2];
@@ -42736,9 +42736,7 @@ var getImageLightness = function getImageLightness(image, onLoad, onError) {
   };
 
   image.onerror = onError;
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (getImageLightness);
+});
 
 
 /***/ }),
@@ -48690,4 +48688,4 @@ function applyToTag (styleElement, obj) {
 
 /***/ })
 ]);
-//# sourceMappingURL=vendor.2e81fc97dfcd8397ece9.js.map
+//# sourceMappingURL=vendor.fe5fa332f6832ddd4bdd.js.map
