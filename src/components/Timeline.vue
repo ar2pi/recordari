@@ -3,7 +3,7 @@
   <div class="doc-content-wrapper full-height">
     <router-link tag="md-button"
                  to="/"
-                 class="md-raised md-primary md-fab md-fab-top-left">
+                 class="md-raised md-primary md-fab md-fab-top-right">
       <md-icon>home</md-icon>
     </router-link>
     <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1rbeTxxdMRRrhj__4VfTMxOj4AC4nxw6tHvxkAKgtmYU&font=Default&lang=en&initial_zoom=2&height=650'

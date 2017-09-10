@@ -2,7 +2,7 @@
   <md-theme md-name="recordari" class="full-height">
     <router-link tag="md-button"
                  to="/"
-                 class="md-raised md-primary md-fab md-fab-top-left">
+                 class="md-raised md-primary md-fab md-fab-top-right">
       <md-icon>home</md-icon>
     </router-link>
     <div class="full-height doc-content-wrapper">
@@ -78,7 +78,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .doc-content-wrapper {
     background-color: #f9f9f9;
     padding: 36px 0;

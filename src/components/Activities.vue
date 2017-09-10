@@ -3,7 +3,7 @@
   <div class="full-height doc-content-wrapper">
     <router-link tag="md-button"
                  to="/"
-                 class="md-raised md-primary md-fab md-fab-top-left">
+                 class="md-raised md-primary md-fab md-fab-top-right">
       <md-icon>home</md-icon>
     </router-link>
 
