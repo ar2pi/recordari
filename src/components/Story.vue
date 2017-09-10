@@ -67,8 +67,7 @@
 
 <script>
   import Vue from 'vue'
-  import VueMaterial from 'vue-material'
-  import SocialSharing from 'vue-social-sharing'
+  import * as SocialSharing from 'vue-social-sharing'
   import axios from 'axios'
   import items from '../resources/items.json'
 

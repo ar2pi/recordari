@@ -60,15 +60,12 @@
 
 <script>
   import Vue from 'vue'
-  import VueMaterial from 'vue-material'
   import VueMasonryPlugin from 'vue-masonry'
   import items from '../resources/items.json'
-  import MdImage from "../../node_modules/vue-material/src/components/mdImage/mdImage.vue";
 
   Vue.use(VueMasonryPlugin);
 
   export default {
-    components: {MdImage},
     name: 'ap-stories',
     data() {
       return {

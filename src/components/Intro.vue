@@ -213,11 +213,7 @@
 </template>
 
 <script>
-import * as VueMaterial from 'vue-material'
 import anime from 'animejs'
-import Vue from 'vue'
-
-Vue.use(VueMaterial);
 
 export default {
   name: 'ap-intro',

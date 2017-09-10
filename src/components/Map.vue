@@ -198,7 +198,6 @@
   import axios from 'axios'
   import Vue2Filters from 'vue2-filters'
   import * as VueGoogleMaps from 'vue2-google-maps'
-  import * as VueMaterial from 'vue-material'
   import styles from '../datasets/styles.json'
 
   const COLORS = [
@@ -512,7 +511,6 @@
       key: 'AIzaSyCe1S3oeq7wJ5AeA9wnyiNCyHr1N2vbcm4',
     }
   });
-
   Vue.use(Vue2Filters);
 
   export default {
