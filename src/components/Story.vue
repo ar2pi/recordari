@@ -29,8 +29,8 @@
             <social-sharing :url="location.href"
                             :title="story.title"
                             :description="story.description"
-                            :quote="story.description"
-                            hashtags="testhashtag"
+                            :quote="story.quote ? story.quote : story.description"
+                            :hashtags="story.hashtags ? story.hashtags : 'somozpaz'"
                             twitter-user="recordariapp"
                             inline-template>
               <div class="social-shares">
@@ -127,12 +127,12 @@
 <style scoped>
   .doc-content-wrapper {
     background-color: #f9f9f9;
-    padding: 36px;
+    padding: 2em;
   }
   @media (max-width: 960px) {
     .doc-content-wrapper {
-      padding-right: 36px;
-      padding-left: 36px;
+      padding-right: 1em;
+      padding-left: 1em;
     }
   }
 

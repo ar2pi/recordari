@@ -1,13 +1,7 @@
-/* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-#app,
-#map {
-  height: 100%;
 }
 
 .img-responsive {
@@ -493,10 +487,6 @@ html, body {
 .transparent {
     opacity: 0;
 }
-
-/*.btn-large i {*/
-  /*font-size: inherit;*/
-/*}*/
 
 .inline-block {
   display: inline-block;

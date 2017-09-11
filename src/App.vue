@@ -57,7 +57,7 @@
   export default {
     name: 'ap-app',
     created() {
-      this.$on('loaded', function (id) {
+      this.$on('loaded', function () {
         console.log('loaded');
         this.loadedOnce = (this.loadedOnce) ? this.loadedOnce : true;
       })
@@ -72,6 +72,7 @@
 
 <style>
   #app {
+    height: 100%;
     background-color: #27A2ED;
   }
 </style>

@@ -78,7 +78,7 @@
 <style scoped>
   .doc-content-wrapper {
     background-color: #f9f9f9;
-    padding: 36px 0;
+    padding: 2em 0;
   }
 
   .item {
