@@ -60,7 +60,7 @@
 
 <script>
   import Vue from 'vue'
-  import VueMasonryPlugin from 'vue-masonry'
+  import {VueMasonryPlugin} from 'vue-masonry'
   import items from '../resources/items.json'
 
   Vue.use(VueMasonryPlugin);
