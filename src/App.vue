@@ -8,6 +8,8 @@
   import Vue from 'vue'
   import * as VueMaterial from 'vue-material'
 
+  console.log('Vue.config', Vue.config);
+
   Vue.use(VueMaterial);
 
   Vue.material.registerPalette('cusblue', {
