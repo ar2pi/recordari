@@ -4,7 +4,10 @@ import Vue from 'vue'
 import router from './router'
 import App from './App'
 
-Vue.config.productionTip = false;
+Vue.config.debug = !(process.env.NODE_ENV === 'production');
+Vue.config.devtools = !(process.env.NODE_ENV === 'production');
+Vue.config.productionTip = !(process.env.NODE_ENV === 'production');
+Vue.config.silent = process.env.NODE_ENV === 'production';
 
 // const EventBus = new Vue();
 // Object.defineProperties(Vue.prototype, {
