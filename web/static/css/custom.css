@@ -4,6 +4,10 @@ html, body {
   padding: 0;
 }
 
+audio {
+  min-height: 32px;
+}
+
 .img-responsive {
   display: block;
   max-width: 100%;

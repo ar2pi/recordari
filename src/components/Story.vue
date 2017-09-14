@@ -16,7 +16,7 @@
             <h1 class="md-display-1 text-center">{{ story.title }}</h1>
             <div v-if="!!story.img"
                  class="md-16-9 sp-stack--big">
-              <md-image :md-src="require('../assets/stories/' + story.img)"
+              <md-image :md-src="require('../../static/img/stories/' + story.img)"
                         :alt="story.title"
                         class="center-block"></md-image>
             </div>

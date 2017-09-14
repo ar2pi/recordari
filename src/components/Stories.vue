@@ -22,7 +22,7 @@
                 <md-card class="card-item">
                   <md-card-media v-if="item.img"
                                  md-ratio="16:9">
-                    <md-image :md-src="require('../assets/stories/' + item.img)"
+                    <md-image :md-src="require('../../static/img/stories/' + item.img)"
                               :alt="item.title"></md-image>
                   </md-card-media>
 
