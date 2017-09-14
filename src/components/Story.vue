@@ -165,8 +165,6 @@
 
   @media (min-width: 960px) {
     .social-shares {
-      bottom: unset;
-      top: 1em;
       right: 2em;
     }
   }

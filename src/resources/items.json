@@ -7,18 +7,10 @@
   },
   {
     "id": "2",
-    "url": "sobreviviente-victima-de",
-    "title": "Sobreviviente victima de ...",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.",
-    "location": "Vichada",
+    "url": "masacre-de-la-horqueta",
+    "title": "Masacre de la Horqueta",
+    "description": "En noviembre de 1997 un comando paramilitar del Bloque Elmer Cárdenas de las AUC, asesinó a 15 campesinos en La Horqueta, Tocaima, Cundinamarca. 17 años después una mujer narra cómo vivió ese violento episodio que cambió su vida.",
+    "location": "Horqueta",
     "img": "vichada.jpg"
-  },
-  {
-    "id": "3",
-    "url": "escolares-le-envian-carta-a",
-    "title": "Escolares le envian carta a...",
-    "description": "Lorem ipsum machin truc",
-    "location": "Bogotá, D.C.",
-    "img": "entry2.jpg"
   }
 ]
