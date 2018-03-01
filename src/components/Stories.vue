@@ -59,9 +59,9 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-  import VueMasonryPlugin from 'vue-masonry'
-  import items from '../resources/items.json'
+  import Vue from 'vue';
+  import * as VueMasonryPlugin from 'vue-masonry';
+  import items from '../resources/items.json';
 
   Vue.use(VueMasonryPlugin);
 
