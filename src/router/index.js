@@ -13,6 +13,7 @@ import Timeline from '@/components/Timeline'
 import Activities from '@/components/Activities'
 import Stories from '@/components/Stories'
 import Story from '@/components/Story'
+import Introbis from '@/components/Introbis'
 
 
 Vue.use(Router);
@@ -24,6 +25,12 @@ export default new Router({
       name: 'intro',
       component: Intro
     },
+    {
+      path: '/introbis',
+      name: 'introbis',
+      component: Introbis
+    },
+
     // {
     //   path: '/inicio',
     //   name: 'Fork',
