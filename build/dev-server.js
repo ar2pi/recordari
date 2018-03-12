@@ -2,9 +2,11 @@
 
 require('./check-versions')();
 
+const env = require('../config/dev.env');
+
 const config = require('../config');
 if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV);
+  process.env.NODE_ENV = JSON.parse(env.NODE_ENV);
 }
 
 const opn = require('opn');
