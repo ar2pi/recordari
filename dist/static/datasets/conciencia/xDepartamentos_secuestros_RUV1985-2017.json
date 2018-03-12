@@ -1,0 +1,173 @@
+{
+  "properties": {
+    "total": "31400",
+    "tipo": "departamento"
+  },
+  "objects": [
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "sum_registros": "7289"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLANTICO",
+      "sum_registros": "100"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTA, D.C.",
+      "sum_registros": "229"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLIVAR",
+      "sum_registros": "1626"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACA",
+      "sum_registros": "343"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "sum_registros": "632"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETA",
+      "sum_registros": "1470"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "sum_registros": "1307"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "sum_registros": "1930"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CORDOBA",
+      "sum_registros": "493"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "sum_registros": "478"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCO",
+      "sum_registros": "857"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "sum_registros": "374"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "sum_registros": "362"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "sum_registros": "712"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "sum_registros": "1768"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "sum_registros": "2399"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "sum_registros": "2098"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "sum_registros": "71"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "sum_registros": "271"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "sum_registros": "965"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "sum_registros": "565"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "sum_registros": "623"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "sum_registros": "1097"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "sum_registros": "615"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "sum_registros": "699"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "sum_registros": "1200"
+    },
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRES",
+      "sum_registros": "1"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "sum_registros": "26"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINIA",
+      "sum_registros": "29"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "sum_registros": "543"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPES",
+      "sum_registros": "107"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "sum_registros": "121"
+    }
+  ]
+}

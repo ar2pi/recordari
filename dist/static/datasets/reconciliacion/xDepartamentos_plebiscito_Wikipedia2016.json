@@ -1,0 +1,311 @@
+{
+  "properties": {
+    "total": {
+      "pct_1": "0.5021",
+      "pct_2": "0.4978",
+      "sum_1": "6431376",
+      "sum_2": "6377482",
+      "diff_1-2": "53894"
+    },
+    "tipo": "departamento_diff_pct"
+  },
+  "objects": [
+    {
+      "codigo": "5",
+      "departamento": "ANTIOQUIA",
+      "pct_1": "0.62",
+      "pct_2": "0.3799",
+      "sum_1": "1057518",
+      "sum_2": "648051",
+      "diff_1-2": "409467"
+    },
+    {
+      "codigo": "8",
+      "departamento": "ATLÁNTICO",
+      "pct_1": "0.3946",
+      "pct_2": "0.6053",
+      "sum_1": "168300",
+      "sum_2": "258121",
+      "diff_1-2": "89821"
+    },
+    {
+      "codigo": "11",
+      "departamento": "BOGOTÁ D.C.",
+      "pct_1": "0.4392",
+      "pct_2": "0.5607",
+      "sum_1": "1114933",
+      "sum_2": "1423612",
+      "diff_1-2": "308679"
+    },
+    {
+      "codigo": "13",
+      "departamento": "BOLÍVAR",
+      "pct_1": "0.3976",
+      "pct_2": "0.6023",
+      "sum_1": "137307",
+      "sum_2": "208019",
+      "diff_1-2": "70712"
+    },
+    {
+      "codigo": "15",
+      "departamento": "BOYACÁ",
+      "pct_1": "0.4991",
+      "pct_2": "0.5008",
+      "sum_1": "188170",
+      "sum_2": "188840",
+      "diff_1-2": "670"
+    },
+    {
+      "codigo": "17",
+      "departamento": "CALDAS",
+      "pct_1": "0.5709",
+      "pct_2": "0.429",
+      "sum_1": "180366",
+      "sum_2": "135540",
+      "diff_1-2": "44826"
+    },
+    {
+      "codigo": "18",
+      "departamento": "CAQUETÁ",
+      "pct_1": "0.5304",
+      "pct_2": "0.4695",
+      "sum_1": "44282",
+      "sum_2": "39197",
+      "diff_1-2": "5085"
+    },
+    {
+      "codigo": "19",
+      "departamento": "CAUCA",
+      "pct_1": "0.326",
+      "pct_2": "0.6739",
+      "sum_1": "113776",
+      "sum_2": "235218",
+      "diff_1-2": "121442"
+    },
+    {
+      "codigo": "20",
+      "departamento": "CESAR",
+      "pct_1": "0.4933",
+      "pct_2": "0.5066",
+      "sum_1": "117446",
+      "sum_2": "120595",
+      "diff_1-2": "3149"
+    },
+    {
+      "codigo": "23",
+      "departamento": "CÓRDOBA",
+      "pct_1": "0.3926",
+      "pct_2": "0.6073",
+      "sum_1": "145611",
+      "sum_2": "225223",
+      "diff_1-2": "79612"
+    },
+    {
+      "codigo": "25",
+      "departamento": "CUNDINAMARCA",
+      "pct_1": "0.5652",
+      "pct_2": "0.4347",
+      "sum_1": "437928",
+      "sum_2": "336874",
+      "diff_1-2": "101074"
+    },
+    {
+      "codigo": "27",
+      "departamento": "CHOCÓ",
+      "pct_1": "0.2023",
+      "pct_2": "0.7976",
+      "sum_1": "19095",
+      "sum_2": "75257",
+      "diff_1-2": "56162"
+    },
+    {
+      "codigo": "41",
+      "departamento": "HUILA",
+      "pct_1": "0.6077",
+      "pct_2": "0.3922",
+      "sum_1": "185484",
+      "sum_2": "119706",
+      "diff_1-2": "65778"
+    },
+    {
+      "codigo": "44",
+      "departamento": "LA GUAJIRA",
+      "pct_1": "0.3885",
+      "pct_2": "0.6114",
+      "sum_1": "41566",
+      "sum_2": "65417",
+      "diff_1-2": "23851"
+    },
+    {
+      "codigo": "47",
+      "departamento": "MAGDALENA",
+      "pct_1": "0.3946",
+      "pct_2": "0.6053",
+      "sum_1": "86102",
+      "sum_2": "132063",
+      "diff_1-2": "45961"
+    },
+    {
+      "codigo": "50",
+      "departamento": "META",
+      "pct_1": "0.6358",
+      "pct_2": "0.3641",
+      "sum_1": "191489",
+      "sum_2": "109676",
+      "diff_1-2": "81813"
+    },
+    {
+      "codigo": "52",
+      "departamento": "NARIÑO",
+      "pct_1": "0.3518",
+      "pct_2": "0.6481",
+      "sum_1": "136283",
+      "sum_2": "251047",
+      "diff_1-2": "114764"
+    },
+    {
+      "codigo": "54",
+      "departamento": "NORTE DE SANTANDER",
+      "pct_1": "0.6392",
+      "pct_2": "0.3607",
+      "sum_1": "282183",
+      "sum_2": "159255",
+      "diff_1-2": "122928"
+    },
+    {
+      "codigo": "63",
+      "departamento": "QUINDIO",
+      "pct_1": "0.6013",
+      "pct_2": "0.3986",
+      "sum_1": "110708",
+      "sum_2": "73793",
+      "diff_1-2": "36915"
+    },
+    {
+      "codigo": "66",
+      "departamento": "RISARALDA",
+      "pct_1": "0.5569",
+      "pct_2": "0.443",
+      "sum_1": "171230",
+      "sum_2": "136208",
+      "diff_1-2": "35022"
+    },
+    {
+      "codigo": "68",
+      "departamento": "SANTANDER",
+      "pct_1": "0.5564",
+      "pct_2": "0.4435",
+      "sum_1": "389598",
+      "sum_2": "310555",
+      "diff_1-2": "79043"
+    },
+    {
+      "codigo": "70",
+      "departamento": "SUCRE",
+      "pct_1": "0.3811",
+      "pct_2": "0.6188",
+      "sum_1": "84887",
+      "sum_2": "137817",
+      "diff_1-2": "52930"
+    },
+    {
+      "codigo": "73",
+      "departamento": "TOLIMA",
+      "pct_1": "0.5971",
+      "pct_2": "0.4028",
+      "sum_1": "243150",
+      "sum_2": "164061",
+      "diff_1-2": "79089"
+    },
+    {
+      "codigo": "76",
+      "departamento": "VALLE DEL CAUCA",
+      "pct_1": "0.4755",
+      "pct_2": "0.5244",
+      "sum_1": "574237",
+      "sum_2": "633329",
+      "diff_1-2": "59092"
+    },
+    {
+      "codigo": "81",
+      "departamento": "ARAUCA",
+      "pct_1": "0.5137",
+      "pct_2": "0.4862",
+      "sum_1": "30274",
+      "sum_2": "28653",
+      "diff_1-2": "1621"
+    },
+    {
+      "codigo": "85",
+      "departamento": "CASANARE",
+      "pct_1": "0.7114",
+      "pct_2": "0.2885",
+      "sum_1": "89054",
+      "sum_2": "36118",
+      "diff_1-2": "52936"
+    },
+    {
+      "codigo": "86",
+      "departamento": "PUTUMAYO",
+      "pct_1": "0.3449",
+      "pct_2": "0.655",
+      "sum_1": "23505",
+      "sum_2": "44643",
+      "diff_1-2": "21138"
+    },
+    {
+      "codigo": "88",
+      "departamento": "SAN ANDRÉS",
+      "pct_1": "0.4498",
+      "pct_2": "0.5001",
+      "sum_1": "4313",
+      "sum_2": "5275",
+      "diff_1-2": "962"
+    },
+    {
+      "codigo": "91",
+      "departamento": "AMAZONAS",
+      "pct_1": "0.4335",
+      "pct_2": "0.5664",
+      "sum_1": "4994",
+      "sum_2": "6524",
+      "diff_1-2": "1530"
+    },
+    {
+      "codigo": "94",
+      "departamento": "GUAINÍA",
+      "pct_1": "0.4447",
+      "pct_2": "0.5552",
+      "sum_1": "2664",
+      "sum_2": "3326",
+      "diff_1-2": "662"
+    },
+    {
+      "codigo": "95",
+      "departamento": "GUAVIARE",
+      "pct_1": "0.4713",
+      "pct_2": "0.5286",
+      "sum_1": "9924",
+      "sum_2": "11132",
+      "diff_1-2": "1208"
+    },
+    {
+      "codigo": "97",
+      "departamento": "VAUPÉS",
+      "pct_1": "0.2194",
+      "pct_2": "0.7805",
+      "sum_1": "1067",
+      "sum_2": "3796",
+      "diff_1-2": "2729"
+    },
+    {
+      "codigo": "99",
+      "departamento": "VICHADA",
+      "pct_1": "0.4933",
+      "pct_2": "0.5066",
+      "sum_1": "5977",
+      "sum_2": "6139",
+      "diff_1-2": "162"
+    }
+  ]
+}
