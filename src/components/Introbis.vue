@@ -24,7 +24,7 @@
         </gmap-polygon>
       </gmap-map>
 
-      <md-dialog class="dialog-large md-active"
+      <md-dialog class="dialog-large"
                  md-open-from="#modal-info"
                  md-close-to="#modal-info"
                  ref="info">
@@ -74,7 +74,12 @@
     events: {},
     methods: {
       openDialog(ref) {
+        console.log(this.$refs[ref]);
+
         this.$refs[ref].open();
+        setTimeout(() => {
+          this.$refs[ref].open();
+        }, 3000)
       },
       closeDialog(ref) {
         this.$refs[ref].close();

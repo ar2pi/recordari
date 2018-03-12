@@ -1,4 +1,3 @@
 module.exports = {
-  NODE_ENV: '"production"',
-  DEBUG_MODE: false
-}
+  NODE_ENV: '"production"'
+};
