@@ -13,7 +13,8 @@ import Timeline from '@/components/Timeline'
 import Activities from '@/components/Activities'
 import Stories from '@/components/Stories'
 import Story from '@/components/Story'
-import Introbis from '@/components/Introbis'
+
+import Home from '@/pages/Home'
 
 
 Vue.use(Router);
@@ -21,14 +22,26 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'intro',
+      path: "/introold",
+      name: "intro",
       component: Intro
     },
     {
-      path: '/introbis',
-      name: 'introbis',
-      component: Introbis
+      path: "/",
+      name: "home",
+      component: Home,
+      children: [
+        {
+          path: "mapa/:theme",
+          name: "map",
+          component: Map,
+        },
+        {
+          path: "cronos",
+          name: "Timeline2",
+          component: Timeline
+        }
+      ]
     },
 
     // {
@@ -56,11 +69,13 @@ export default new Router({
     //   name: 'Mapregions',
     //   component: Mapregions
     // },
-    {
-      path: '/mapa/:theme',
-      name: 'Map',
-      component: Map
-    },
+
+    // {
+    //   path: '/mapa/:theme',
+    //   name: 'Map',
+    //   component: Map
+    // },
+
     // {
     //   path: '/mapa',
     //   name: 'Map',
@@ -72,24 +87,24 @@ export default new Router({
     //   component: Map2
     // },
     {
-      path: '/cronos',
-      name: 'Timeline',
+      path: "/cronos",
+      name: "Timeline",
       component: Timeline
     },
     {
-      path: '/docente',
-      name: 'Activities',
+      path: "/docente",
+      name: "Activities",
       component: Activities
     },
     {
-      path: '/historias',
-      name: 'Historias',
+      path: "/historias",
+      name: "Historias",
       component: Stories
     },
     {
-      path: '/historias/:story',
-      name: 'Historia',
+      path: "/historias/:story",
+      name: "Historia",
       component: Story
     }
   ]
-})
+});

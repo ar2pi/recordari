@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: "RightSidebar",
+  name: "rec-component-rightSidebar",
   props: {
     show: Boolean
   },

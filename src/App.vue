@@ -1,13 +1,17 @@
 <template>
   <main id="app">
-    <router-view></router-view>
+    <md-theme md-name="recordari">
+      <router-view></router-view>
+    </md-theme>
   </main>
 </template>
 
 <script>
   import Vue from 'vue'
+  import VueCookie from 'vue-cookie'
   import * as VueMaterial from 'vue-material'
 
+  Vue.use(VueCookie);
   Vue.use(VueMaterial);
 
   Vue.material.registerPalette('cusblue', {
@@ -55,18 +59,7 @@
   });
 
   export default {
-    name: 'ap-app',
-    created() {
-      this.$on('loaded', function () {
-        console.log('loaded');
-        this.loadedOnce = (this.loadedOnce) ? this.loadedOnce : true;
-      })
-    },
-    data() {
-      return {
-        loadedOnce: false
-      }
-    }
+    name: 'rec-app',
   }
 </script>
 
