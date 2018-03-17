@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Intro from '@/components/Intro'
+// import Intro from '@/components/Intro'
 // import Fork from '@/components/Fork'
 import Map from '@/components/Map'
 // import Mapbasic from '@/components/Mapbasic'
@@ -21,28 +21,48 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
-    {
-      path: "/introold",
-      name: "intro",
-      component: Intro
-    },
+    // {
+    //   path: "/introold",
+    //   name: "intro",
+    //   component: Intro
+    // },
     {
       path: "/",
+      // redirect: "/mapa/conciencia",
       name: "home",
       component: Home,
       children: [
         {
           path: "mapa/:theme",
           name: "map",
-          component: Map,
-        },
-        {
-          path: "cronos",
-          name: "Timeline2",
-          component: Timeline
+          components: {
+            default: Map
+          }
         }
       ]
     },
+    // {
+    //   path: "/mapa/:theme",
+    //   name: "map1",
+    //   component: Home,
+    // },
+    // {
+    //   path: "/mapa/reparacion",
+    //   name: "map2",
+    //   component: Home,
+    // },
+    // {
+    //   path: "/mapa/reconciliacion",
+    //   name: "map3",
+    //   component: Home,
+    // },
+
+
+    // {
+    //   path: "mapa/:theme",
+    //   name: "map",
+    //   component: Map,
+    // },
 
     // {
     //   path: '/inicio',
@@ -87,7 +107,7 @@ export default new Router({
     //   component: Map2
     // },
     {
-      path: "/cronos",
+      path: "/linea-de-tiempo",
       name: "Timeline",
       component: Timeline
     },

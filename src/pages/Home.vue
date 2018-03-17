@@ -1,20 +1,15 @@
 <template>
-  <div>
-    <div id="logo-top-left" class="md-fab md-fab-top-left"
-         @click="openDialog('info')">
-      <md-image :md-src="require('../assets/recordari_white.svg')"
-                v-show="$store.state.loaded"
-                @click="openDialog('info')"
-                width="135"></md-image>
-    </div>
+  <div class="app-home">
+
+    <splash />
 
     <router-view />
 
     <md-dialog class="dialog-large"
-                md-open-from="#logo-top-left"
-                md-close-to="#logo-top-left"
-                @close="closedInit()"
-                ref="info">
+               md-open-from="#logo-top-left"
+               md-close-to="#logo-top-left"
+               @close="closeIntro()"
+               ref="intro">
       <md-dialog-title>
         <div class="text-center">Recordari</div>
       </md-dialog-title>
@@ -23,36 +18,47 @@
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary"
-                   @click="closeDialog('info')">Ok</md-button>
+                   @click="closeDialog('intro')">Ok</md-button>
       </md-dialog-actions>
     </md-dialog>
 
+    <div id="logo-top-left" class="md-fab md-fab-top-left"
+         v-show="$store.state.loaded"
+         @click="openDialog('intro')">
+      <md-image :md-src="require('../assets/recordari_white.svg')"
+                width="135" />
+    </div>
+
     <right-sidebar />
+
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
+import Vue from "vue";
 
-import RightSidebar from '../components/RightSidebar';
+// import Map from "../components/Map";
+import Splash from "../components/Splash";
+import RightSidebar from "../components/RightSidebar";
 
-Vue.component('right-sidebar', RightSidebar);
+// Vue.component("map-frame", Map);
+Vue.component("splash", Splash);
+Vue.component("right-sidebar", RightSidebar);
 
 export default {
-  name: 'rec-page-home',
+  name: "rec-page-home",
   created() {
-    if (this.$cookie.get('loadedOnce')) {
-      this.$store.commit('load');
-      if (this.$route.name === 'home') {
-        this.$router.push({ name: 'map', params: { theme: 'conciencia' }});
+    if (this.$cookie.get("loadedOnce")) {
+      this.$store.commit("load");
+      if (this.$route.name === "home") {
+        this.$router.push({ name: "map", params: { theme: "conciencia" } });
       }
     }
   },
   beforeRouteUpdate(to, from, next) {
-    if (this.$route.name === 'home') {
-      this.name = to.params.name;
-      next();
-    }
+    console.log("to", to);
+    console.log("from", from);
+    next();
   },
   mounted() {
     setTimeout(() => {
@@ -63,7 +69,7 @@ export default {
   methods: {
     postMount() {
       if (!this.$store.state.loaded) {
-        this.openDialog('info');
+        this.openDialog("intro");
       }
     },
     openDialog(ref) {
@@ -72,11 +78,11 @@ export default {
     closeDialog(ref) {
       this.$refs[ref].close();
     },
-    closedInit() {
-      this.$store.commit('load');
-      this.$cookie.set('loadedOnce', true, { expires: '7D' });
-      if (this.$route.name === 'home') {
-        this.$router.push({ name: 'map', params: { theme: 'conciencia' }});
+    closeIntro() {
+      this.$store.commit("load");
+      this.$cookie.set("loadedOnce", true, { expires: "7D" });
+      if (this.$route.name === "home") {
+        this.$router.push({ name: "map", params: { theme: "conciencia" } });
       }
     }
   },

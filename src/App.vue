@@ -1,7 +1,7 @@
 <template>
   <main id="app">
     <md-theme md-name="recordari">
-      <router-view></router-view>
+      <router-view />
     </md-theme>
   </main>
 </template>
@@ -65,7 +65,8 @@
 
 <style>
   #app {
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
     background-color: #27A2ED;
   }
 </style>
