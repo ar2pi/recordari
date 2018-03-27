@@ -21,7 +21,7 @@
 
     <div class="map-card md-fab md-fab-top-right">
       <md-card>
-        <p class="md-body-2 sp-hinset">¿ Sabias que ?</p>
+        <p class="md-body-2 sp-hinset">¿ Sabías que ?</p>
         <span class="md-body-1 sp-hinset">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</span>
         <md-card-actions>
           <md-button class="md-accent md-dense">Ver en mapa</md-button>

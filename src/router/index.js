@@ -13,6 +13,7 @@ import Timeline from '@/components/Timeline'
 import Activities from '@/components/Activities'
 import Stories from '@/components/Stories'
 import Story from '@/components/Story'
+import Licencia from '@/components/Licencia'
 
 
 Vue.use(Router);
@@ -83,6 +84,11 @@ export default new Router({
       path: '/historias/:story',
       name: 'Historia',
       component: Story
+    },
+    {
+      path: '/licencia',
+      name: 'Licencia',
+      component: Licencia
     }
   ]
 })

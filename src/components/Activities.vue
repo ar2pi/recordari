@@ -18,9 +18,10 @@
                   novalidate
                   @submit.stop.prevent="submit">
               <md-input-container>
-                <label>Codigo de ingreso (1234)</label>
+                <label>Código de ingreso (1234)</label>
                 <md-input v-model="loginCode"></md-input>
               </md-input-container>
+              <p v-show="validationError" class="md-warn error">Este código de ingreso no es valido.</p>
               <md-button class="md-accent"
                          @click.prevent="submit">Ingresar
               </md-button>
@@ -199,6 +200,11 @@
               });
             }
           });
+        } else {
+          this.validationError = true;
+          setTimeout(() => {
+            this.validationError = false;
+          }, 2000);
         }
       }
     },
@@ -209,7 +215,8 @@
       return {
         loginCode: '',
         secretCode: '1234',
-        initialized: false
+        initialized: false,
+        validationError: false
       }
     }
   }
@@ -226,5 +233,11 @@
     max-width: 750px;
     border-left: 2px solid rgba(0, 0, 0, .2);
     border-right: 2px solid rgba(0, 0, 0, .2);
+  }
+
+  .error {
+    color: #ffeb3b;
+    padding: .5em;
+    background-color: rgba(0,0,0,.3);
   }
 </style>

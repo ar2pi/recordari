@@ -136,7 +136,7 @@
                        v-show="showElement === 'fe4'">
                     <div class="col-md-5">
                       <p class="sp-hinset--small">
-                        A continuacion puedes aprender mas sobre los eventos claves del conflicto a traves del tiempo</p>
+                        A continuación puedes aprender mas sobre los eventos claves del conflicto a través del tiempo.</p>
                     </div>
                     <div class="col-md-1">
                       <router-link tag="md-button"
@@ -164,7 +164,7 @@
                        v-show="showElement === 'fe5'">
                     <div class="col-md-5">
                       <p class="sp-hinset--small">
-                        ¡Descubre historias de gente como tu, actores del cambio y constructores de paz!</p>
+                        ¡Descubre historias de gente como tú, actores del cambio y constructores de paz!</p>
                     </div>
                     <div class="col-md-1">
                       <router-link tag="md-button"

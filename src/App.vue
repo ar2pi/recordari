@@ -44,6 +44,23 @@
     A700: '#ff898b',
     darkText: [50, 100, 200, 300, 'A100']
   });
+  Vue.material.registerPalette('cusgreen', {
+    50: '#fde4e6',
+    100: '#f9bcbf',
+    200: '#f68f95',
+    300: '#f2626b',
+    400: '#ef404b',
+    500: '#ec1e2b',
+    600: '#ea1a26',
+    700: '#e71620',
+    800: '#e4121a',
+    900: '#df0a10',
+    A100: '#ffffff',
+    A200: '#ffd5d6',
+    A400: '#ffa2a4',
+    A700: '#ff898b',
+    darkText: [50, 100, 200, 300, 'A100']
+  });
 
   Vue.material.registerTheme({
     recordari: {

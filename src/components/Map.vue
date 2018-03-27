@@ -27,7 +27,7 @@
       <div class="map-card md-fab md-fab-top-right"
            v-show="tooltip.show">
         <md-card>
-          <p class="md-body-2 sp-hinset">¿ Sabias que ?</p>
+          <p class="md-body-2 sp-hinset">¿ Sabías que ?</p>
           <span class="md-body-1 sp-hinset">{{ tooltip.content }}</span>
           <md-card-actions>
             <md-button class="md-accent md-dense"
@@ -98,6 +98,28 @@
         </md-dialog-actions>
       </md-dialog>
 
+      <md-dialog md-open-from="#termsandconditions-link"
+                 md-close-to="#termsandconditions-link"
+                 ref="termsandconditions">
+        <md-dialog-title>Términos y Condiciones</md-dialog-title>
+        <md-dialog-content class="text-center">
+          <p>
+            Aplican derechos y restricciones de licencia <router-link to="/licencia">Creative Commons Attribution-ShareAlike 3.0</router-link>
+          </p>
+          <p>
+            <img class="modal-img" :src="require('../assets/cc-by-sa.svg')" alt="CC BY-SA" />
+          </p>
+          <p>
+            Esta aplicación web también esta sujeta a los términos y condiciones de <a href="https://www.google.com/intl/es-CO_US/help/terms_maps.html" target="_blank">Google Maps</a>
+          </p>
+        </md-dialog-content>
+        <md-dialog-actions>
+          <md-button class="md-primary"
+                     @click="closeDialog('termsandconditions')">Ok
+          </md-button>
+        </md-dialog-actions>
+      </md-dialog>
+
       <md-button class="md-fab md-fab-bottom-left"
                  id="fab"
                  @click="openDialog('dialog2')">
@@ -161,6 +183,9 @@
           </router-link>
         </p>
         <div class="bottom-left-sidenav">
+          <div class="text-center">
+            <a href="#" @click="handleTermsAndConditions($event)">Términos y Condiciones</a>
+          </div>
           <p class="md-subheading">Fuentes de datos:</p>
           <div class="brick-unit">
             <md-tooltip md-direction="right">Departamento Administrativo Nacional de Estadística</md-tooltip>
@@ -572,6 +597,10 @@
     },
     events: {},
     methods: {
+      handleTermsAndConditions(e) {
+        e.preventDefault();
+        this.$refs['termsandconditions'].open();
+      },
       showLayer(layer) {
         api.get(this.datasets[layer].archive, {responseType: 'json'}).then((response) => {
           switch (response.data.properties.tipo) {
@@ -785,7 +814,7 @@
             this.stateBus.memoizedData.conversion.objects[convertBuffer[i].codigo] = {
               departamento: convertBuffer[i].departamento,
               quantifier: convertBuffer[i].comp_registros,
-              label: 'indice relativo a los otros departamentos segun el numero de casos por total de poblacion'
+              label: 'índice relativo a los otros departamentos según el número de casos por total de población'
             }
           }
           for (let i = 0; i < convertBuffer.length; i++) {
@@ -881,7 +910,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .map-card {
     width: 60%;
     min-width: 225px;
@@ -915,12 +944,24 @@
     width: 80%;
   }
 
+  .modal-img {
+    width: 20%;
+    min-width: 200px;
+  }
+
+  .bottom-left-sidenav {
+    padding-top: 2em;
+    .md-subheading {
+      padding-left: .7em;
+    }
+  }
+
   @media (min-width: 600px) {
-    .bottom-left-sidenav {
+    /* .bottom-left-sidenav {
       position: absolute;
       bottom: 1em;
       left: 1em;
-    }
+    } */
     .bottom-left-sidenav img {
       width: 50px;
     }
