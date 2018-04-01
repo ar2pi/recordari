@@ -102,16 +102,54 @@
                  md-close-to="#termsandconditions-link"
                  ref="termsandconditions">
         <md-dialog-title>Términos y Condiciones</md-dialog-title>
-        <md-dialog-content class="text-center">
-          <p>
-            Aplican derechos y restricciones de licencia <router-link to="/licencia">Creative Commons Attribution-ShareAlike 3.0</router-link>
-          </p>
-          <p>
-            <img class="modal-img" :src="require('../assets/cc-by-sa.svg')" alt="CC BY-SA" />
-          </p>
-          <p>
-            Esta aplicación web también esta sujeta a los términos y condiciones de <a href="https://www.google.com/intl/es-CO_US/help/terms_maps.html" target="_blank">Google Maps</a>
-          </p>
+        <md-dialog-content>
+          <div class="text-center">
+            <p>
+              Aplican derechos y restricciones de licencia <router-link to="/licencia">Creative Commons Attribution-ShareAlike 3.0</router-link>
+            </p>
+            <p>
+              <img class="modal-img" :src="require('../assets/cc-by-sa.svg')" alt="CC BY-SA" />
+            </p>
+          </div>
+          <h3>1. USO DE NUESTROS SERVICIOS</h3>
+          <small>
+            La información y recomendaciones incluidas en el portal RECORDARI tienen la función de dar a conocer un panorama general del conflicto armado en el país a través de los datos abiertos. Esta aplicación se divide en tres categorías: conciencia, reparación y reconciliación. En cada una de estas categorías se presenta un mapa de Colombia con datos en función de cada una. Además, hay actividades para los docentes. Nuestra aplicación está planteada como una herramienta pedagógica en donde sus principales usuarios son los docentes y los alumnos.
+            La Aplicación web Recordari incluye las siguientes funcionalidades:
+            1. la web App maneja 3 funcionalidades primordiales que son: Conciencia, Reparación y Reconciliación, adicional tenemos una línea de tiempo que trata puntos claves del conflicto a través del tiempo, y una parte de historias que son personas que han sufrido el conflicto armado y hablan del cambio y la construcción de paz.
+            2. Tenemos un botón para el docente que incluye actividades para que el profesor las desarrolle en clase con sus alumnos.
+            La iniciativa RECORDARI No asume responsabilidad por la utilización, aplicación y/o procesamiento que los diferentes actores puedan darle a dicha información ni otorgar garantía sobre la exactitud de sus contenidos.
+            La inscripción del “USUARIO” en el portal RECORDARI será considerada como la aceptación de estos Términos y Condiciones. Los datos proporcionados por el docente deben ser correctos, veraces y completos, por lo que el USUARIO asumirá toda responsabilidad sobre la falta de veracidad o exactitud en el suministro de los datos.
+            El uso de nuestros servicios no otorga derecho de propiedad intelectual alguno sobre nuestros servicios o contenido al que acceda. No podrá utilizar el contenido de nuestros servicios a menos que obtenga el permiso de su propietario o que ello esté permitido por ley. Estas condiciones no le otorgan el derecho de utilizar marca o logotipo alguno utilizado en nuestros servicios. No elimine, oculte ni modifique ningún aviso legal mostrado en nuestros servicios o junto a ellos.
+            Nuestros servicios muestran cierto contenido que no pertenece a RECORDARI. Dicho contenido es responsabilidad exclusiva de la entidad que lo pone a disposición. Podremos revisar contenido para determinar si es ilegal o si infringe nuestras políticas, y podremos eliminar o rechazar la visualización de contenido que razonablemente consideremos que infringe nuestras políticas o la ley. Sin embargo, esto no significa que revisemos contenido, por lo que no debe suponer que lo haremos.
+          </small>
+          <h3>2. INFORMACIÓN</h3>
+          <small>
+            Los datos de los usuarios que se registren al portal RECORDARI serán tratados cumpliendo con las políticas de seguridad de la iniciativa en cuanto a la integridad de la información.
+            RECORDARI puede utilizar información de los USUARIOS para contactarlos en caso de requerirse. Así mismo, tal información podrá compartirla con las instituciones aliadas, entes públicos, privados y demás actores del ecosistema educativo con los cuales la Iniciativa tiene relación directa, como parte del proceso de acompañamiento, visibilidad, difusión, mentorías, asesorías y otras herramientas que implemente la iniciativa para el cumplimiento de su misión.
+          </small>
+          <h3>3. USO DE LA PLATAFORMA</h3>
+          <small>
+            La iniciativa RECORDARI se reserva el derecho a realizar la eliminación y activación de Usuarios para el uso de la plataforma a aquellos que demuestren comportamientos nocivos para la comunidad educativa y/o utilicen lenguajes de carácter ofensivo en los servicios de comunicaciones que provee la plataforma (blog, redes, etc.).
+            El Usuario podrá utilizar la plataforma de la iniciativa RECORDARI solo de acuerdo con los términos de este acuerdo. No podrá utilizar técnicas de ingeniería inversa, descompilar, desensamblar ni eludir las limitaciones técnicas del producto, salvo que la legislación aplicable lo permita a pesar de esta limitación. No podrá desactivar, alterar ni, de otro modo, intentar burlar cualquier mecanismo de seguridad con la intención de conocer, alterar y/o atentar contra la seguridad de la información y de los servicios que provee la iniciativa RECORDARI.
+            Tampoco podrá subir, enviar o de otra manera transmitir algún contenido que pueda resultar contrario a la ley, moral, orden público, contenido dañino, abusivo, despectivo, difamatorio, vulgar, obsceno, invasivo o privado, racista, xenófobos, o cualquier comportamiento objetable.
+            No podrá subir, enviar o transmitir algún contenido sin acreditar legalmente los derechos necesarios para hacerlo (por ejemplo, la información al interior de una empresa, propietaria y confidencial aprendida o divulgada como parte de relaciones del empleo o según los términos de acuerdos de un contrato). Así mismo, está prohibido enviar, subir o transmitir algún contenido comercial o publicitario.
+            No podrá subir, enviar o transmitir algún material que contenga virus o algún código computacional como archivos o programas diseñados para interrumpir, destruir o limitar la funcionalidad de algún software, hardware o equipo de telecomunicaciones.
+          </small>
+          <h3>4. RESPONSABILIDAD DE LAS CUENTAS</h3>
+          <small>
+            Los usuarios también serán responsables de mantener la confidencialidad de cualquier credencial de autenticación no pública relacionada con el uso que hace de los Servicios.
+          </small>
+          <h3>5. POLÍTICA DE PRIVACIDAD</h3>
+          <small>
+            Al aceptar las presentes Políticas de Privacidad, usted autoriza a RECORDARI para:
+            Comunicar a otros organismos del Estado u otros terceros aliados sus datos personales con el objeto de mejorar la calidad de información de la iniciativa.
+            Comunicar a terceros información estadística elaborada a partir de los datos personales de sus usuarios, cuando de dichos datos no sea posible identificar individualmente a los titulares (datos disociados), de conformidad a la Ley.
+            Aparte de las autorizaciones establecidas anteriormente, RECORDARI mantendrá la debida confidencialidad de los datos personales y no los trasmitirá a terceros, salvo cuando se deban entregar debido a un mandato legal o una orden emanada de la autoridad Judicial que así lo requiera.
+          </small>
+          <h3>6. AUTORIZACIÓN</h3>
+          <small>
+            Los usuarios de la iniciativa declaran conocer y aceptar la circunstancia relativa a que este servicio podrá, en cualquier momento, modificar todo o parte de las presentes condiciones de uso, conforme con la legislación vigente o políticas del Gobierno Nacional.
+          </small>
         </md-dialog-content>
         <md-dialog-actions>
           <md-button class="md-primary"
@@ -171,7 +209,7 @@
                        to="/cronos"
                        class="no-margin full-width"
                        :class="$route.params.theme === 'timeline' ? 'active-element' : 'md-raised md-primary'">
-            Timeline
+            Línea de tiempo
           </router-link>
         </p>
         <p class="pill">
